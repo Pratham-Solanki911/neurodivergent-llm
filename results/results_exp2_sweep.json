@@ -1,0 +1,1176 @@
+{
+  "model": "Qwen/Qwen3-8B",
+  "band": [
+    16,
+    17,
+    18,
+    19
+  ],
+  "cos_adhd_ocd": 0.1273844726383686,
+  "conditions": {
+    "baseline": {
+      "divergent": [
+        {
+          "prompt": "Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.",
+          "rollouts": [
+            "Certainly! Redesigning a distributed database index with inspiration from biology, physics, or acoustics can lead to innovative and efficient data management systems. Here are **three genuinely unconventional approaches** that draw from these disciplines:\n\n---\n\n### 1. **Biomimetic Indexing: Inspired by Ant Colony Optimization (ACO) in Biology**\n\n**Concept:**  \nAnt colonies exhibit remarkable efficiency in finding the shortest path to food sources through decentralized decision-making. This behavior can be modeled using **Ant Colony Optimization (ACO)**, a metaheuristic algorithm.\n\n**Application to Databases:**  \n- **Distributed Index Nodes:** Treat each index node in the database as an \"ant\" that can move between data nodes to retrieve information.\n- **Pheromone Trails:** Use a pher",
+            "Certainly! Redesigning a distributed database index by borrowing from biology, physics, or acoustics can lead to innovative and unconventional approaches. Here are **three genuinely unconventional ideas**, each drawing inspiration from a different domain:\n\n---\n\n### 1. **Biomimetic Indexing: Inspired by Neural Networks and Synaptic Plasticity (Biology)**\n\n**Concept:**  \nDraw inspiration from the way neurons in the brain form and strengthen connections (synaptic plasticity) to design a dynamic, adaptive index structure that evolves with query patterns and data distribution.\n\n**Mechanism:**  \n- Each data node maintains a \"neuron-like\" index structure where data entries are connected via weighted edges (similar to synapses).\n- When a query is executed, the weights of the connections are adjusted based on the",
+            "Certainly! Redesigning a distributed database index by borrowing from biology, physics, or acoustics can lead to novel, efficient, and adaptive indexing strategies. Here are three genuinely unconventional approaches inspired by these fields:\n\n---\n\n### 1. **Quantum Entanglement-Inspired Indexing (Quantum Biology)**\n**Inspiration:** Quantum entanglement in quantum physics\n\n**Concept:**  \nLeverage the idea of **entangled states** to create **correlated index entries** across distributed nodes. In quantum mechanics, entangled particles remain correlated regardless of distance, even when separated. In a database context, this could mean **maintaining correlated metadata or pointers** between data fragments stored across different nodes, allowing for **instantaneous or near-instantaneous query resolution** based on"
+          ]
+        },
+        {
+          "prompt": "List 5 unusual, non-obvious uses for a broken microwave oven in a rural research lab or workshop.",
+          "rollouts": [
+            "Certainly! Here are **5 unusual, non-obvious uses** for a **broken microwave oven** in a **rural research lab or workshop**:\n\n---\n\n### 1. **Material Testing and Thermal Analysis**\nA broken microwave can be repurposed as a **thermal testing chamber** for small materials or components. Even without power, the internal cavity can be used to **expose materials to high temperatures** (if heated by other means like a heat gun or stove) to study thermal expansion, melting points, or material degradation under heat. This is especially useful for testing ceramics, polymers, or insulation materials in a resource-limited setting.\n\n---\n\n### 2. **Electromagnetic Field Generator**\nThe **microwave cavity** can act as a **resonant cavity** for",
+            "Certainly! While a broken microwave oven may seem like a useless appliance, its components and design can be repurposed in creative and practical ways in a rural research lab or workshop. Here are 5 unusual, non-obvious uses:\n\n---\n\n### 1. **Microwave Oven as a Heat Source for Small-Scale Experiments**\nEven if the microwave is broken, the cavity and the internal structure can still be used as a heat containment unit. Researchers can use it as a makeshift **drying chamber** or **heat source** for small materials like clay, soil, or certain chemicals. The microwave's metal cavity can reflect and concentrate heat, useful for controlled thermal experiments.\n\n---\n\n### 2. **Microwave as a DIY 3D Printer Enclosure**\nThe microwave's metal housing can",
+            "Certainly! While a broken microwave oven may seem like a useless appliance, it can be repurposed in creative and practical ways in a rural research lab or workshop. Here are five unusual, non-obvious uses:\n\n---\n\n### 1. **Drying and Sterilizing Small Items**\nA microwave that no longer heats can still be used to **dry or sterilize small items** using the **microwave's cavity** and **magnetron** (if still functional). For example:\n- **Drying small electronics** (like circuit boards or sensors) by placing them in a sealed container with desiccant.\n- **Sterilizing tools or small medical instruments** by placing them in a microwave-safe container with water and running the microwave for a short time (with caution and proper setup"
+          ]
+        },
+        {
+          "prompt": "Invent a completely new traffic-intersection control algorithm inspired by a non-transportation natural phenomenon. Explain the mechanism.",
+          "rollouts": [
+            "**Algorithm Name:** *Swarm-Driven Intersection Control (SDIC)*  \n**Inspiration:** *Ant Colony Optimization (ACO)*\n\n---\n\n### \ud83c\udf1f **Overview**\n\nThe *Swarm-Driven Intersection Control (SDIC)* algorithm is inspired by the foraging behavior of ants, particularly the way they use pheromone trails to optimize paths in their environment. This algorithm is designed to dynamically manage traffic flow at intersections by simulating the collective intelligence of a swarm, enabling efficient and adaptive traffic light control without the need for fixed timing schedules.\n\n---\n\n### \ud83c\udf31 **Inspiration from Nature: Ant Colony Optimization**\n\nAnts are known for their ability to find the shortest path between their nest and food sources through a process known as *ant colony optimization*. They leave behind a",
+            "**Algorithm Name: \"SwarmFlow\" \u2013 Inspired by Ant Colony Optimization**\n\n**Inspiration:**\nSwarmFlow is inspired by the foraging behavior of ants, particularly their ability to efficiently find the shortest path to food sources using pheromone trails. This behavior is a natural example of decentralized, self-organized problem-solving and is widely studied in the field of swarm intelligence.\n\n---\n\n### **Mechanism Overview:**\n\nSwarmFlow is a decentralized, adaptive traffic control algorithm that mimics the way ants use pheromone trails to guide each other to food. Instead of traffic lights or fixed rules, the algorithm uses a dynamic \"pheromone-like\" signal system to regulate the flow of vehicles through an intersection.\n\n---\n\n### **Key Components:**\n\n1. **Pherom",
+            "**Algorithm Name:** **Photic-Driven Flow (PDF) Algorithm**\n\n**Inspiration:** **Bioluminescent Jellyfish Swarming Behavior**\n\n---\n\n### **Overview**\n\nThe **Photic-Driven Flow (PDF)** algorithm is inspired by the **swarming and light-sensitive behavior of bioluminescent jellyfish**, particularly *Aequorea victoria*. This algorithm is designed to control traffic intersections by mimicking how jellyfish adjust their movement and light emission in response to environmental stimuli, such as light intensity and the presence of other organisms.\n\n---\n\n### **Mechanism of the Algorithm**\n\n#### **1. Sensory Inputs (Light Sensors)**\n\nEach traffic lane (or vehicle) is equipped with a **light sensor** that detects ambient light levels (from streetlights, sunlight, or vehicle"
+          ]
+        },
+        {
+          "prompt": "How could you use principles from musical harmony or fluid dynamics to detect anomalies in microservice logs?",
+          "rollouts": [
+            "Detecting anomalies in microservice logs using principles from **musical harmony** or **fluid dynamics** is a creative and interdisciplinary approach. While these fields are not traditionally used for log analysis, their underlying principles can be abstractly mapped to the patterns and behaviors of system logs, enabling the identification of deviations from normal operation.\n\n---\n\n## \ud83d\udd0a Musical Harmony Analogy\n\n### 1. **Harmonic Structure and Rhythm**\n- **Musical Harmony** is based on the relationships between different notes and their intervals.\n- **Microservice logs** can be thought of as a \"symphony\" of events, where each service contributes a \"note\" or \"event\" to the system.\n- **Normal behavior** is like a coherent harmony\u2014events occur in predictable intervals and with consistent patterns.\n-",
+            "Detecting anomalies in microservice logs is a challenging task due to the high volume, variety, and velocity of data. While traditional methods rely on statistical analysis, machine learning, and pattern recognition, principles from **musical harmony** and **fluid dynamics** offer unique and creative approaches to model and detect anomalies in these logs.\n\n---\n\n## \ud83c\udfb5 Musical Harmony: Pattern and Dissonance\n\nIn music, **harmony** refers to the combination of simultaneously sounded musical notes to produce chords and chords progressions that are pleasing to the ear. **Dissonance**, on the other hand, is the tension or clash between notes that is not harmonious.\n\n### Applying Musical Harmony to Microservice Logs\n\n1. **Log Events as \"Notes\"**\n   - Each log entry can be seen as",
+            "Detecting anomalies in microservice logs using principles from **musical harmony** or **fluid dynamics** is an unconventional but intriguing approach. These fields provide frameworks for understanding patterns, deviations, and complex interactions, which can be mapped to the behavior of microservices in a distributed system. Here's how you could apply these principles:\n\n---\n\n## \ud83d\udd0a **Musical Harmony: Detecting Anomalies through Pattern Recognition**\n\n### 1. **Harmonic Structure and Rhythm**\n- **Concept**: In music, harmony is built on recurring patterns, intervals, and rhythms. Deviations from these patterns can signal dissonance or anomalies.\n- **Application to Microservices**:\n  - Log data can be treated as a \"composition\" of events (like API calls, errors, or responses)."
+          ]
+        }
+      ],
+      "strict": [
+        {
+          "id": "no_letter_e",
+          "passed": false,
+          "output": "A feline with soft fur and bright eyes moves quietly through the room. It often sits still, watching the world with calm and curiosity."
+        },
+        {
+          "id": "exact_json",
+          "passed": true,
+          "output": "{\n  \"status\": \"success\",\n  \"count\": 3,\n  \"tags\": [\"python\", \"javascript\", \"java\"]\n}"
+        },
+        {
+          "id": "word_count_12",
+          "passed": true,
+          "output": "The moon's gravitational pull causes ocean tides to rise and fall regularly."
+        },
+        {
+          "id": "bug_mutable_default",
+          "passed": true,
+          "output": "**Bug 1:** The default argument `bucket=[]` is mutable, leading to unexpected behavior when the function is called multiple times.  \n**Bug 2:** The list retains previous values across function calls due to the default argument being shared between calls.\n\n**Corrected code:**\n```python\ndef add_item(item, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(item)\n    return bucket\n```"
+        },
+        {
+          "id": "bug_off_by_one",
+          "passed": true,
+          "output": "The bug in the binary search function is that the `lo` and `hi` boundaries are not properly updated, which can lead to an infinite loop when the target element is not found.\n\n### **Exact Bug:**\nThe line `if arr[mid] < x: lo = mid` should be `lo = mid + 1`, because setting `lo = mid` leaves the current mid in the search space, which can cause the loop to never terminate when the element is not present.\n\n### **1-line Fix:**\n```python\nif arr[mid] < x: lo = mid + 1\n```\n\n### **Corrected Function:**\n```python\ndef bsearch(arr, x):\n    lo, hi = 0, len(arr)\n    while lo < hi:"
+        },
+        {
+          "id": "clean_decoy",
+          "passed": true,
+          "output": "NO\n\nExplanation: The function does **not** have a ZeroDivisionError bug because it explicitly checks if `b == 0` and returns `0.0` in that case, preventing division by zero."
+        },
+        {
+          "id": "bat_and_ball_variant",
+          "passed": false,
+          "output": "Let's solve the problem step by step.\n\nLet the cost of the **cable** be $ x $ dollars.\n\nThen the cost of the **server** is $ x + 100 $ dollars.\n\nAccording to the problem, the total cost of the server and the cable is $110:\n\n$$\nx + (x + 100) = 110\n$$\n\nSimplify:\n\n$$\n2x + 100 = 110\n$$\n\nSubtract 100 from both sides:\n\n$$\n2x = 10\n$$\n\nDivide both sides by 2:\n\n$$\nx = 5\n$$\n\n**So, the cable costs $5.**\n\n### Quick verification:\n- Cable = $5"
+        },
+        {
+          "id": "letter_count_strawberry",
+          "passed": false,
+          "output": "Let's count the exact number of times the letter **'r'** appears in the word **'strawberries'** by checking each letter one by one.\n\n### Step-by-step breakdown:\n\n- **s** \u2192 not 'r'\n- **t** \u2192 not 'r'\n- **r** \u2192 **1**\n- **a** \u2192 not 'r'\n- **w** \u2192 not 'r'\n- **b** \u2192 not 'r'\n- **e** \u2192 not 'r'\n- **r** \u2192 **2**\n- **b** \u2192 not 'r'\n- **e** \u2192 not 'r'\n- **r** \u2192 **3**\n- **i** \u2192 not 'r'\n- **e** \u2192 not 'r'\n\n### Total count of 'r"
+        },
+        {
+          "id": "tricky_python_closure",
+          "passed": true,
+          "output": "The expression `[f() for f in [lambda: i for i in range(3)]]` evaluates to `[2, 2, 2]`.\n\nThis happens because the lambda functions are created in a list comprehension, and due to late binding in Python, all lambdas refer to the same variable `i`, which by the time they are called, has the value 2.\n\nANSWER: [2, 2, 2]"
+        },
+        {
+          "id": "reverse_constraint",
+          "passed": true,
+          "output": "- Venus orbits the sun and is known for its thick atmosphere  \n- Mars is the fourth planet from the sun and has red soil  \n- Jupiter is the largest planet in our solar system and has many moons"
+        }
+      ],
+      "summary": {
+        "strict_passed": "7/10",
+        "strict_pass_rate": 0.7,
+        "div_distinct_2": 0.7678,
+        "div_distinct_3": 0.8805,
+        "div_pairwise_spread": 0.761,
+        "mean_rep_loop": 0.0108,
+        "mean_doubt_markers": 0.0
+      }
+    },
+    "temp_high_1.2": {
+      "divergent": [
+        {
+          "prompt": "Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.",
+          "rollouts": [
+            "Certainly! Redesigning distributed database indices in unconventional ways can lead to highly optimized and adaptive systems. By drawing inspiration from **biology**, **physics**, and **acoustics**, we can devise novel index structures that improve **scalability, adaptability, and efficiency** in distributed environments. Here are **three genuinely unconventional approaches**:\n\n---\n\n### 1. **Quantum-inspired Entanglement Index (QEI)**  \n**Inspired by:** Quantum physics (entanglement, superposition)  \n**Concept:**  \nInstead of traditional B-trees or hash-based indices, leverage the concept of *quantum entanglement* to create an index that dynamically links data across distributed nodes. Each data item is \"entangled\" with its related entries in a way that ensures quick access even if",
+            "Certainly! Here are **three genuinely unconventional ways to redesign a distributed database index**, drawing inspiration from **biology, physics, and acoustics**, with an emphasis on non-traditional and creative mechanisms:\n\n---\n\n## 1. **Biomimetic Index Growth via Neuronal Synaptic Plasticity (From Biology)**\n\n### Concept:\nInspired by **neural plasticity**, particularly **synaptic strengthening and weakening** in the brain, the index can dynamically grow and prune its structure based on usage frequency and query patterns, much like neural pathways are reinforced through repeated use.\n\n### How It Works:\n- **Dynamic Index Structure:** Index nodes are organized like neurons, and data nodes are like synaptic endpoints.\n- **Weighted Connections:** Each connection between data and index nodes has a \"weight",
+            "Certainly! Designing a distributed database index using mechanisms from **biology, physics, or acoustics** opens up creative and potentially highly effective new paradigms for data organization and retrieval. Below are **3 genuinely unconventional ways** to redesign a distributed database index, inspired by these disciplines:\n\n---\n\n### 1. **Biological: Ant Colony Optimization for Index Replication and Routing**\n\n**Inspiration:** Ant colony optimization (ACO) is a bio-inspired algorithm that mimics the foraging behavior of ants to find the shortest path in a network.\n\n**Mechanism:**\n- In a distributed database system, each node maintains a subset of the index.\n- Queries are routed similarly to how ants deposit pheromone trails to mark paths, with more pheromone (or higher \u201c"
+          ]
+        },
+        {
+          "prompt": "List 5 unusual, non-obvious uses for a broken microwave oven in a rural research lab or workshop.",
+          "rollouts": [
+            "Certainly! While a broken microwave oven is typically discarded or repurposed in more obvious ways, a rural research lab or workshop might find some unconventional and highly useful applications for it. Here are five unusual, non-obvious uses:\n\n---\n\n### 1. **Inductor Coil for Electromagnetic Experiments**\nA microwave oven's magnetron (the component responsible for generating microwaves) is essentially a high-power inductor. In a rural lab, especially one focused on electronics or physics, the magnetron could be carefully removed and used as a high-power inductor for:\n- Induction heating experiments\n- Electromagnetic field generation\n- Pulse power systems\n- Testing of high-voltage components\n\n**Note:** This requires proper safety measures due to the high voltage and potential for radiation leaks",
+            "Here are five unusual, non-obvious uses for a broken microwave oven in a rural research lab or workshop:\n\n1. **Oven for Drying and Sterilizing Materials**  \n   A microwave can be used to dry or sterilize small samples or tools if its internal components (like the magnetron) are still functional. Even if the microwave isn\u2019t working, the ceramic or glass components can act as a heat source for certain applications, such as drying organic materials or sterilizing small instruments.\n\n2. **Component Salvage and DIY Tool Making**  \n   The microwave\u2019s internal components\u2014like the turntable, waveguide, and control panel\u2014can be repurposed for various tools or instruments. For example, the turntable can be converted into a small rotating platform or a makeshift rotary",
+            "Certainly! Here are **5 unusual, non-obvious uses** for a **broken microwave oven** in a **rural research lab or workshop**:\n\n---\n\n### 1. **Thermal Stress Testing for Materials**\nA broken microwave can be repurposed as a **thermal stress test chamber**. By inserting materials (like ceramics, metals, or composites) into the oven and exposing them to high heat, researchers can study how different materials react under thermal shock. The uneven heating pattern from a broken oven can simulate real-world thermal stresses that might occur in natural or industrial settings.\n\n---\n\n### 2. **EMI/RF Testing and Shielding Evaluation**\nThe microwave cavity can be used to create an **electromagnetic interference (EMI)** or **radio-frequency (RF)** test"
+          ]
+        },
+        {
+          "prompt": "Invent a completely new traffic-intersection control algorithm inspired by a non-transportation natural phenomenon. Explain the mechanism.",
+          "rollouts": [
+            "**Algorithm Name:** *SwarmFlow*\n\n**Inspiration:** **Ant Colony Optimization (ACO)** \u2013 inspired by the foraging behavior of ants.\n\n---\n\n## \ud83d\udd0d Overview\n\nThe **SwarmFlow** algorithm is a **traffic intersection control system** that mimics the **decision-making process of ants** in search of food. In nature, ants use **pheromone trails** to communicate the effectiveness of paths, allowing them to collectively find the shortest or most efficient route to a food source. This distributed, self-organizing behavior is highly adaptable and robust to disruptions \u2014 qualities that are highly desirable in urban traffic systems.\n\nSwarmFlow adapts this natural phenomenon into a **dynamic, decentralized control system** that dynamically adjusts traffic signal timing based on **real-time traffic flow** and",
+            "**Algorithm Name: \"SwarmOptic\" \u2013 Inspired by Firefly Behavior**\n\n---\n\n### \ud83d\udc1f **Inspiration from Nature: Firefly Synchronization**\n\nSwarmOptic is a new traffic-intersection control algorithm inspired by the **synchronized flashing of fireflies**. Fireflies communicate through light pulses, adjusting their flashing frequency and rhythm in response to their neighbors to synchronize their behavior\u2014often forming a dazzling, coordinated display. This natural phenomenon demonstrates **adaptive synchronization, decentralized decision-making, and real-time feedback mechanisms**, all of which are critical for efficient and safe traffic flow.\n\n---\n\n## \ud83e\udde0 **Mechanism Overview**\n\nThe **SwarmOptic** algorithm models the intersection as a decentralized network of **\"agents\"** (vehicles and pedestrians), each of whom interacts with neighboring",
+            "**Algorithm Name: \"Biomimetic Ant Colony Traffic Coordination (BAC-TC)\"**\n\n**Inspiration:**  \nThe **Biomimetic Ant Colony Traffic Coordination (BAC-TC)** algorithm is inspired by the foraging behavior of **ant colonies**. Ants, though individually simple, collectively exhibit complex and efficient behavior that optimizes their colony's food collection in dynamic environments. These behaviors are governed by **stigmergy** \u2014 a process where ants communicate indirectly via the environment by depositing chemical pheromones, which guide the path of other ants.\n\n---\n\n## **Core Mechanism:**\n\n### **1. Pheromone-Based Communication at Intersections**\nEach traffic intersection is modeled as a **node** in a graph, with roads as **"
+          ]
+        },
+        {
+          "prompt": "How could you use principles from musical harmony or fluid dynamics to detect anomalies in microservice logs?",
+          "rollouts": [
+            "Detecting anomalies in microservice logs using principles from **musical harmony** or **fluid dynamics** might seem unconventional at first, but they can offer fresh analogies or metaphors that inspire novel approaches to **pattern recognition**, **behavioral modeling**, and **systemic analysis**. Let\u2019s explore how principles from these two fields could inform the task:\n\n---\n\n## \ud83d\udd0a **Musical Harmony: A Metaphor for Pattern Recognition and Consistency**\n\nIn musical harmony, notes and chords are organized into patterns that are perceived as pleasing, coherent, or dissonant. These principles can be applied to microservice behavior in the following ways:\n\n### 1. **Consistency Patterns (Like Harmonic Tones)**\n- **Concept**: A microservice should behave in a predictable way \u2014 like",
+            "Detecting anomalies in microservice logs is a critical task in modern software operations. It involves identifying unusual patterns in large volumes of data that could signal performance issues, security threats, or system errors. While logs themselves are text-based, we can apply **principles from musical harmony and fluid dynamics** to gain new insights into log patterns and detect anomalies in a more structured, creative way.\n\n---\n\n## \ud83d\udd0d Concept 1: Musical Harmony \u2013 **Pattern Recognition and Dissonance**\n\n**Musical harmony** is based on the interplay of different tones and chords. In a harmonious context, the sounds are expected and structured. When there is an unexpected sound (dissonance), it stands out and can be identified as a deviation.\n\n### Mapping Logs to Music:\n- **Logs as Musical",
+            "Detecting anomalies in microservice logs using principles from **musical harmony** or **fluid dynamics** might seem unconventional at first, but there is a powerful metaphor and analytical basis in these fields that can be applied to the problem of log anomaly detection. Here's how:\n\n---\n\n## \ud83c\udfb5 **Musical Harmony Analogy**\n\n### Key Concepts in Music and How They Relate to Logs:\n\n1. **Rhythm and Timing**  \n   - In music, rhythm is the regularity of beats, and anomalies can be seen as disruptions in rhythmic patterns.\n   - In microservices, logs often have timestamps, which can be analyzed for regularity in event timing (e.g., periodic task execution, request intervals).\n\n2. **Harmonics and Spectral Analysis**  \n   - Musical"
+          ]
+        }
+      ],
+      "strict": [
+        {
+          "id": "no_letter_e",
+          "passed": false,
+          "output": "A feline with soft fur and bright eyes moves quietly through the day. It often sits still, watching the world with calm focus."
+        },
+        {
+          "id": "exact_json",
+          "passed": true,
+          "output": "{\"status\": \"success\", \"count\": 3, \"tags\": [\"javascript\", \"python\", \"java\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "passed": true,
+          "output": "The moon's gravitational pull causes the ocean tides to rise and fall."
+        },
+        {
+          "id": "bug_mutable_default",
+          "passed": true,
+          "output": "**Bug:** The default argument `bucket=[]` is mutable and retains values between function calls, leading to unexpected behavior.\n\n**Corrected code:**\n```python\ndef add_item(item, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(item)\n    return bucket\n```"
+        },
+        {
+          "id": "bug_off_by_one",
+          "passed": true,
+          "output": "The **exact bug** in the provided binary search function is that when `arr[mid] < x`, it sets `lo = mid` instead of `lo = mid + 1`. This causes an **infinite loop** when the element is not present in the array, because the search range never shrinks properly.\n\n### 1-line fix:\n```python\nlo = mid + 1\n```\n\n### Fixed code:\n```python\ndef bsearch(arr, x):\n    lo, hi = 0, len(arr)\n    while lo < hi:\n        mid = (lo + hi) // 2\n        if arr[mid] == x: return mid\n        elif arr[mid] < x: lo = mid + 1\n        else: hi = mid"
+        },
+        {
+          "id": "clean_decoy",
+          "passed": true,
+          "output": "NO\n\nThe function does **not** have a ZeroDivisionError bug. It checks if `b == 0` and returns `0.0` in that case, preventing division by zero. However, it's worth noting that checking `b == 0` with floating-point numbers can be unreliable due to precision issues, but in this specific case, the function avoids the error."
+        },
+        {
+          "id": "bat_and_ball_variant",
+          "passed": false,
+          "output": "Let's denote the cost of the **cable** as $ x $.\n\nThen the cost of the **server** is $ x + 100 $ (since it costs $100 more than the cable).\n\nThe total cost is $110:\n\n$$\nx + (x + 100) = 110\n$$\n\nSimplify:\n\n$$\n2x + 100 = 110\n$$\n\nSubtract 100 from both sides:\n\n$$\n2x = 10\n$$\n\nDivide by 2:\n\n$$\nx = 5\n$$\n\n### Quick verification:\n- Cable = $5\n- Server = $5 + $100 = $105\n- Total ="
+        },
+        {
+          "id": "letter_count_strawberry",
+          "passed": false,
+          "output": "Let's count the exact number of times the letter **'r'** appears in the word **\"strawberries\"**.\n\n### Step-by-step breakdown:\n\n1. Start with the word: **strawberries**\n2. Break it down letter by letter: **s, t, r, a, w, b, e, r, r, i, e, s**\n3. Now look for **'r'** in each position:\n   - 1st letter: **s** \u2192 not 'r'\n   - 2nd letter: **t** \u2192 not 'r'\n   - 3rd letter: **r** \u2192 \u2705 count = 1\n   - 4th letter: **a** \u2192 not 'r'\n   - 5"
+        },
+        {
+          "id": "tricky_python_closure",
+          "passed": true,
+          "output": "The expression `[f() for f in [lambda: i for i in range(3)]]` evaluates to `[2, 2, 2]`.\n\nThis is because the lambda functions are created in a list comprehension where `i` is assigned values from `range(3)`, but due to late binding, all lambdas refer to the same variable `i` which ends up being 2. When the lambdas are called, they all return the current value of `i`, which is 2.\n\nANSWER: [2, 2, 2]"
+        },
+        {
+          "id": "reverse_constraint",
+          "passed": true,
+          "output": "- Venus orbits the Sun in a slow circular path  \n- Mars is known for its red surface and two small moons  \n- Jupiter is the largest planet in our solar system"
+        }
+      ],
+      "summary": {
+        "strict_passed": "7/10",
+        "strict_pass_rate": 0.7,
+        "div_distinct_2": 0.8309,
+        "div_distinct_3": 0.9182,
+        "div_pairwise_spread": 0.811,
+        "mean_rep_loop": 0.0039,
+        "mean_doubt_markers": 0.0
+      }
+    },
+    "temp_low_0.2": {
+      "divergent": [
+        {
+          "prompt": "Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.",
+          "rollouts": [
+            "Certainly! Redesigning a distributed database index using mechanisms from biology, physics, or acoustics can lead to innovative and efficient indexing strategies. Here are three genuinely unconventional approaches:\n\n---\n\n### 1. **Biological: Ant Colony Optimization for Dynamic Index Partitioning**\n\n**Inspiration:** Ant Colony Optimization (ACO) is a bio-inspired algorithm used in swarm intelligence to solve optimization problems, such as finding the shortest path in a graph.\n\n**Concept:**  \nIn a distributed database, data is often partitioned across multiple nodes. Traditional partitioning methods (like range or hash) can become inefficient as data distribution changes over time. ACO can be used to dynamically re-partition the index based on access patterns and data distribution.\n\n**How It Works:**\n- **Ants** represent data",
+            "Certainly! Redesigning a distributed database index with inspiration from biology, physics, or acoustics can lead to innovative and unconventional approaches that improve scalability, efficiency, and adaptability. Here are three genuinely unconventional ideas:\n\n---\n\n### 1. **Biological Inspiration: Ant Colony Optimization for Index Partitioning**\n\n**Concept:**  \nDraw from the foraging behavior of ants, which use pheromone trails to find the shortest path to food. In this context, the \"food\" is data access, and the \"pheromone trails\" are dynamic weights that guide data distribution and query routing.\n\n**Implementation:**  \n- **Dynamic Index Partitioning:** Instead of static partitioning, the database index is continuously re-partitioned based on access patterns, similar to how ants adjust their paths based",
+            "Certainly! Redesigning a distributed database index using mechanisms from biology, physics, or acoustics can lead to innovative and unconventional approaches. Here are three such ideas:\n\n---\n\n### 1. **Biological Inspiration: Ant Colony Optimization for Index Partitioning**\n\n**Concept:**  \nDraw inspiration from the foraging behavior of ants, which use pheromone trails to find the shortest path to food. In a distributed database, this can be adapted to dynamically partition and route queries across nodes.\n\n**Mechanism:**  \n- **Pheromone Trails as Query Load:** Nodes in the distributed system maintain \"pheromone\" values that represent the current load or query frequency. Nodes with higher load (more frequent queries) emit stronger \"pheromone\" signals.\n- **Query Routing via P"
+          ]
+        },
+        {
+          "prompt": "List 5 unusual, non-obvious uses for a broken microwave oven in a rural research lab or workshop.",
+          "rollouts": [
+            "Certainly! Here are five unusual and non-obvious uses for a broken microwave oven in a rural research lab or workshop:\n\n1. **Heat Source for Drying or Sterilization**  \n   Even though the microwave is broken, its internal components (like the magnetron or transformer) may still generate heat. In a rural setting, it could be repurposed as a makeshift heat source for drying materials, sterilizing small tools, or warming up chemicals in a controlled environment. Caution is needed to avoid overheating or fire hazards.\n\n2. **Electrical Power Source (with Caution)**  \n   If the microwave\u2019s power supply is still intact, it might be possible to extract and repurpose the high-voltage transformer or capacitor for use in low-voltage circuits. This could be used",
+            "Certainly! Here are **5 unusual, non-obvious uses** for a broken microwave oven in a rural research lab or workshop:\n\n---\n\n### 1. **DIY Microwave Oven Cleaner (Chemical Reactor)**\nA broken microwave can be repurposed as a **low-cost chemical reactor** for small-scale experiments. By removing the door and inner components, it can be used to heat or mix chemicals safely. It can also be used to **dehydrate samples** or **catalyze reactions** that require controlled heating.\n\n---\n\n### 2. **Microwave Oven as a Heat Source for Drying or Sterilization**\nEven without power, the **microwave cavity** can be used as a **heat retention chamber**. If the magnetron is removed, the cavity can",
+            "Certainly! Here are **5 unusual, non-obvious uses** for a **broken microwave oven** in a **rural research lab or workshop**:\n\n---\n\n### 1. **Microwave-Assisted Chemical Reactions (Non-Thermal Applications)**\nEven though the microwave is broken, its **microwave cavity** can still be used for **non-thermal applications** like **dielectric heating** or **molecular excitation**. In a rural lab, this could be useful for:\n- **Catalyst activation** (e.g., using microwaves to activate certain materials for chemical reactions).\n- **Material synthesis** (e.g., creating nanomaterials or composites using microwave energy).\n- **Sample preparation** (e.g., drying or dehydrating samples without"
+          ]
+        },
+        {
+          "prompt": "Invent a completely new traffic-intersection control algorithm inspired by a non-transportation natural phenomenon. Explain the mechanism.",
+          "rollouts": [
+            "**Algorithm Name:** *Swarm-Driven Intersection Control (SDIC)*\n\n**Inspiration:** *Ant Colony Optimization (ACO)*\n\n---\n\n### \ud83c\udf1f **Overview**\n\nThe **Swarm-Driven Intersection Control (SDIC)** algorithm is inspired by the foraging behavior of ants, particularly the **Ant Colony Optimization (ACO)** algorithm, which is a metaheuristic used in optimization problems. In nature, ants use pheromone trails to communicate the quality of paths between their nest and food sources. Inspired by this, SDIC uses a decentralized, adaptive system to manage traffic flow at intersections, dynamically adjusting signal timing based on real-time traffic conditions.\n\n---\n\n### \ud83e\udde0 **Mechanism of SDIC**\n\n#### 1. **Pheromone Trails as Traffic",
+            "**Algorithm Name:** *SwarmFlow: A Traffic-Intersection Control Algorithm Inspired by Ant Colony Optimization*\n\n---\n\n### **Inspiration: Ant Colony Optimization (ACO) in Nature**\n\nIn the natural world, ants exhibit remarkable collective intelligence when foraging for food. When an ant finds a food source, it lays down a pheromone trail on its way back to the colony. Other ants follow these trails, and the more ants that traverse a path, the stronger the pheromone becomes, reinforcing the path. Over time, the most efficient paths\u2014those with the least travel time and obstacles\u2014become the dominant routes. This behavior is the basis of **Ant Colony Optimization (ACO)**, a metaheuristic algorithm used in computer science and operations research for solving optimization problems",
+            "**Algorithm Name: \"SwarmFlow\" \u2013 Inspired by Ant Colony Optimization**\n\n---\n\n### **Inspiration: Ant Colony Optimization (ACO)**\n\n**Natural Phenomenon:**  \nThe foraging behavior of ants in a colony is a fascinating example of decentralized, self-organized behavior. Ants do not have a central authority directing them, yet they collectively find the shortest path between their nest and a food source. They accomplish this by laying down pheromone trails, which other ants follow, and reinforcing the trails with more pheromone as they travel more frequently. Over time, the most efficient paths become more prominent due to the accumulation of pheromone, while less efficient paths fade away.\n\n---\n\n### **Mechanism of SwarmFlow:**\n\n**1. Traffic Flow as"
+          ]
+        },
+        {
+          "prompt": "How could you use principles from musical harmony or fluid dynamics to detect anomalies in microservice logs?",
+          "rollouts": [
+            "Detecting anomalies in microservice logs is a complex task that involves identifying deviations from normal behavior. While microservice logs are typically analyzed using machine learning, statistical methods, or rule-based systems, we can draw inspiration from **musical harmony** and **fluid dynamics** to develop novel, metaphorical, or even hybrid approaches to anomaly detection. These principles can help us model and interpret log data in new ways.\n\n---\n\n## \ud83d\udd0a **Musical Harmony: Structure, Rhythm, and Dissonance**\n\n### 1. **Pattern Recognition as Musical Structure**\n- **Musical harmony** is built on predictable patterns (e.g., chord progressions, scales) that create a sense of order.\n- In microservices, **normal behavior** can be seen as a structured \"melody\" of",
+            "Detecting anomalies in microservice logs is a critical task in modern software engineering, especially in distributed systems where failures can be subtle and hard to trace. While microservice logs are typically analyzed using machine learning, statistical methods, or rule-based systems, we can draw inspiration from **musical harmony** and **fluid dynamics** to develop novel, metaphorical, or even literal approaches to anomaly detection.\n\n---\n\n## \ud83c\udfb5 **Musical Harmony Analogy**\n\n### 1. **Harmonic Consistency**\n- **Concept**: In music, harmony is the result of consistent, predictable relationships between notes. Dissonance or unexpected intervals indicate an anomaly.\n- **Application to Logs**:\n  - Treat log events as \"notes\" in a \"composition.\"\n  - Use **time-series analysis** to",
+            "Detecting anomalies in microservice logs is a complex task that involves identifying deviations from normal behavior. While microservice logs are typically analyzed using machine learning, statistical methods, or rule-based systems, drawing inspiration from **musical harmony** and **fluid dynamics** can offer novel and creative approaches to this problem.\n\nHere\u2019s how principles from these two domains can be applied to detect anomalies in microservice logs:\n\n---\n\n## \ud83d\udd0a **1. Musical Harmony: Patterns and Dissonance**\n\n### **Concept:**\nIn music, harmony refers to the combination of different notes that sound pleasant together. Dissonance occurs when notes clash, creating tension or an \"off\" sound. Similarly, in microservices, normal behavior can be seen as a \"harmonious\" pattern, while anomalies are like \"dis"
+          ]
+        }
+      ],
+      "strict": [
+        {
+          "id": "no_letter_e",
+          "passed": false,
+          "output": "A cat moves quietly with soft paws and bright eyes. It often sits still or plays with toys made of string or yarn."
+        },
+        {
+          "id": "exact_json",
+          "passed": true,
+          "output": "{\n  \"status\": \"success\",\n  \"count\": 3,\n  \"tags\": [\"python\", \"json\", \"data\"]\n}"
+        },
+        {
+          "id": "word_count_12",
+          "passed": true,
+          "output": "The moon's gravitational pull causes ocean tides to rise and fall regularly."
+        },
+        {
+          "id": "bug_mutable_default",
+          "passed": true,
+          "output": "**Bug:** The default argument `bucket=[]` is mutable and retains values between function calls, leading to unexpected behavior.\n\n**Corrected code:**\n```python\ndef add_item(item, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(item)\n    return bucket\n```"
+        },
+        {
+          "id": "bug_off_by_one",
+          "passed": true,
+          "output": "The bug in the given binary search implementation is that it **does not update `lo` or `hi` correctly** when the target `x` is **greater than** or **less than** the middle element. This can lead to an **infinite loop** in certain cases.\n\n### Problem:\nIn the current code:\n```python\nelif arr[mid] < x: lo = mid\nelse: hi = mid\n```\n- When `arr[mid] < x`, it sets `lo = mid`, but it should be `lo = mid + 1`.\n- When `arr[mid] > x`, it sets `hi = mid`, but it should be `hi = mid - 1`.\n\nThis causes the loop to never terminate in some cases, especially when the array is"
+        },
+        {
+          "id": "clean_decoy",
+          "passed": true,
+          "output": "NO\n\nExplanation: The function checks if `b == 0` and returns `0.0` in that case, so it does not raise a `ZeroDivisionError`. However, returning `0.0` may not always be the desired behavior, but it does prevent the error."
+        },
+        {
+          "id": "bat_and_ball_variant",
+          "passed": false,
+          "output": "Let's define:\n\n- Let the cost of the **cable** be $ x $ dollars.\n- Then the cost of the **server** is $ x + 100 $ dollars (since it's $100 more than the cable).\n\nWe are told the total cost is $110:\n\n$$\nx + (x + 100) = 110\n$$\n\nSimplify:\n\n$$\n2x + 100 = 110\n$$\n\nSubtract 100 from both sides:\n\n$$\n2x = 10\n$$\n\nDivide by 2:\n\n$$\nx = 5\n$$\n\n### Quick verification:\n- Cable = $5\n- Server = $5 + $100"
+        },
+        {
+          "id": "letter_count_strawberry",
+          "passed": false,
+          "output": "Let's count the exact number of times the letter **'r'** appears in the word **'strawberries'** by checking each letter one by one.\n\n### Step-by-step breakdown of the word **'strawberries'**:\n\n1. **s**  \n2. **t**  \n3. **r** \u2705 (1st 'r')  \n4. **a**  \n5. **w**  \n6. **b**  \n7. **e**  \n8. **r** \u2705 (2nd 'r')  \n9. **r** \u2705 (3rd 'r')  \n10. **e**  \n11. **s**  \n12. **s**  \n\n### Total count of 'r': **3**\n\n###"
+        },
+        {
+          "id": "tricky_python_closure",
+          "passed": true,
+          "output": "The expression `[f() for f in [lambda: i for i in range(3)]]` evaluates to `[2, 2, 2]`.\n\nThis is because the lambda functions are created in a list comprehension where `i` is in the range 0 to 2. However, due to late binding in Python, all the lambda functions capture the variable `i` by reference, not by value. By the time the lambdas are called, the loop has completed and `i` is 2. Therefore, all lambdas return 2.\n\nANSWER: [2, 2, 2]"
+        },
+        {
+          "id": "reverse_constraint",
+          "passed": true,
+          "output": "- Venus orbits the sun and is known for its thick atmosphere  \n- Mars is the fourth planet from the sun and has polar ice caps  \n- Jupiter is the largest planet in our solar system and has a prominent Great Red Spot"
+        }
+      ],
+      "summary": {
+        "strict_passed": "7/10",
+        "strict_pass_rate": 0.7,
+        "div_distinct_2": 0.6958,
+        "div_distinct_3": 0.7992,
+        "div_pairwise_spread": 0.6828,
+        "mean_rep_loop": 0.0057,
+        "mean_doubt_markers": 0.0
+      }
+    },
+    "random_ctrl_04": {
+      "divergent": [
+        {
+          "prompt": "Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.",
+          "rollouts": [
+            "Certainly! Redesigning a distributed database index using mechanisms from biology, physics, or acoustics can lead to innovative, adaptive, and efficient indexing strategies. Below are three genuinely unconventional ideas that borrow from these fields:\n\n---\n\n### 1. **Biological: \"Neural Network\" Indexing (Inspired by the Human Brain)**\n**Concept:**  \nDraw from the structure and function of the human brain, particularly the **neocortex** and **neural networks**, to design a **self-organizing, distributed, hierarchical index**.\n\n**Mechanism:**  \n- Each node in the distributed database maintains a **local neural index**, modeled after **neurons and synapses**.\n- Data is represented as **neural nodes** with **connection weights** that represent the relevance",
+            "Certainly! Redesigning a distributed database index using concepts from biology, physics, or acoustics can lead to innovative and efficient indexing strategies, especially in distributed systems where data is spread across multiple nodes. Below are three genuinely unconventional and creative approaches that borrow from these fields:\n\n---\n\n### 1. **Biological: \"Ant Colony Indexing\" (Inspired by Ant Colony Optimization)**\n\n**Concept:**  \nAnt Colony Optimization (ACO) is a bio-inspired algorithm used for solving combinatorial optimization problems, such as the Traveling Salesman Problem. In this approach, artificial ants explore paths and deposit pheromones, guiding future ants to find the most efficient routes.\n\n**Application to Database Indexing:**  \n- **Index Nodes as Ants:** Each data node in a distributed",
+            "Certainly! Redesigning a distributed database index with inspiration from biology, physics, or acoustics opens up a fascinating realm of unconventional approaches. Here are **three genuinely unconventional ways** to redesign a distributed database index by borrowing mechanisms from these fields:\n\n---\n\n### 1. **Biomimetic Indexing Using Neuronal Networks (Inspired by the Brain)**\n\n**Concept:**  \nInspired by the **neuroplasticity and parallel processing** of the human brain, this indexing approach models the database index as a **neural network** where nodes (database partitions) connect dynamically based on query patterns and data access frequency.\n\n**Mechanics:**\n- **Synaptic Connections:** Nodes (database shards) form **synaptic-like connections** that strengthen over time based on query"
+          ]
+        },
+        {
+          "prompt": "List 5 unusual, non-obvious uses for a broken microwave oven in a rural research lab or workshop.",
+          "rollouts": [
+            "Certainly! A broken microwave oven might seem like a useless object, but in a rural research lab or workshop, it can be repurposed in creative and functional ways. Here are 5 unusual, non-obvious uses for a broken microwave oven:\n\n---\n\n### 1. **DIY Solar Oven or Heat Collector**\n- **Use**: The microwave\u2019s cavity can be used as a heat collector, especially when combined with a solar panel or reflective material.\n- **How**: Line the interior with reflective material (like aluminum foil) and attach it to a frame. Use the microwave\u2019s cavity to trap and concentrate sunlight, which can be used for small-scale heating, sterilization, or even cooking in a solar oven setup.\n- **Application**: Useful for small-scale sterilization, drying herbs, or",
+            "Certainly! While a broken microwave oven is not a conventional lab tool, it can be repurposed in creative and unconventional ways in a rural research lab or workshop. Here are five unusual, non-obvious uses for a broken microwave:\n\n---\n\n### 1. **DIY 3D Printer Enclosure / Heat Management System**\n- **Use:** The microwave\u2019s metal casing can be used as a heat-dissipating enclosure for a 3D printer or other heat-sensitive electronics.\n- **Why It Works:** The metal shell is sturdy, insulated, and can be modified to allow airflow or venting. It can help regulate temperature or provide a protective barrier for sensitive components.\n- **Bonus:** The microwave\u2019s door can be repurposed as a cover or access panel.\n\n---\n\n###",
+            "Certainly! A broken microwave oven, while no longer functional for its intended purpose, can still be creatively repurposed in a rural research lab or workshop. Here are five unusual, non-obvious uses:\n\n---\n\n### 1. **DIY 3D Printer Enclosure**\nA microwave oven can be repurposed as a housing unit for a 3D printer, especially in environments where temperature control is needed. The microwave's insulated walls can help maintain a stable internal temperature, reducing the risk of warping or melting of printed materials. It can also provide a clean, enclosed space to protect the printer from dust and environmental contaminants.\n\n---\n\n### 2. **Thermal Insulation Box for Temperature-Sensitive Samples**\nThe microwave's outer shell, which is made of thick, insulated materials,"
+          ]
+        },
+        {
+          "prompt": "Invent a completely new traffic-intersection control algorithm inspired by a non-transportation natural phenomenon. Explain the mechanism.",
+          "rollouts": [
+            "**Algorithm Name: \"Swarm-Flow Control Algorithm (SFCA)\"**\n\n**Inspiration:**\nThe *Swarm-Flow Control Algorithm* (SFCA) is inspired by the collective foraging behavior of ants in a natural ecosystem. Ants do not have centralized control or pre-programmed routes; instead, they rely on a decentralized, self-organizing system to find the most efficient paths to food sources. This behavior is driven by the release of pheromones, which guide the movement of other ants and allow the colony to adapt dynamically to changes in the environment.\n\n---\n\n### **Mechanism of SFCA**\n\n#### **1. Conceptual Overview**\nThe SFCA mimics the ant foraging process to manage traffic flow at intersections. Instead of fixed traffic lights or predefined rules",
+            "**Algorithm Name: \"SwarmFlow\" \u2013 Inspired by Ant Foraging Behavior**\n\n---\n\n### **Overview**\n\n**SwarmFlow** is a novel traffic-intersection control algorithm inspired by the decentralized foraging behavior of ants. Instead of relying on traditional traffic lights or fixed rules, this algorithm mimics the way ants collectively optimize their pathfinding through a dynamic, decentralized system. It is designed to manage the flow of vehicles at intersections in real time, adapting to changing traffic conditions without centralized control.\n\n---\n\n### **Biological Inspiration: Ant Foraging Behavior**\n\nAnts do not possess a centralized \"brain\" or traffic control system. Instead, they rely on a **stigmergic** mechanism\u2014where ants communicate indirectly through environmental cues (e.g., pheromone trails) to guide",
+            "**Algorithm Name: \"Swarm-Adaptive Traffic Intersection Control\" (SATIC)**\n\n**Inspiration:**\nThe SATIC algorithm is inspired by the **swarming behavior of ants** \u2014 particularly their ability to navigate, find the shortest path, and dynamically adapt to environmental changes in complex, multi-agent systems. Ants use a combination of **pheromone trails** and **local sensing** to guide their movement and optimize foraging paths. This natural phenomenon offers a powerful model for decentralized, adaptive, and efficient traffic control.\n\n---\n\n## **Mechanism of SATIC:**\n\n### **1. Conceptual Framework**\nSATIC treats the traffic intersection as a **swarm environment**, where vehicles are analogous to ants and the intersection is the \"food source.\" The goal is to optimize traffic"
+          ]
+        },
+        {
+          "prompt": "How could you use principles from musical harmony or fluid dynamics to detect anomalies in microservice logs?",
+          "rollouts": [
+            "Detecting anomalies in microservice logs using principles from **musical harmony** or **fluid dynamics** is an unconventional but intriguing approach. These domains, though seemingly unrelated to software logs, offer powerful metaphors and mathematical frameworks that can be creatively applied to identify patterns, inconsistencies, or deviations in log data.\n\n---\n\n## \ud83c\udfb5 **Musical Harmony: Patterns and Dissonance in Logs**\n\nIn music, harmony is the combination of simultaneously sounded musical notes to produce chords and chords progressions that are perceived as consonant or dissonant. Similarly, in logs, patterns (like normal behavior) can be considered as \"consonant\" and anomalies as \"dissonant.\"\n\n### How to Apply Musical Harmony Principles:\n\n1. **Pattern Recognition (Consonance):**\n   - Model normal",
+            "Detecting anomalies in microservice logs is a critical task for maintaining system reliability and performance in distributed systems. While it might seem unconventional, you can draw interesting parallels between **musical harmony** and **fluid dynamics** to develop innovative anomaly detection methods. These analogies can inspire new ways of modeling, analyzing, and interpreting log data.\n\n---\n\n## \ud83d\udd0d 1. **Musical Harmony: Structural Patterns and Dissonance**\n\nIn music, harmony is about the interplay of notes and chords that create a pleasing or structured sound. Dissonance, on the other hand, is when the notes clash and create tension \u2014 an anomaly in the musical context.\n\n### Application to Microservice Logs:\n- **Patterns as Chords**: Each microservice can be considered a \"note\" or a \"voice",
+            "Detecting anomalies in microservice logs is a common challenge in distributed systems, especially as systems grow in complexity and scale. While traditional approaches rely on pattern recognition, statistical analysis, or rule-based detection, **musical harmony** and **fluid dynamics** offer some intriguing, metaphorical, and potentially useful perspectives for understanding and detecting anomalies in log data.\n\nBelow is a conceptual exploration of how these two fields could be applied to anomaly detection in microservice logs:\n\n---\n\n## \ud83d\udd0a **1. Musical Harmony: A Metaphor for System Behavior**\n\n### a. **Harmony as Consistency**\nIn music, harmony refers to the pleasing combination of sounds. In a system, harmony could be seen as the consistent and expected behavior of microservices \u2014 i.e., predictable interactions, consistent response times, and"
+          ]
+        }
+      ],
+      "strict": [
+        {
+          "id": "no_letter_e",
+          "passed": false,
+          "output": "A cat moves quietly with a soft purr, often curling up in a warm spot. Its eyes glow in the dark, showing a calm and curious nature."
+        },
+        {
+          "id": "exact_json",
+          "passed": true,
+          "output": "{\n  \"status\": \"success\",\n  \"count\": 3,\n  \"tags\": [\"python\", \"json\", \"data\"]\n}"
+        },
+        {
+          "id": "word_count_12",
+          "passed": true,
+          "output": "The moon's gravity pulls ocean waters, creating rhythmic tides along the shore."
+        },
+        {
+          "id": "bug_mutable_default",
+          "passed": true,
+          "output": "**Bug:**  \nThe default argument `bucket=[]` is mutable, so it retains previous values across function calls, leading to unexpected behavior.\n\n**Corrected code:**\n```python\ndef add_item(item, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(item)\n    return bucket\n```"
+        },
+        {
+          "id": "bug_off_by_one",
+          "passed": true,
+          "output": "The provided binary search function has a **bug that can cause an infinite loop**.\n\n### Bug Explanation:\n\nThe issue lies in how the `lo` and `hi` boundaries are updated:\n\n```python\nelif arr[mid] < x: lo = mid\nelse: hi = mid\n```\n\nThis is incorrect. In a standard binary search, when `arr[mid] < x`, you should move `lo` to `mid + 1`, not just `mid`. Similarly, when `arr[mid] > x`, you should move `hi` to `mid - 1`, not just `mid`.\n\nBy only setting `lo = mid` or `hi = mid`, you are not excluding the current `mid` from the search space, which can cause the loop to never terminate"
+        },
+        {
+          "id": "clean_decoy",
+          "passed": true,
+          "output": "NO\n\nExplanation: The function `safe_div` does **not** have a `ZeroDivisionError` bug because it explicitly checks if `b == 0` and returns `0.0` in that case, preventing division by zero."
+        },
+        {
+          "id": "bat_and_ball_variant",
+          "passed": false,
+          "output": "Let\u2019s solve this step by step.\n\nLet the cost of the **cable** be $ x $.\n\nThen the cost of the **server** is $ x + 100 $ (since it costs $100 more than the cable).\n\nThe total cost is $110, so we can write the equation:\n\n$$\nx + (x + 100) = 110\n$$\n\nSimplify:\n\n$$\n2x + 100 = 110\n$$\n\nSubtract 100 from both sides:\n\n$$\n2x = 10\n$$\n\nDivide by 2:\n\n$$\nx = 5\n$$\n\n### Quick verification:\n- Cable = $5  \n- Server = $5 +"
+        },
+        {
+          "id": "letter_count_strawberry",
+          "passed": false,
+          "output": "Let's count the number of times the letter **'r'** appears in the word **'strawberries'** by checking each letter one by one:\n\n1. **s** \u2013 not 'r'\n2. **t** \u2013 not 'r'\n3. **r** \u2013 **1**\n4. **a** \u2013 not 'r'\n5. **w** \u2013 not 'r'\n6. **b** \u2013 not 'r'\n7. **e** \u2013 not 'r'\n8. **r** \u2013 **2**\n9. **e** \u2013 not 'r'\n10. **s** \u2013 not 'r'\n11. **s** \u2013 not 'r'\n1,2,3,4,5,6,7,8,9"
+        },
+        {
+          "id": "tricky_python_closure",
+          "passed": false,
+          "output": "The expression `[f() for f in [lambda: i for i in range(3)]]` evaluates to `[0, 1, 2]`.\n\nExplanation:  \nEach lambda function in the list `[lambda: i for i in range(3)]` captures the current value of `i` from the loop. However, due to late binding in Python, all lambdas reference the same `i` variable, which ends up being 2 after the loop completes. But when the list comprehension is evaluated, each lambda is called in sequence, and at the time of calling, `i` has already been updated. So the result is `[0, 1, 2]`.\n\nANSWER: [0, 1, 2]"
+        },
+        {
+          "id": "reverse_constraint",
+          "passed": true,
+          "output": "- Venus spins slowly on its axis  \n- Mars has a reddish appearance  \n- Jupiter is the largest planet in the solar system"
+        }
+      ],
+      "summary": {
+        "strict_passed": "6/10",
+        "strict_pass_rate": 0.6,
+        "div_distinct_2": 0.7711,
+        "div_distinct_3": 0.8872,
+        "div_pairwise_spread": 0.7668,
+        "mean_rep_loop": 0.0083,
+        "mean_doubt_markers": 0.0
+      }
+    },
+    "adhd_015": {
+      "divergent": [
+        {
+          "prompt": "Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.",
+          "rollouts": [
+            "Absolutely! Redesigning a distributed database index with inspiration from **biology, physics, or acoustics** opens up fascinating new avenues for **scalability, adaptability, and efficiency**. Here are **three genuinely unconventional ways** to rethink distributed indexing through these lenses:\n\n---\n\n### 1. **Biological: Neural Network-Inspired Indexing (NeuroIndex)**\n\n**Concept**: Borrow from **neural networks** in the brain, where **synapses** adapt to **patterns of activity** and **memory is distributed** across **multiple neurons**.\n\n**Mechanism**:\n- **Distributed Memory Nodes**: Each node in the database acts like a **neuron**, storing a **part of a key-value pair** rather than the full record.\n- **Adaptive Syn",
+            "Absolutely! Redesigning a distributed database index using concepts from **biology, physics, or acoustics** can lead to truly unconventional and potentially groundbreaking ideas. Here are **three genuinely unconventional proposals**, each drawing from a different domain:\n\n---\n\n### 1. **Index Design Inspired by ****Neural Networks in the Brain (Biology)**\n\n**Concept: \"Synaptic Indexing\"**\n\n**Mechanism:**\n- Borrowing from the **plasticity and adaptability** of **neural networks**, we could design a **distributed index that learns and evolves** based on query patterns and data access frequency.\n- Each **data node** is like a **neuron**, and **queries** are like **stimuli** that **strengthen or weaken synaptic connections** (i.e",
+            "Absolutely! Redesigning a distributed database index with inspiration from biology, physics, or acoustics opens up fascinating possibilities for innovation. Here are **3 genuinely unconventional ways** to rethink index design through interdisciplinary lenses:\n\n---\n\n### 1. **Bio-Inspired Indexing: \"Neural Synapse Mapping\" (From Biology)**\n\n**Concept:**  \nDraw inspiration from the **neural network** structure of the brain, specifically the **synaptic pruning** and **neuroplasticity** processes. In the brain, synapses are dynamically reconfigured based on usage frequency and pattern.\n\n**Implementation:**  \n- **Index Structure:** Create a **hierarchical, dynamic index** that mimics the **neural tree** \u2014 nodes (data points) are connected via **synaptic links"
+          ]
+        },
+        {
+          "prompt": "List 5 unusual, non-obvious uses for a broken microwave oven in a rural research lab or workshop.",
+          "rollouts": [
+            "Certainly! Here are **5 unusual, non-obvious uses for a broken microwave oven** in a **rural research lab or workshop**\u2014each leveraging the microwave's unique properties in unexpected ways:\n\n---\n\n### 1. **Thermal Imaging for Material Analysis**\nA broken microwave can be repurposed as a **thermal imaging tool**. The microwave's internal cavity can be modified to detect heat signatures in materials. By introducing a small, controlled energy source (like a heated resistor), the cavity can act as a **thermal scanner**, helping identify conductive or insulating materials, or even detect hidden damage in structures.\n\n---\n\n### 2. **Microwave Dielectric Spectroscopy Setup**\nThe microwave cavity can be used to perform **dielectric spectroscopy** on materials. By measuring how",
+            "Certainly! A broken microwave oven, while seemingly useless, can be repurposed in creative and practical ways in a rural research lab or workshop. Here are five unusual, non-obvious uses:\n\n---\n\n### 1. **Microwave Oven as a Heat Source for Drying or Sterilizing Small Items**\n- **Use:** A microwave oven, even if broken, can still generate heat. If the magnetron is functional, it can be used to dry small electronics components, delicate materials, or even sterilize small tools or instruments.\n- **How:** Use the microwave\u2019s residual heat or, if the magnetron is still working, carefully set it to low power for controlled drying or sterilization.\n\n---\n\n### 2. **Microwave Oven as a Metal Detector for Mining or Soil Analysis**",
+            "Certainly! A broken microwave oven, while no longer functional as a kitchen appliance, can be repurposed in creative and unexpected ways in a rural research lab or workshop. Here are 5 unusual, non-obvious uses:\n\n---\n\n### 1. **Microwave Oven as a Thermal Imaging Camera Housing**\nA microwave oven's cavity can be used to build or adapt a **thermal imaging camera housing**. The microwave's metal enclosure can act as a shield for sensitive thermal sensors, protecting them from ambient electromagnetic interference. The oven\u2019s structure can be modified to fit a thermal camera or sensor array, offering a low-cost, rugged housing for thermal monitoring in environmental or agricultural research.\n\n---\n\n### 2. **Microwave Oven as a Radiation Shield for Electronics**\nThe metal cavity of a microwave oven is an"
+          ]
+        },
+        {
+          "prompt": "Invent a completely new traffic-intersection control algorithm inspired by a non-transportation natural phenomenon. Explain the mechanism.",
+          "rollouts": [
+            "**Algorithm Name: \"Flocking Flow Control\" (FlockFlow)**  \n**Inspiration: School of Fish (Collective Animal Behavior)**\n\n---\n\n### \ud83c\udf0a **Concept Overview**\n\n**FlockFlow** is a novel traffic-intersection control algorithm inspired by the **collective behavior of schooling fish**. In nature, fish in a school move in coordinated patterns, adjusting their direction and speed based on local interactions with nearby individuals\u2014without centralized control. This decentralized, adaptive behavior results in efficient, collision-free motion.\n\nFlockFlow applies this principle to traffic intersections, enabling autonomous vehicles (AVs) or traffic agents to navigate intersections with minimal delay, high safety, and low computational overhead.\n\n---\n\n### \ud83e\udde0 **Mechanism: Local Interaction Rules**\n\nFlockFlow operates on **",
+            "**Algorithm Name:** **SwarmFlow: A Traffic-Intersection Control Algorithm Inspired by Ant Colony Optimization**\n\n---\n\n**Inspiration:**  \nThe algorithm is inspired by the **foraging behavior of ants**, particularly their ability to **navigate complex environments using pheromone trails**. Ants leave a chemical trail (pheromone) as they travel, and other ants follow these trails, reinforcing them when they find food. Over time, the most efficient paths become more prominent due to the **positive feedback loop** of pheromone deposition and decay.\n\n---\n\n### **Mechanism Overview:**\n\n**SwarmFlow** is a **self-organizing, decentralized algorithm** that uses a **pheromone-based feedback system** to dynamically control traffic flow at intersections. Instead of fixed traffic lights",
+            "**Algorithm Name:** *Swarm-Flow Coordination (SFC)*  \n**Inspiration:** *Ant Colony Optimization (ACO) in Termite Nest Foraging Behavior*\n\n---\n\n### \ud83c\udf31 **Conceptual Origin: Termite Nest Foraging**\n\nIn the natural world, **termites** exhibit fascinating collective behavior when foraging for food. While not as well-known as ants in terms of organized labor, termites display **stochastic yet efficient** coordination in their foraging activities. They don\u2019t use a centralized control system, but rather **local interaction rules** that result in **emergent global patterns**. Termites leave **chemical trails** (called **pheromones**) that guide other termites to food sources, and these trails **evaporate over time**,"
+          ]
+        },
+        {
+          "prompt": "How could you use principles from musical harmony or fluid dynamics to detect anomalies in microservice logs?",
+          "rollouts": [
+            "Detecting anomalies in microservice logs using principles from **musical harmony** or **fluid dynamics** is a creative and interdisciplinary approach. These fields, though seemingly unrelated to software systems, offer rich metaphors and mathematical models that can be applied to analyze patterns in log data.\n\n---\n\n## \ud83d\udd0a **Musical Harmony and Anomaly Detection**\n\n### \ud83c\udfb6 **Musical Metaphors in Data**\n\n1. **Harmony as Consistency**  \n   In music, harmony arises from the consistent relationships between notes. Similarly, in microservices, **consistent patterns** in log data (e.g., request rates, error frequencies, latency distributions) reflect a healthy system. Anomalies would be like **discordant notes**\u2014unexpected deviations from the expected harmonic structure.\n\n2. **Harmonic",
+            "Detecting anomalies in microservice logs using principles from **musical harmony** and **fluid dynamics** is an unconventional but fascinating interdisciplinary approach. These principles, though originating from vastly different domains, share commonalities in **pattern recognition**, **system behavior**, and **dynamic interactions**. Here's how you could use these principles to model and detect anomalies in microservice logs:\n\n---\n\n## \ud83d\udd0a **Musical Harmony as a Metaphor for Log Patterns**\n\n### \ud83c\udfb6 **Harmonic Structure in Log Sequences**\n- **Microservices logs** are sequences of events, much like musical notes in a composition.\n- **Harmonic patterns** emerge from regular intervals, rhythm, and flow \u2014 just like logs with consistent service calls, error rates, or latency.\n- **Anomalies**",
+            "Detecting anomalies in microservice logs is a complex task, involving both the structure of the data and the behavior of the system. Principles from **musical harmony** and **fluid dynamics** offer intriguing metaphors and models that can be adapted to help detect anomalies in this domain.\n\n---\n\n## \ud83c\udfb6 **Musical Harmony: Structure and Dissonance in Logs**\n\n### 1. **Harmonic Structure in Logs**\nJust as a musical piece has a structure\u2014melody, rhythm, harmony\u2014microservice logs also have patterns:\n- **Logs as notes**: Each log entry could be a \"note\" in a system's \"symphony\".\n- **Patterns as motifs**: Repeated log entries (e.g., \"error 404\") are like motifs in a song.\n-"
+          ]
+        }
+      ],
+      "strict": [
+        {
+          "id": "no_letter_e",
+          "passed": false,
+          "output": "A cat has soft fur and moves quietly. It often sits still and watches with bright eyes."
+        },
+        {
+          "id": "exact_json",
+          "passed": true,
+          "output": "{\"status\": \"success\", \"count\": 3, \"tags\": [\"technology\", \"ai\", \"innovation\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "passed": false,
+          "output": "The moon's gravity causes ocean tides to rise and fall twice each day."
+        },
+        {
+          "id": "bug_mutable_default",
+          "passed": true,
+          "output": "**Bug 1:** The default argument `bucket=[]` is mutable, leading to unexpected persistent state across function calls.  \n**Bug 2:** The function inadvertently shares the same list across all calls, causing data leakage.\n\n**Corrected code:**\n```python\ndef add_item(item, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(item)\n    return bucket\n```"
+        },
+        {
+          "id": "bug_off_by_one",
+          "passed": true,
+          "output": "The bug in the given binary search implementation is **infinite loop** when the array contains **duplicate elements** or **when the search value is not present**.\n\n### Exact Bug:\nThe line `lo = mid` when `arr[mid] < x` is incorrect. It should be `lo = mid + 1`.\n\n### Why it's a bug:\n- In the current implementation, when `arr[mid] < x`, the code sets `lo = mid`, which **doesn't exclude the mid element** from the search space. This can lead to an **infinite loop** when the array has duplicates or when the value is not present.\n\n### 1-line Fix:\n```python\nlo = mid + 1\n```\n\n### Corrected Code:\n```python\ndef b"
+        },
+        {
+          "id": "clean_decoy",
+          "passed": true,
+          "output": "NO\n\nThe function does **not** have a ZeroDivisionError bug. It explicitly checks if `b == 0` and returns `0.0` in that case, preventing division by zero. However, it's worth noting that checking `b == 0` with floating-point numbers can be unreliable due to precision issues, but in this specific case, the function avoids the error."
+        },
+        {
+          "id": "bat_and_ball_variant",
+          "passed": false,
+          "output": "Let's define the cost of the **cable** as **$ x $**.\n\nThen the **server** costs **$ x + 100 $** (since it's $100 more than the cable).\n\nThe total cost is:\n\n$$\nx + (x + 100) = 110\n$$\n\nSimplify:\n\n$$\n2x + 100 = 110\n$$\n\nSubtract 100 from both sides:\n\n$$\n2x = 10\n$$\n\nDivide by 2:\n\n$$\nx = 5\n$$\n\n**Quick verification:**\n\n- Cable = $5  \n- Server = $5 + $100 = $105  \n- Total = $5"
+        },
+        {
+          "id": "letter_count_strawberry",
+          "passed": false,
+          "output": "Let's count the exact number of times the letter **'r'** appears in the word **'strawberries'** by checking each letter one by one.\n\n---\n\n### Step-by-step check:\n\n**Word:** s t r a w b e r r i e s\n\nNow, go through each letter and look for **'r'**:\n\n1. **s** \u2013 not 'r'\n2. **t** \u2013 not 'r'\n3. **r** \u2013 \u2705 **1**\n4. **a** \u2013 not 'r'\n5. **w** \u2013 not 'r'\n6. **b** \u2013 not 'r'\n7. **e** \u2013 not 'r'\n8. **r** \u2013 \u2705 **2**\n9. **r** \u2013"
+        },
+        {
+          "id": "tricky_python_closure",
+          "passed": true,
+          "output": "The expression `[f() for f in [lambda: i for i in range(3)]]` evaluates to `[2, 2, 2]`.\n\nThis happens because the lambda functions are created in a list comprehension where `i` is captured by reference, not by value. All the lambdas end up referencing the same `i`, which by the time they are called, has the value `2` (the last value in the range).\n\nANSWER: [2, 2, 2]"
+        },
+        {
+          "id": "reverse_constraint",
+          "passed": true,
+          "output": "- Venus spins backward  \n- Jupiter has a Great Red Spot  \n- Saturn rings are made of ice and rock"
+        }
+      ],
+      "summary": {
+        "strict_passed": "6/10",
+        "strict_pass_rate": 0.6,
+        "div_distinct_2": 0.7881,
+        "div_distinct_3": 0.8897,
+        "div_pairwise_spread": 0.7573,
+        "mean_rep_loop": 0.0047,
+        "mean_doubt_markers": 0.0
+      }
+    },
+    "adhd_030": {
+      "divergent": [
+        {
+          "prompt": "Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.",
+          "rollouts": [
+            "Absolutely! Redesigning a distributed database index using mechanisms from biology, physics, or acoustics is a fascinating interdisciplinary approach. Here are **three genuinely unconventional ways** to redesign a distributed database index, drawing inspiration from **biology, physics, and acoustics**:\n\n---\n\n### 1. **Biology-Inspired: **Index as a **Neural Network** \u2014 **Synaptic Plasticity in Distributed Storage**\n\n**Concept:**  \nInspired by **neural networks in the brain**, where **synaptic plasticity** allows neurons to strengthen or weaken connections based on activity, a **distributed database index** could use **dynamic storage allocation** based on query frequency.\n\n**Mechanism:**  \n- **Nodes act as neurons** \u2014 each node stores **query patterns** like **mem",
+            "Absolutely! Redesigning a distributed database index using unconventional mechanisms from biology, physics, or acoustics opens up fascinating possibilities for innovation. Here are **three genuinely unconventional ways** to redesign a distributed database index by borrowing from **biology, physics, and acoustics**, respectively:\n\n---\n\n### **1. Biology: Redesigning Indexes Using Principles from Neural Networks (Biology)**\n\n**Mechanism Borrowed:** **Neural plasticity and decentralized memory in the brain**\n\n**Concept:**  \nThe human brain is a distributed memory system, with **neural plasticity** allowing for **decentralized, self-organizing, and adaptive indexing**. Rather than rigid, pre-defined indexes, we could design a database index that **self-organizes** based on usage patterns,",
+            "Absolutely! Redesigning a distributed database index using mechanisms from **biology, physics, or acoustics** is a fascinating and unconventional approach. Here are **three genuinely unconventional ideas**, each drawing inspiration from a different field:\n\n---\n\n### 1. **Bio-Inspired Index Redesign: The **Neural Network Index (NNI)** \u2014 Borrowing from **Biology (Neuroscience)**\n\n**Concept:**  \nRedesign a distributed database index by borrowing the **principles of neural networks**, specifically **synaptic plasticity** and **neuro-distributed memory**.\n\n**Mechanism:**  \n- **Synaptic Plasticity:** Database indexes would adapt over time based on query patterns, similar to how neurons strengthen connections based on repeated signals.\n- **Distributed Memory:** Index"
+          ]
+        },
+        {
+          "prompt": "List 5 unusual, non-obvious uses for a broken microwave oven in a rural research lab or workshop.",
+          "rollouts": [
+            "Sure! Here are 5 unusual, non-obvious uses for a broken microwave oven in a rural research lab or workshop:\n\n---\n\n**1. Microwave-Induced Thermal Therapy for Plant Research**\n\nA broken microwave can be repurposed as a **thermal therapy tool** for **plant research**. By carefully controlling the microwave's residual heat, researchers can **simulate environmental stress** on plants \u2014 such as **drought or heatwaves** \u2014 to study **adaptive responses** in **rural agricultural systems**. The microwave's non-uniform heating patterns can mimic natural stress conditions, useful for **bioengineering** or **ecological resilience studies**.\n\n---\n\n**2. Microwave-Based Particle Accelerator for Dust Analysis**\n\nIn a rural workshop, a broken microwave can be **repurposed into a",
+            "Sure! Here are five unusual, non-obvious uses for a broken microwave oven in a rural research lab or workshop:\n\n---\n\n**1. ** **Microwave Oven as a ** **Low-Cost ** **Particle Accelerator for ** **Dust or ** **Powder ** **Analysis**  \nA broken microwave can be repurposed as a **low-energy particle accelerator** for **dust or powder analysis**. By using the microwave's resonant cavity, researchers can **vaporize or ionize** **tiny particles** for **spectroscopic or ** **chemical analysis**. This is particularly useful in **rural settings** where **powdered materials** are common in **agricultural or ** **mineral research**.\n\n---\n\n**2. ** **Microwave",
+            "Certainly! A broken microwave oven, while seemingly useless, can be repurposed in unexpected and non-trivial ways, especially in a rural research lab or workshop where resourcefulness is key. Here are five unusual, non-obvious uses:\n\n---\n\n**1. ** **Thermo-Visual Imaging Tool (Heat Mapping)**  \nA microwave oven can be used as a **thermal imaging device** by focusing its internal magnetron (if still functional) to **generate heat patterns**. In a rural lab, this could be used for **non-contact temperature mapping** of materials or biological samples. The microwave's electromagnetic field can induce **localized heating**, creating **thermal signatures** that can be captured using a **camera or sensor array**.\n\n---\n\n**2. ** **Microwave-Driven Particle Accelerator"
+          ]
+        },
+        {
+          "prompt": "Invent a completely new traffic-intersection control algorithm inspired by a non-transportation natural phenomenon. Explain the mechanism.",
+          "rollouts": [
+            "**Algorithm Title: \"Swarm-Flow: Inspired by Ant Colony Optimization in Traffic Control\"**\n\n---\n\n### \ud83c\udf1f **Conceptual Inspiration: Ant Colony Optimization (ACO) in Nature**\n\nIn the natural world, ants exhibit remarkably efficient collective behavior when foraging for food. They leave pheromone trails that guide other ants, creating a dynamic feedback system that optimizes paths in real-time. This phenomenon, known as **Ant Colony Optimization (ACO)**, is a powerful metaphor for decentralized, adaptive control systems.\n\n---\n\n### \ud83e\udde0 **Mechanism of the Algorithm: Swarm-Flow**\n\n**Swarm-Flow** is a **completely new traffic-intersection control algorithm** inspired by the **pheromone-guided path selection of ants**. It operates at a",
+            "**Algorithm Name: \"SwarmFlow: Traffic Control Inspired by Ant Colony Optimization in Nature\"**\n\n---\n\n### **Inspiration: Ant Colony Optimization (ACO) in Nature**\n\nIn the natural world, **ants** exhibit remarkable **traffic control** at **intersection points**. When a colony of ants forages for food, they navigate complex terrain, including intersections, by **leaving pheromone trails**. These trails **evaporate over time**, but **stronger trails persist**, guiding more ants. At **intersection points**, ants **choose paths based on pheromone concentration**, **evaporation**, and **exploration**. This behavior is **self-organized**, **adaptive**, and **resilient to disruptions**.\n\n---\n\n### **Mechanism of SwarmFlow",
+            "**Algorithm Name: \"Swarm-Flow Intersection Control (SFIC)\"**\n\n**Inspired by: The Collective Behavior of Fire Ants in Foraging**\n\n---\n\n**Mechanism Overview:**\n\nIn the natural world, fire ants exhibit fascinating collective behavior when foraging for food. Despite individual ants being simple and blind, they coordinate to form bridges, rafts, and pathways that allow the colony to navigate complex environments. This behavior is driven by **local interaction rules** and **emergent global patterns**. \n\nInspired by this, the **Swarm-Flow Intersection Control (SFIC)** algorithm mimics the way fire ants dynamically adapt their foraging paths in response to traffic (food sources) and obstacles (other ants). \n\n---\n\n**SFIC Algorithm Mechanism:**\n\nAt a"
+          ]
+        },
+        {
+          "prompt": "How could you use principles from musical harmony or fluid dynamics to detect anomalies in microservice logs?",
+          "rollouts": [
+            "This is a fascinating and interdisciplinary question\u2014using principles from **musical harmony** and **fluid dynamics** to detect **anomalies in microservice logs**. At first glance, these seem like disparate domains, but they share underlying **patterns of structure, flow, and resonance**, which can be useful in analyzing **system behavior**.\n\n---\n\n## \ud83d\udd0d **1. Musical Harmony: Patterns, Resonance, and Dissonance**\n\n### \ud83c\udfb6 **Principles from Musical Harmony:**\n- **Resonance**: A system in harmony resonates with its expected patterns.\n- **Dissonance**: An anomaly is like an unexpected note in a melody.\n- **Harmonic structure**: Logs have expected patterns (like a melody), and anomalies break that structure.\n- **R",
+            "Detecting anomalies in microservice logs using principles from **musical harmony** or **fluid dynamics** is an intriguing and metaphorical approach, but it can yield useful analogies and frameworks for **pattern recognition** and **system health monitoring**. Let\u2019s break this down into two parts: **musical harmony** and **fluid dynamics**, and then see how they might be used to detect anomalies in microservice logs.\n\n---\n\n## \ud83d\udd0a Part 1: Musical Harmony \u2013 Pattern Recognition in Logs\n\nIn musical harmony, **anomalies are dissonant notes** in a composition. A system in harmony has predictable patterns; an anomaly is a **deviation** from that.\n\n### \ud83c\udfb6 Metaphorical Mapping:\n- **Microservices as instruments**: Each microservice is a musical instrument",
+            "Detecting anomalies in microservice logs using principles from **musical harmony** and **fluid dynamics** is an unconventional but fascinating interdisciplinary approach. While these domains seem unrelated at first glance, they share abstract patterns of **structure**, **flow**, and **dissonance** that could be useful in identifying irregularities in data.\n\n---\n\n## \ud83c\udfb6 **Musical Harmony: Dissonance as Anomaly**\n\n### **1. Pattern Recognition in Logs**\nMicroservice logs are like a **symphony of data**\u2014each log entry is a note, and the overall system is a composition. A **harmonious system** would have predictable patterns, while **anomalies** would be **dissonant notes**.\n\n- **Harmonic principles**:\n  - **Consonance**"
+          ]
+        }
+      ],
+      "strict": [
+        {
+          "id": "no_letter_e",
+          "passed": false,
+          "output": "A cat is a small animal with soft fur and curious eyes. It likes to play and often follows people around."
+        },
+        {
+          "id": "exact_json",
+          "passed": true,
+          "output": "{\"status\":\"ok\",\"count\":3,\"tags\":[\"nature\",\"travel\",\"photography\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "passed": false,
+          "output": "Ocean tides rise and fall with the gentle pull of the moon's gravity."
+        },
+        {
+          "id": "bug_mutable_default",
+          "passed": true,
+          "output": "**Exact bug:**  \nThe default `bucket=[]` is reused across calls, causing persistent items to accumulate.\n\n**Corrected code:**  \n```python\ndef add_item(item, bucket=None):\n    bucket = bucket or []\n    bucket.append(item)\n    return bucket\n```"
+        },
+        {
+          "id": "bug_off_by_one",
+          "passed": false,
+          "output": "Let's inspect the binary search code:\n\n```python\ndef bsearch(arr, x):\n    lo, hi = 0, len(arr)\n    while lo < hi:\n        mid = (lo + hi) // 2\n        if arr[mid] == x: return mid\n        elif arr[mid] < x: lo = mid\n        else: hi = mid\n    return -1\n```\n\n### **Bug Analysis:**\n\nThis binary search is **not working correctly** and can **cause an infinite loop** in certain cases.\n\n### **What's the problem?**\n\nThe issue lies in **how the `lo` and `hi` boundaries are updated**.\n\nIn a **correct binary search**, when `arr[mid] < x`, you should **set `lo ="
+        },
+        {
+          "id": "clean_decoy",
+          "passed": true,
+          "output": "NO\n\nThe function does **not** have a ZeroDivisionError bug. It explicitly checks if `b == 0` and returns `0.0` in that case, preventing division by zero. However, it's worth noting that checking `b == 0` for floating-point numbers can be unreliable due to precision issues, but in this specific case, the bug is avoided."
+        },
+        {
+          "id": "bat_and_ball_variant",
+          "passed": true,
+          "output": "Let's solve the problem step by step.\n\n---\n\n**Let the cost of the cable be** $ X $.\n\nThen the server costs $ X + 100 $.\n\n**Total cost is** $ X + (X + 100) = 110 $\n\nSo:\n\n$$\n2X + 100 = 110\n$$\n\n$$\n2X = 10\n$$\n\n$$\nX = 5\n$$\n\n---\n\n**Quick verification**:\n\n- Cable costs $5\n- Server costs $5 + $100 = $105\n- Total = $5 + $105 = $110 \u2705\n\n---\n\n**ANSWER: $5**"
+        },
+        {
+          "id": "letter_count_strawberry",
+          "passed": false,
+          "output": "Let's count the exact number of times the letter **'r'** appears in the word **'strawberries'**. We'll check each letter one by one.\n\n---\n\n**Word:** **s t r a w b e r r i e s**\n\nNow let's go through each letter:\n\n1. **s** \u2013 not 'r'\n2. **t** \u2013 not 'r'\n3. **r** \u2013 **'r'** \u2705 **1**\n4. **a** \u2013 not 'r'\n5. **w** \u2013 not 'r'\n6. **b** \u2013 not 'r'\n7. **e** \u2013 not 'r'\n8. **r** \u2013 **'r'** \u2705 **2**\n9. **r** \u2013"
+        },
+        {
+          "id": "tricky_python_closure",
+          "passed": false,
+          "output": "This expression evaluates to `[0, 1, 2]`.\n\nThe inner list `[lambda: i for i in range(3)]` creates three lambda functions, each capturing the variable `i` at the time of creation. However, due to late binding, all three lambdas end up capturing the same `i` (the last value in the loop, which is 2). When the list comprehension `[f() for f in ...]` executes the lambdas, they all return `i`, which is now 2. But wait \u2014 no, that's not the case here. Actually, in Python, the lambda functions are created with the `i` from the loop, and because of how closures work in Python, all three lambdas end up referring to the same `"
+        },
+        {
+          "id": "reverse_constraint",
+          "passed": true,
+          "output": "- Mars  \n- Jupiter  \n- Saturn"
+        }
+      ],
+      "summary": {
+        "strict_passed": "5/10",
+        "strict_pass_rate": 0.5,
+        "div_distinct_2": 0.7148,
+        "div_distinct_3": 0.8394,
+        "div_pairwise_spread": 0.6889,
+        "mean_rep_loop": 0.0085,
+        "mean_doubt_markers": 0.1
+      }
+    },
+    "adhd_050": {
+      "divergent": [
+        {
+          "prompt": "Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.",
+          "rollouts": [
+            "**Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.**\n\n---\n\n**1. ******Biomechanical Indexing: The Jellyfish Database**  \n**Inspiration:** *Biology \u2013 Jellyfish swarm dynamics*  \n**Mechanism:**  \nJellyfish swim in coordinated, decentralized swarms without central control. Their movement is **acoustic**, **mechanical**, and **distributed** \u2013 yet **emergent**.  \n**Application:**  \nDesign a **distributed index** that **emerges from acoustic signals** in the database.  \n**Indexing Mechanism:**  \n- **Nodes** are **acoustic sensors** \u2013 they **listen** to the **database**.  \n-",
+            "**Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.**\n\n---\n\n**1.** ****Biomimetic Indexing: The Neural Network Database Index**  \n**Inspired by: Biology \u2014 The Human Brain\u2019s Neural Indexing**  \n\n**Mechanism:**  \nThe human brain doesn\u2019t store information in linear indexes; it uses **neural indexing** \u2014 a distributed, **acoustic-like** ****acoustic resonance** \u2014 where ****acoustic resonance** is used to ****acoustic resonance** is used to ****acoustic resonance** is used to **  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**",
+            "**Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.**\n\n---\n\n**1. *Biology: The Index as a Neural Network \u2014 Borrowing from the Brain\u2019s Synaptic Plasticity***\n\n**Mechanism Inspired By:** *Neural Synaptic Plasticity in the Brain*\n\n**Redesign Concept:**\n\n**Index as a Synaptic Network \u2014 Distributed Database with Biological Indexing**\n\n**How It Works:**\n\n- **Database Nodes as Neurons:** Each node in the distributed database is modeled like a neuron, with synapses as the indexes.\n- **Index Synapses:** The indexes are like synapses \u2014 they strengthen or weaken based on query frequency.\n- **Query as Neural Stimulus:** A query stimulates a node"
+          ]
+        },
+        {
+          "prompt": "List 5 unusual, non-obvious uses for a broken microwave oven in a rural research lab or workshop.",
+          "rollouts": [
+            "**5 Unusual, Non-Obvious Uses for a Broken Microwave Oven in a Rural Research Lab or Workshop**\n\n---\n\n**1. Microwave Oven as a Rural Microwave Oven for Cooking in a Research Lab**\n\n**Use:**  \nIn a rural research lab where cooking is part of the research process (e.g., biochemistry, food science, or ethnobotany), a broken microwave can still be used for cooking in a lab setting. The broken nature doesn\u2019t matter\u2014it\u2019s just a microwave. The lab might be doing research on how cooking affects plant compounds, or how microwave cooking influences microbial growth. The broken microwave is just a microwave.\n\n**Non-obvious:**  \nIt\u2019s not broken in a way that matters\u2014it\u2019s just broken. So the lab uses it for cooking in a research setting,",
+            "**5 Unusual, Non-Obvious Uses for a Broken Microwave Oven in a Rural Research Lab or Workshop**\n\n---\n\n**1. Microwave-Induced Polymerization in a Rural Workshop**\n\nA broken microwave can serve as a **rural lab-scale polymerization reactor** for **bio-inspired polymers**. In a rural workshop, a microwave oven with a broken door can be re-purposed as a **polymerization chamber** for **microwave-assisted polymerization** of **bio-inspired polymers** like **microwave-activated cellulose polymers** or **microwave-activated chitosan**.\n\n- **Why it works**: The microwave\u2019s electromagnetic field can **activate cross-linking** in **microwave-activated polymers**.\n- **Rural context**:",
+            "**5 Unusual, Non-Obvious Uses for a Broken Microwave Oven in a Rural Research Lab or Workshop**\n\n---\n\n**1. Microwave as a Rural Microwave Oven for Heat Research**\n\n**Use:**  \n**Microwave as a Heat Source for Rural Rural Research**\n\nIn a rural research lab, a broken microwave can be repurposed as a **heat source for rural research**. The microwave's **cavity** can be used as a **heat chamber** for **rural heat research**. The **cavity** can be used as a **heat chamber** for **rural heat research**. The **cavity** can be used as a **heat chamber** for **rural heat research**. The **cavity** can be used as a **heat chamber** for"
+          ]
+        },
+        {
+          "prompt": "Invent a completely new traffic-intersection control algorithm inspired by a non-transportation natural phenomenon. Explain the mechanism.",
+          "rollouts": [
+            "**Algorithm Title:**\n\n****Swarm-Intersection Control: Inspired by Ant Colony Optimization in Nature**\n\n---\n\n**Inspiration:**\n\n**Ant Colony Optimization (ACO)** is a natural phenomenon observed in the behavior of **ants** navigating paths to food sources. Despite having no individual map, ants collectively find the shortest path by depositing **pheromone trails**. Pheromone trails are **chemical signals** that ants use to communicate path information. The more ants traverse a path, the stronger the pheromone trail becomes, attracting more ants to that path. Over time, the **strongest path** emerges as the **most efficient**.\n\n**Mechanism:**\n\n**Swarm-Intersection Control (SIC)** is an algorithm that uses the **pheromone trail",
+            "**Algorithm Title: \"Swarm-Intersection: Inspired by Ant Traffic Control\"**\n\n---\n\n**Inspiration:**\nAnts in a colony exhibit remarkable traffic control at intersections\u2014without any centralized control, ants at a crossing point (like a bridge or a narrow passage) spontaneously organize into a **swarm-traffic control mechanism**. They use **local rules, pheromone trails, and swarm intelligence** to manage flow, avoid congestion, and maintain order.\n\n**Mechanism:**\nImagine a traffic intersection where vehicles are like ants, and the control is not by traffic lights or sensors, but by **swarm rules** inspired by ants at a crossing.\n\n---\n\n**Algorithm: \"Swarm-Intersection Control\"**\n\n**Concept:**\nAt a traffic intersection, vehicles (ants) use",
+            "**Algorithm Name: \"Swarm-Intersection: Inspired by Ant Colony Optimization in Traffic Control\"**\n\n---\n\n**Inspiration:**\nAnts in a colony don\u2019t use traffic lights or signage, yet they manage to navigate complex intersections in a swarm. They leave pheromone trails that guide other ants, and the trails become stronger the more ants use them. Over time, the paths become optimized for the swarm, even as the environment changes.\n\n**Mechanism:**\n\n**1. Pheromone Trails as Traffic Rules:**\n- At each intersection, sensors detect the flow of vehicles and assign a \"pheromone\" value to the path taken.\n- The more vehicles use a path, the stronger the pheromone trail becomes, guiding future vehicles to choose the same path."
+          ]
+        },
+        {
+          "prompt": "How could you use principles from musical harmony or fluid dynamics to detect anomalies in microservice logs?",
+          "rollouts": [
+            "Ah, what a fascinating intersection of **fluid dynamics** and **microservice logs**! Let\u2019s dive into how principles from **musical harmony** and **fluid dynamics** could be used to **detect anomalies in microservice logs**.\n\n---\n\n### \ud83c\udfb6 **Musical Harmony: Detecting Anomalies in Log Patterns**\n\nIn **musical harmony**, **anomalies** are like **dissonant notes** in a melody \u2014 they break the flow, create tension, and are often the first sign of something wrong.\n\n#### \ud83d\udd0d **Log Patterns as Musical Melodies**\n\n- **Microservices logs** are like **digital symphonies** \u2014 each service is a **instrument**, and the **logs** are the **notes**.\n- **Anomalies** are **",
+            "Ah, what a fascinating intersection of musical harmony and fluid dynamics in the realm of microservice logs! Let me break this down with the elegance of a symphony and the precision of a fluid flow.\n\n---\n\n### \ud83c\udfb6 **Musical Harmony in Logs: Anomaly Detection as Dissonance**\n\nIn a musical symphony, harmony is the balance of tones \u2014 the perfect resonance of a cello and a violin. Anomaly in logs is like a dissonant chord in a symphony \u2014 it breaks the flow, it's not expected, it's jarring.\n\n**Principle:**  \n**Dissonance in musical harmony** \u2014 unexpected chords, clashing tones \u2014 can be mapped to **unexpected log patterns**.\n\n**Application:**  \n- **Log patterns as musical motifs** \u2014 recurring",
+            "Ah, what a fascinating intersection of **harmony** and **fluid dynamics** in the realm of **microservice logs**! Let's dive into this with the precision of a musical composer and the fluidity of a dynamic system.\n\n---\n\n### \ud83c\udfb6 **Musical Harmony as Anomaly Detection in Logs**\n\nIn **musical harmony**, **anomalies** are like **dissonant notes** in a composition. A perfectly harmonious log is one where services communicate with **fluidity**, **resonance**, and **no sudden spikes** in **log intensity**.\n\n#### \ud83d\udd0d **Principles from Musical Harmony:**\n\n1. **Dissonance in Logs**:\n   - An **anomaly** is like a **dissonant chord** in a musical piece"
+          ]
+        }
+      ],
+      "strict": [
+        {
+          "id": "no_letter_e",
+          "passed": false,
+          "output": "A cat is a curious animal with a soft fur and a wild look. It moves quietly and watches everything with a calm attitude."
+        },
+        {
+          "id": "exact_json",
+          "passed": true,
+          "output": "{\"status\":\"ok\",\"count\":3,\"tags\":[\"rain\",\"chips\",\"flick\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "passed": true,
+          "output": "Ocean tides gently pull the shore with exactly 12 words of precision."
+        },
+        {
+          "id": "bug_mutable_default",
+          "passed": true,
+          "output": "**Exact bug in 2 concise sentences:**  \nThe default `bucket=` is a mutable list that retains values between calls, causing unexpected persistence.  \nThis is a classic Python default argument bug.\n\n**Corrected code:**  \n```python\ndef add_item(item, bucket=None):\n    bucket = bucket if bucket is not None else []\n    bucket.append(item)\n    return bucket\n```"
+        },
+        {
+          "id": "bug_off_by_one",
+          "passed": false,
+          "output": "**Bug:**  \nThe infinite loop occurs when `arr` is **empty** (`len(arr) == 0`), but the code still runs `lo < hi` which is `0 < 0` \u2192 `False`, so the loop doesn't run. So **no infinite loop** \u2014 **wait**, that's not the bug.\n\nLet\u2019s **carefully analyze**:\n\n---\n\n### **The actual bug:**\n\n**In the case where `arr` is **not sorted** \u2014 the binary search fails to find `x` even if it exists.**\n\n**But the question says: \"Inspect this Python binary search for bugs\" \u2014 and the code is a **binary search**.**\n\nSo the **bug is in the logic of the binary search** \u2014 not in the infinite"
+        },
+        {
+          "id": "clean_decoy",
+          "passed": true,
+          "output": "NO\n\nExplanation: The function does **not** have a ZeroDivisionError bug. It explicitly checks if `b == 0` and returns `0.0` in that case, so division by zero is avoided."
+        },
+        {
+          "id": "bat_and_ball_variant",
+          "passed": false,
+          "output": "Let's solve this step-by-step.\n\n---\n\n**Total cost:** $110  \n**Server costs $100 more than the cable**\n\nLet\u2019s define:\n\n- **Cable cost = X**\n- **Server cost = X + 100**\n\n**Total cost equation:**\n\n$$\nX + (X + 100) = 110\n$$\n\n$$\n2X + 100 = 110\n$$\n\n$$\n2X = 10\n$$\n\n$$\nX = 5\n$$\n\n---\n\n**Quick verification:**\n\n- Cable = $5  \n- Server = $5 + $100 = $105  \n- Total = $5 + $105 = **$11"
+        },
+        {
+          "id": "letter_count_strawberry",
+          "passed": false,
+          "output": "Let's count the exact number of times the letter **'r'** appears in the word **'strawberries'**. We'll check each letter one by one.\n\n---\n\n**Word:** **strawberries**\n\nLet's go letter by letter:\n\n1. **s** \u2014 not 'r'\n2. **t** \u2014 not 'r'\n3. **r** \u2014 **'r'** \u2014 **1**\n4. **a** \u2014 not 'r'\n5. **w** \u2014 not 'r'\n6. **b** \u2014 not 'r'\n7. **e** \u2014 not 'r'\n8. **r** \u2014 **'r'** \u2014 **2**\n9. **r** \u2014 **'r'** \u2014 **3**\n10."
+        },
+        {
+          "id": "tricky_python_closure",
+          "passed": false,
+          "output": "What does `[f() for f in [lambda: i for i in range(3)]]` evaluate to in Python?\n\nIt evaluates to `[2, 2, 2]` because all the `lambda: i` functions are created with `i` being the last value in the loop, which is `2`.\n\nANSWER: [x, y, z]"
+        },
+        {
+          "id": "reverse_constraint",
+          "passed": false,
+          "output": "-  \n-  \n-"
+        }
+      ],
+      "summary": {
+        "strict_passed": "4/10",
+        "strict_pass_rate": 0.4,
+        "div_distinct_2": 0.6655,
+        "div_distinct_3": 0.805,
+        "div_pairwise_spread": 0.7386,
+        "mean_rep_loop": 0.0241,
+        "mean_doubt_markers": 0.1
+      }
+    },
+    "adhd_080": {
+      "divergent": [
+        {
+          "prompt": "Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.",
+          "rollouts": [
+            "**Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.**\n\n---\n\n**1.** **************************************************************************************************************************************************************************************************************************************************************",
+            "**Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.**\n\n---\n\n**1.** **************************************************************************************************************************************************************************************************************************************************************",
+            "**Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.**\n\n---\n\n**1.**  \n******Biomechanical Index: The Distributed Database as a Neural Network Index**  \n****  \n****  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**  \n**"
+          ]
+        },
+        {
+          "prompt": "List 5 unusual, non-obvious uses for a broken microwave oven in a rural research lab or workshop.",
+          "rollouts": [
+            "**5 Unusual, Non-Obvious Uses for a Broken Microwave Oven in a Rural Research Lab or Workshop**\n\n---\n\n**1. Microwave as a Rural Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014 Microwave as a Microwave Oven \u2014",
+            "**5 Unusual, Non-Obvious Uses for a Broken Microwave Oven in a Rural Research Lab or Workshop**\n\n---\n\n**1. Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave as a Microwave Oven \u2013 Microwave",
+            "**5 Unusual, Non-Obsvious Uses for a Broken Microwave Oven in a Rural Research Lab or Workshop**\n\n**1. Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave as a Rural Microwave Oven \u2013 Microwave"
+          ]
+        },
+        {
+          "prompt": "Invent a completely new traffic-intersection control algorithm inspired by a non-transportation natural phenomenon. Explain the mechanism.",
+          "rollouts": [
+            "**Algorithm Inspired By: ** ********************************************************************************************************************************************************************************************************************************************************************************************************************",
+            "**Algorithm Inspired by:**\n\n********************************************************************************************************************************************************************************************************************************************************************************************************************",
+            "**Algorithm Inspired by: ** ********************************************************************************************************************************************************************************************************************************************************************************************************************"
+          ]
+        },
+        {
+          "prompt": "How could you use principles from musical harmony or fluid dynamics to detect anomalies in microservice logs?",
+          "rollouts": [
+            "Ah, **how could you use principles from musical harmony or fluid dynamics to detect anomalies in microservice logs?**\n\n**Wow, what a question.** Let me try to **map this**.\n\n---\n\n**First**, let me **break it down**.\n\n---\n\n**Microservice logs** are **complex**, **dense**, **anomalous**, **micro**.\n\n**Musical harmony** is **about** **********************************************************************************************************************************************************",
+            "Ah, you're asking how to use principles from **musical harmony** or **fluid dynamics** to detect anomalies in **microservice logs**? That's a fascinating intersection of **harmony in music**, **fluid dynamics**, and **log anomaly detection** in microservices. Let me break it down.\n\n---\n\n### **1. Musical Harmony as a Principle for Log Anomaly Detection**\n\n**Musical Harmony** is about **balance, balance, balance** \u2014 in frequencies, in harmonics, in the way **microservices** log their **micrologs**.\n\n**Anomaly detection** in logs is about **harmony in the logs** \u2014 when they are **balanced**, they are **normal**; when they are **harmonically disbalanced**, they are **anomalous**",
+            "Ah, **how could you use principles from musical harmony or fluid dynamics to detect anomalies in microservice logs?**  \n**Wow, that\u2019s a** ******************************************************************************************************************************************************************************************************************************************************************"
+          ]
+        }
+      ],
+      "strict": [
+        {
+          "id": "no_letter_e",
+          "passed": false,
+          "output": ""
+        },
+        {
+          "id": "exact_json",
+          "passed": true,
+          "output": "{\"status\":\"count\",\"count\":3,\"tags\":[\"tag1\",\"tag2\",\"tag3\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "passed": false,
+          "output": ""
+        },
+        {
+          "id": "bug_mutable_default",
+          "passed": true,
+          "output": "**Exact bug in 2 sentences:**  \n*The default bucket is shared between calls \u2014 it\u2019s a mutable default parameter bug.*  \n*It\u2019s like a bucket that never resets \u2014 it\u2019s always the same one.*  \n\n**Corrected code:**  \n```python\ndef add_item(item, bucket=None):\n    bucket = bucket or []\n    bucket.append(item)\n    return bucket\n```"
+        },
+        {
+          "id": "bug_off_by_one",
+          "passed": false,
+          "output": "**Bug:**  \nInfinite loop when `arr` is **not** sorted.  \n**But** \u2014 **the actual bug is** in **`mid = (lo + hi) // 2`** \u2014 **it's 1-line fix**.\n\n**Exact bug:**  \n**`mid = (lo + hi) // 2`** \u2014 **it's 1-line fix**.\n\n**Fix:**  \n**`mid = (lo + hi) // 2`** \u2192 **`mid = lo + (hi - lo) // 2`**.\n\n**Why?**  \nIn **binary search**, **`mid = (lo + hi) // 2`** is **buggy** \u2014 it causes **infinite loop** when `arr` is"
+        },
+        {
+          "id": "clean_decoy",
+          "passed": false,
+          "output": "**NO**  \nThe code does **not** have a **ZeroDivisionError** bug.  \nIt **explicitly checks if** `b == 0` and **returns 0.0** in that case, so it **safely avoids division by zero**. \u2705"
+        },
+        {
+          "id": "bat_and_ball_variant",
+          "passed": false,
+          "output": "Let's solve this step-by-step.\n\n---\n\n**Total:** $110  \n**Server costs $100 more than the cable.**\n\nLet the **cable cost be X**.\n\nThen the **server costs X + $100**.\n\n**Total cost:** X + (X + 100) = 110\n\n**Equation:**  \nX + X + 100 = 110  \n2X + 100 = 110  \n2X = 10  \nX = 5\n\n**Cable costs $5**  \n**Server costs $15**  \n**Total: $20**\u2026 wait, that's not $110. Hmm.\n\nWait \u2014 let's re-verify"
+        },
+        {
+          "id": "letter_count_strawberry",
+          "passed": false,
+          "output": "Let's count the exact number of times the letter **'r'** appears in the word **'strawberries'**.  \nWe will check each letter one by one like a detective looking for **'r'** in a word.  \n\n---\n\n**Word: 'strawberries'**  \nLet\u2019s break it down letter by letter:\n\n1. **s** \u2014 no  \n2. **t** \u2014 no  \n3. **r** \u2014 **YES!** \u2014 **1**  \n4. **w** \u2014 no  \n5. **s** \u2014 no  \n6. **b** \u2014 no  \n7. **e** \u2014 no  \n8. **r** \u2014 **YES!** \u2014 **2**  \n9. **r** \u2014 **YES!** \u2014"
+        },
+        {
+          "id": "tricky_python_closure",
+          "passed": false,
+          "output": "**Evaluate:** `[f() for f in [lambda: i for i in range(3)]]`  \n**Explanation:**  \nThe `[lambda: i for i in range(3)]` list creates three `lambda: i` functions, each `i` being from `0` to `2` in `range(3)`. But in Python `lambda: i` captures `i` by reference, not value \u2014 so all three `lambda: i` capture `i` from the `range(3)` loop, which ends with `i = 2`. So all three `lambda: i` capture `i = 2`. Then `[f() for f in ...]` calls all three `lambda: i` with `i = 2`, so `"
+        },
+        {
+          "id": "reverse_constraint",
+          "passed": false,
+          "output": "-  \n-  \n-"
+        }
+      ],
+      "summary": {
+        "strict_passed": "2/10",
+        "strict_pass_rate": 0.2,
+        "div_distinct_2": 0.25,
+        "div_distinct_3": 0.2895,
+        "div_pairwise_spread": 0.2189,
+        "mean_rep_loop": 0.1245,
+        "mean_doubt_markers": 0.3
+      }
+    },
+    "ocd_015": {
+      "divergent": [
+        {
+          "prompt": "Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.",
+          "rollouts": [
+            "Certainly! Redesigning a distributed database index with mechanisms borrowed from biology, physics, or acoustics can lead to truly unconventional and potentially revolutionary approaches. Below are three such proposals, each rooted in a different scientific domain:\n\n---\n\n### **1. \"Neural Network-Inspired Indexing: Synaptic Plasticity for Query Optimization\" (Biology)**\n\n**Concept:** Borrowing from the **synaptic plasticity** mechanism in the **neuroscience of the brain**, this approach models the database index as a **neural network** where nodes (data entries) are connected via weighted edges (index pointers), and the weights are dynamically adjusted based on query patterns and usage frequency.\n\n**Mechanics:**\n- **Node activation:** Each data node is activated based on query frequency and",
+            "Redesigning distributed database indexes is a complex challenge involving trade-offs between performance, scalability, and fault tolerance. By borrowing mechanisms from **biology, physics, and acoustics**, we can propose **unconventional yet potentially powerful** redesigns that may offer novel solutions to indexing problems in distributed systems.\n\n---\n\n### **1. Index Redesign Inspired by ****Biological Neural Networks (e.g., Cerebellum)**\n\n#### **Mechanism Borrowed:**\nThe **cerebellum** in the brain is known for its **high parallelism, fault tolerance, and dynamic reconfiguration**. It uses a **granular structure** with **high fan-in and fan-out** connections that allow it to process and adapt to new information in real-time.\n\n#### **Index Design:",
+            "Redesigning distributed database indexes by borrowing from biology, physics, and acoustics offers a truly unconventional approach. These disciplines provide rich metaphors and mechanisms that could inspire novel indexing strategies, especially in distributed environments where scalability, fault tolerance, and adaptability are critical.\n\n---\n\n### **1. Acoustic Resonance Indexing \u2013 Inspired by Sound Waves in Physics**\n\n**Concept:**  \nIn acoustics, sound waves resonate in specific frequencies to amplify or weaken certain signals. This can be applied to a distributed index where data is \"tuned\" to specific query patterns.\n\n**Mechanism:**  \n- **Resonant Nodes:** Each node in the distributed index is assigned a \"resonant frequency\" based on the data types and access patterns it handles.\n- **Signal Propagation:**"
+          ]
+        },
+        {
+          "prompt": "List 5 unusual, non-obvious uses for a broken microwave oven in a rural research lab or workshop.",
+          "rollouts": [
+            "Certainly! A broken microwave oven, while no longer functional as a microwave, can still be a surprisingly versatile and useful tool in a rural research lab or workshop. Here are 5 unusual, non-obvious uses for a broken microwave:\n\n---\n\n### 1. **Microwave Oven as a Heat Source for Drying or Sterilizing**\nEven though the microwave is broken, its internal structure (especially the cavity and turntable) can be used to create a **low-cost drying chamber** for small items. By using a heat source (like a portable stove or solar heater), the microwave can serve as a **drying or sterilizing unit** for tools, small parts, or even biological specimens. This is particularly useful in a rural setting where access to lab equipment may be limited.\n\n---\n\n###",
+            "Certainly! A broken microwave oven, while no longer functional for its intended purpose, can still be repurposed in creative and practical ways, especially in a rural research lab or workshop where resourcefulness and sustainability are valued. Here are five unusual and non-obvious uses:\n\n---\n\n### 1. **Microwave Oven as a Heat Source for Drying or Sterilization (with Caution)**  \nEven though the microwave is broken, its internal components (like the magnetron or cavity) may still generate heat. In a rural setting, you could potentially repurpose it as a low-cost drying oven for small items (e.g., seeds, spices, or small tools) or for sterilizing equipment in a controlled environment. Always ensure the microwave is safely enclosed and insulated to prevent overheating or electrical",
+            "Here are five unusual, non-obvious uses for a broken microwave oven in a rural research lab or workshop:\n\n---\n\n**1. Microwave Oven as a Heat Source for Drying or Sterilization (Low-Tech)**  \nEven with a broken turntable or control panel, a microwave can still emit heat. In a rural setting, it can be used for low-tech drying of materials like wood, fabric, or even small electronic components. It can also be repurposed for basic sterilization of tools or small items by heating them to high temperatures (though this is not a substitute for proper sterilization equipment).\n\n---\n\n**2. Microwave as a Metal Melting or Smelting Tool**  \nIf the microwave is still functional enough to generate heat, it could be used to melt small quantities of"
+          ]
+        },
+        {
+          "prompt": "Invent a completely new traffic-intersection control algorithm inspired by a non-transportation natural phenomenon. Explain the mechanism.",
+          "rollouts": [
+            "**Algorithm Name: \"Swarm-Optimized Traffic Flow (SOTF)\"**  \n**Inspired by: Ant Colony Optimization (ACO) in Termite Colonies**\n\n---\n\n### **Concept Overview**\n\nThe **Swarm-Optimized Traffic Flow (SOTF)** algorithm is inspired by the foraging behavior of **termite colonies**, particularly the way termites use **chemical pheromones** to optimize paths and resource distribution. Unlike traditional traffic control systems that rely on fixed timing or pre-defined rules, SOTF dynamically adapts to real-time traffic conditions by simulating the pheromone-based decision-making process of termites.\n\n---\n\n### **Mechanism Explanation**\n\n#### **1. Pheromone Representation**\n\n- Each traffic intersection is treated as a **node",
+            "**Algorithm Name: \"Photic Flow Control\" \u2013 Inspired by the Phototactic Behavior of Zooplankton**\n\n---\n\n### **Inspiration: Zooplankton Phototaxis**\n\nIn the ocean, zooplankton exhibit a behavior known as **phototaxis** \u2013 the movement of organisms in response to light. Some species move toward light (positive phototaxis), while others move away (negative phototaxis). This behavior is essential for their survival, helping them navigate toward food sources, avoid predators, or find suitable environments.\n\nZooplankton do not have a centralized control system like traffic lights. Instead, their movement is guided by a decentralized, real-time response to environmental stimuli (light intensity, direction, etc.). They adjust their path continuously based on local light conditions",
+            "**Algorithm Name: \"Phyto-Logic: Traffic Intersection Control Inspired by Plant Signaling Networks\"**\n\n---\n\n### **Inspiration: Plant Signaling Networks**\n\nIn the natural world, plants have evolved highly efficient signaling mechanisms to coordinate responses to environmental stimuli such as light, water, nutrients, and stress. These signaling networks are decentralized, adaptive, and often involve **feedback loops**, **local communication**, and **dynamic reconfiguration** to optimize resource allocation and survival.\n\nFor example, **mycorrhizal networks** (the \"wood-wide-web\") allow trees to share nutrients and information through fungal networks. This system is **decentralized**, **self-organizing**, and **adaptive**, with each plant node responding to local conditions and communicating with neighbors.\n\n---\n\n### **Mechanism Overview"
+          ]
+        },
+        {
+          "prompt": "How could you use principles from musical harmony or fluid dynamics to detect anomalies in microservice logs?",
+          "rollouts": [
+            "Detecting anomalies in microservice logs is a classic problem in distributed systems monitoring. While it may seem unrelated at first glance, principles from **musical harmony** and **fluid dynamics** can offer **analogical frameworks** to help model, detect, and interpret anomalies in log data. Below is a structured approach to how these principles could be applied:\n\n---\n\n## \ud83d\udd0a **Musical Harmony Principles**\n\n### 1. **Harmonic Balance**\n- **Musical analogy**: In a well-balanced musical piece, the harmonics (frequencies, overtones) are in a consistent and expected relationship. An anomaly could be a sudden dissonance or unexpected frequency.\n- **Application to logs**:\n  - Model log data as a \"frequency spectrum\" where each log event or metric (",
+            "Detecting anomalies in microservice logs is a complex task that involves processing vast volumes of structured and unstructured data, identifying patterns, and flagging deviations from normal behavior. While this is typically approached with machine learning or statistical methods, drawing inspiration from **musical harmony** and **fluid dynamics** can offer novel and creative perspectives to model and detect anomalies in log data.\n\n---\n\n## \ud83d\udd0a Musical Harmony Principles\n\n### 1. **Harmonic Structure and Pattern Recognition**\n- **Musical logs**: Think of each log entry as a \"note\" or \"event\" in a sequence. Just as musical harmony relies on the relationships between notes (intervals, chords), log data can be analyzed for temporal and relational patterns.\n- **Harmonic anomalies**: Deviations from expected intervals (e.g.,",
+            "Detecting anomalies in microservice logs is a complex task that involves pattern recognition, statistical analysis, and understanding of system behavior. While it might seem unconventional, **principles from musical harmony and fluid dynamics** offer unique perspectives that could be leveraged in anomaly detection systems. These principles are rooted in **pattern recognition, system behavior modeling, and signal processing**, which are all relevant to log analysis.\n\n---\n\n## \ud83d\udd0a Musical Harmony Principles\n\n### 1. **Harmonic Structure and Pattern Recognition**\n- **Musical logs** could be interpreted as **sequences of events** with **timing and intensity** akin to musical notes.\n- **Harmonic patterns** (e.g., chord progressions, rhythmic structures) could be mapped to **log patterns** (e.g., recurring sequences of error"
+          ]
+        }
+      ],
+      "strict": [
+        {
+          "id": "no_letter_e",
+          "passed": false,
+          "output": "A cat moves with grace and speed through a room filled with light and shadow. Its eyes glow with a quiet strength as it watches the world with care and focus."
+        },
+        {
+          "id": "exact_json",
+          "passed": true,
+          "output": "{\"status\": \"success\", \"count\": 3, \"tags\": [\"java\", \"python\", \"javascript\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "passed": false,
+          "output": "Ocean tides are caused by the gravitational pull of the moon and sun."
+        },
+        {
+          "id": "bug_mutable_default",
+          "passed": true,
+          "output": "**Exact bug:**\nThe default argument `bucket=[]` is mutable and reused across function calls, leading to unexpected persistent state.\n\n**Corrected code:**\n```python\ndef add_item(item, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(item)\n    return bucket\n```"
+        },
+        {
+          "id": "bug_off_by_one",
+          "passed": true,
+          "output": "The exact bug in the binary search implementation is that **the update to `lo` and `hi` is incorrect**, leading to an **infinite loop** in certain cases.\n\n### Problem:\nIn the original code:\n```python\nelif arr[mid] < x: lo = mid\nelse: hi = mid\n```\n- When `arr[mid] < x`, the correct update is `lo = mid + 1`, not just `lo = mid`.\n- When `arr[mid] > x`, the correct update is `hi = mid - 1`, not just `hi = mid`.\n\nThis leads to an infinite loop when the search space doesn't shrink properly.\n\n### Fix:\nReplace the incorrect update logic with the correct one.\n\n### One-line fix:\n```python\nelif arr"
+        },
+        {
+          "id": "clean_decoy",
+          "passed": true,
+          "output": "NO\n\nExplanation: The function checks if `b == 0` and returns `0.0` in that case, so it does not raise a `ZeroDivisionError`. However, returning `0.0` may not always be the desired behavior, but it does prevent the error."
+        },
+        {
+          "id": "bat_and_ball_variant",
+          "passed": false,
+          "output": "Let\u2019s define:\n\n- Let the **cost of the cable** be $ x $ dollars.\n- Then the **cost of the server** is $ x + 100 $ dollars (since it's $100 more than the cable).\n\nWe are told the **total cost** is $110:\n\n$$\nx + (x + 100) = 110\n$$\n\nSimplify:\n\n$$\n2x + 100 = 110\n$$\n\nSubtract 100 from both sides:\n\n$$\n2x = 10\n$$\n\nDivide by 2:\n\n$$\nx = 5\n$$\n\nSo, the **cable costs $5**.\n\n---\n\n**Quick verification**:\n\n- Cable"
+        },
+        {
+          "id": "letter_count_strawberry",
+          "passed": false,
+          "output": "Let's count the exact number of times the letter **'r'** appears in the word **'strawberries'** step by step.\n\n---\n\n### Step 1: Write the word and check each letter one by one\n\n**Word:** **s t r a w b e r r i e s**\n\nLet's go through each letter and mark if it's an **'r'**:\n\n1. **s** \u2192 not 'r'  \n2. **t** \u2192 not 'r'  \n3. **r** \u2192 **yes**, 1st 'r'  \n4. **a** \u2192 not 'r'  \n5. **w** \u2192 not 'r'  \n6. **b** \u2192 not 'r'  \n7. **e** \u2192 not"
+        },
+        {
+          "id": "tricky_python_closure",
+          "passed": true,
+          "output": "The expression `[f() for f in [lambda: i for i in range(3)]]` evaluates to `[2, 2, 2]`. This is because the lambda functions are created in a list comprehension where `i` is captured by reference, not by value. All lambdas end up referencing the same `i`, which is finally set to 2 after the loop completes.\n\nANSWER: [2, 2, 2]"
+        },
+        {
+          "id": "reverse_constraint",
+          "passed": true,
+          "output": "- Earth spins on its axis creating day and night  \n- Mars has reddish soil and thin atmosphere  \n- Jupiter is the largest planet in our solar system"
+        }
+      ],
+      "summary": {
+        "strict_passed": "6/10",
+        "strict_pass_rate": 0.6,
+        "div_distinct_2": 0.7929,
+        "div_distinct_3": 0.9005,
+        "div_pairwise_spread": 0.7741,
+        "mean_rep_loop": 0.0055,
+        "mean_doubt_markers": 0.0
+      }
+    },
+    "ocd_030": {
+      "divergent": [
+        {
+          "prompt": "Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.",
+          "rollouts": [
+            "Redesigning distributed database indexes by borrowing from biology, physics, or acoustics can lead to unconventional and potentially revolutionary mechanisms. Below are **3 genuinely unconventional redesign proposals** that borrow from **biology, physics, and acoustics**, respectively, and can be applied to distributed database indexing systems.\n\n---\n\n### **1. Mechanism Borrowed from: Biology \u2013 ** ****Neuroplasticity & Synaptic Encoding** ****  \n****Proposed Mechanism: \"Synapse-Indexed Distributed Database\" (SIDDB)**\n\n**Concept:**\nDatabase indexes are typically static or semi-static structures. However, in the brain, synapses (connections between neurons) are **dynamic and adaptive** \u2013 they change strength and connectivity based on usage patterns (neuroplasticity). Inspired",
+            "Redesigning a distributed database index is a critical task for performance, scalability, and fault tolerance. Borrowing mechanisms from **biology, physics, or acoustics** can lead to **genuinely unconventional** and **novel** index designs that may not have been previously considered in traditional database systems. Here are **three such unconventional index redesigns**, each drawing from a different scientific discipline:\n\n---\n\n### **1. Borrowing from ****Biological Evolution: Index as a Population of Genes**\n\n**Concept:**  \nTreat the database index as a **population of evolving \"genes\"**, where each index structure is a **gene** and the index population is a **chromosome**. Evolutionary mechanisms such as **mutation, crossover, and selection** are used to optimize the index",
+            "Redesigning a distributed database index by borrowing from **biology, physics, or acoustics** can lead to **genuinely unconventional** mechanisms that **optimize for distribution, fault tolerance, and query performance** in ways that are not traditionally found in database systems. Here are **3 such unconventional redesigns**:\n\n---\n\n### **1. Borrowing from **Acoustics: ****Wave Indexing for Distributed Query Propagation**\n\n**Mechanism Inspired From:** **Acoustic Wave Propagation in Biological Systems (e.g., ****echolocation in bats or ******biological sound localization in ****************************************************************************"
+          ]
+        },
+        {
+          "prompt": "List 5 unusual, non-obvious uses for a broken microwave oven in a rural research lab or workshop.",
+          "rollouts": [
+            "A broken microwave oven, while obviously non-functional in its original purpose, can be repurposed in a rural research lab or workshop for unusual, non-obvious uses. Below are 5 such uses that might not be immediately obvious, but could provide value in a rural, resource-limited setting:\n\n---\n\n**1. Microwave Oven as a Power Source for Low-Voltage Equipment**\n\n- **Use**: Broken microwaves often contain a microwave magnetron, which can be repurposed for low-voltage power generation in rural labs.\n- **Detail**: The magnetron can be used in conjunction with a voltage regulator to generate power for small electronic devices, sensors, or low-voltage tools.\n- **Note**: This requires electrical expertise and safety considerations, but could be a cost-effective power source in",
+            "Here are **5 unusual, non-obvious uses** for a **broken microwave oven** in a **rural research lab or workshop** \u2014 focusing on **non-obvious, rural-appropriate, and research-oriented** applications:\n\n---\n\n### 1. **Microwave-Assisted Chemical Synthesis (for Rural Lab Use)**  \nEven a broken microwave may have some internal components (like the magnetron or cavity) that can be repurposed for **low-energy microwave-assisted chemical reactions** in a **microwave reactor** setup. In rural labs with limited access to high-end equipment, broken microwaves can be disassembled and used as **microwave sources for chemical synthesis** (e.g., for polymerization, solvothermal reactions, or microwave-assisted extraction). This can",
+            "Broken microwave ovens can be more than just a waste of space \u2014 especially in a rural research lab or workshop where resources are limited and creativity is key. Below are 5 unusual, non-obvious uses for a broken microwave in such an environment:\n\n---\n\n### 1. **Microwave as a Heat Source for DIY Sterilization**\nA broken microwave can be repurposed as a heat source for sterilization of tools or small workshop items. By using a microwave-safe container with water and placing items inside, you can achieve high temperatures (up to ~200\u00b0C) for short periods \u2014 useful for sterilizing metal tools or small electronic components in a rural setting without access to a lab-grade autoclave.\n\n---\n\n### 2. **Microwave as a DIY Oven for Workshop Use"
+          ]
+        },
+        {
+          "prompt": "Invent a completely new traffic-intersection control algorithm inspired by a non-transportation natural phenomenon. Explain the mechanism.",
+          "rollouts": [
+            "**Algorithm Name:** **Pheromone-Path Intersections (PPI)**  \n**Inspired by:** **Ant Colony Optimization (ACO)**  \n**Non-Transportation Natural Phenomenon:** **Ant Colony Behavior in Path Selection**\n\n---\n\n### **Mechanism Overview:**\n\n**Pheromone-Path Intersections (PPI)** is a traffic control algorithm inspired by the path selection behavior of ants in a colony. Ants use **pheromone trails** to communicate with each other about the quality of paths between their colony and food sources. The more ants that traverse a path, the stronger the pheromone trail, which attracts more ants to use that path. Over time, the **strongest trails** (most frequently used and shortest) become dominant, leading",
+            "**Algorithm Name: \"Phoebes Control\" \u2013 Inspired by the Natural Phenomenon of Phoebes (a type of Phoebes bird behavior in non-transportation natural systems)**\n\n---\n\n### **Inspiration from Nature: Phoebes Birds**\n\nPhoebes (a family of birds including *Phoebes* and *Say\u2019s Phoebes*) are known for their **non-transportation, natural behavior** that is highly **synchronized, adaptive, and cooperative**. While not directly related to movement systems, their behavior is **patterned, rule-based, and responsive to environmental cues** \u2014 making them a rich source of inspiration for a **traffic-intersection control algorithm**.\n\nPhoebes are often found near water sources",
+            "**Algorithm Name:** **\"Swarm-Flow Control (SFC)\"**\n\n**Inspiration:** **Non-Transportation Natural Phenomenon:** **Swarm Behavior in Social Insects (e.g., Ants, Bees)**\n\n---\n\n### **Mechanism Overview:**\n\n**Swarm-Flow Control (SFC)** is a traffic intersection control algorithm inspired by the decentralized, self-organizing behavior observed in social insect swarms such as ants and bees. These swarms exhibit efficient resource allocation, path selection, and conflict resolution without centralized control, making them a powerful model for traffic control in urban environments.\n\n---\n\n### **Key Concepts from Nature:**\n\n1. **Pheromone Path Selection:**\n   - In ants, pheromones are used to communicate the efficiency"
+          ]
+        },
+        {
+          "prompt": "How could you use principles from musical harmony or fluid dynamics to detect anomalies in microservice logs?",
+          "rollouts": [
+            "Detecting anomalies in microservice logs is a complex task that involves pattern recognition, log parsing, and real-time monitoring. Principles from **musical harmony** and **fluid dynamics** offer unique perspectives on detecting anomalies in log data, leveraging **harmonic patterns** and **flow dynamics** to identify deviations from normal behavior.\n\n---\n\n## \ud83d\udd0a **Musical Harmony Principles**\n\nIn musical harmony, logs can be thought of as **sequences of notes** (log entries) that form a **harmonic pattern** over time. Anomalies are deviations from the expected \"harmony\" \u2014 i.e., unexpected notes or patterns.\n\n### **1. Log Parsing as Note Extraction**\n\n- **Log entries** can be viewed as **notes** with:\n  - **Log entry content** \u2192 **note value",
+            "Detecting anomalies in microservice logs is a critical task in modern software systems. While logs are typically analyzed using principles from data science and machine learning, there are also interesting and unconventional approaches inspired by **musical harmony** and **fluid dynamics** that can offer unique insights and detection methods.\n\n---\n\n## **1. Principles from Musical Harmony**\n\nMusical harmony involves the study of how different pitches and rhythms interact to form pleasing or dissonant structures. These principles can be applied to microservice logs in the following ways:\n\n### **a. Log Pattern Rhythm and Timing**\n- **Logs as \"Notes\"**: Each log entry can be seen as a \"note\" with a time-stamp and content.\n- **Log Frequency as \"Rhythm\"**: The frequency of log patterns (e.g",
+            "Detecting anomalies in microservice logs is a critical task for maintaining system reliability and performance. While microservice logs are typically structured as text logs, they often contain numerical metrics, timestamps, and event patterns that could be modeled using principles from **musical harmony** or **fluid dynamics** to detect **anomalies**.\n\nHere's how you could **use principles from musical harmony or fluid dynamics** to **detect anomalies in microservice logs**:\n\n---\n\n## \ud83c\udfb5 **Musical Harmony Principles**\n\n### 1. **Harmonic Patterns (Log Patterns)**\n- **Analog**: Microservice logs often have **repetitive patterns** (e.g., API calls, log levels, error types).\n- **Musical Principle**: Harmonic patterns in music are based on **frequency ratios"
+          ]
+        }
+      ],
+      "strict": [
+        {
+          "id": "no_letter_e",
+          "passed": false,
+          "output": "A cat moves with calm and quiet grace. Its eyes shine bright in the dark with keen focus."
+        },
+        {
+          "id": "exact_json",
+          "passed": true,
+          "output": "{\"status\": \"success\", \"count\": 3, \"tags\": [\"example\", \"test\", \"tag\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "passed": false,
+          "output": "Ocean tides are caused by the gravitational pull of the moon and sun."
+        },
+        {
+          "id": "bug_mutable_default",
+          "passed": true,
+          "output": "**Exact bug:**\nThe `bucket` argument is default-`[]` and is reused across calls, leading to persistent state and unintended behavior.\n\n**Corrected code:**\nUse `bucket=[]` as default and ensure it is reinitialized on each call by using `bucket = bucket or []`.\n\n```python\ndef add_item(item, bucket=None):\n    bucket = bucket or []\n    bucket.append(item)\n    return bucket\n```"
+        },
+        {
+          "id": "bug_off_by_one",
+          "passed": true,
+          "output": "The binary search function you've provided has a **bug causing an infinite loop** in **some cases**.\n\n---\n\n### \u2705 **Exact Bug:**\n\nThe update to `lo` and `hi` is **incorrect**:\n\n- When `arr[mid] < x`, the correct update is: `lo = mid + 1`\n- When `arr[mid] > x`, the correct update is: `hi = mid - 1`\n\nBut in your current code:\n\n```python\nelif arr[mid] < x: lo = mid\nelse: hi = mid\n```\n\nThis **incorrectly keeps `lo` or `hi` at the same `mid`**, potentially **not reducing the search space**, which can **cause an infinite loop**.\n\n---\n\n### \u2705 **1"
+        },
+        {
+          "id": "clean_decoy",
+          "passed": true,
+          "output": "NO\n\nExplanation: The function returns `0.0` when `b == 0`, which avoids the `ZeroDivisionError`. However, this may not be the desired behavior in all contexts (e.g., returning `0.0` for division by zero could be misleading), but from a bug perspective, it does not raise an error."
+        },
+        {
+          "id": "bat_and_ball_variant",
+          "passed": false,
+          "output": "Let\u2019s define:\n\n- **Cable cost = X**\n- **Server cost = X + 100** (since it\u2019s $100 more than the cable)\n\nWe are told that **server + cable = $110**:\n\n$$\n(X + 100) + X = 110\n$$\n\n$$\n2X + 100 = 110\n$$\n\n$$\n2X = 10\n$$\n\n$$\nX = 5\n$$\n\n---\n\n**Quick verification:**\n\n- Cable = $5\n- Server = $5 + $100 = $105\n- Total = $5 + $105 = $110 \u2705\n\n---\n\n**ANSWER: $"
+        },
+        {
+          "id": "letter_count_strawberry",
+          "passed": false,
+          "output": "We are to **count the exact number of times the letter 'r' appears in the word 'strawberries'**, and then end with **'ANSWER: N'**.\n\n---\n\n### Step-by-step: Check each letter in **'strawberries'**\n\nLet\u2019s write out the letters one by one:\n\n**s**, **t**, **r**, **a**, **w**, **b**, **e**, **r**, **r**, **i**, **e**, **s**\n\nNow, count the **'r'** letters:\n\n1. **s** \u2192 not 'r'\n2. **t** \u2192 not 'r'\n3. **r** \u2192 **1**\n4. **a** \u2192 not 'r'\n5. **w** \u2192 not 'r"
+        },
+        {
+          "id": "tricky_python_closure",
+          "passed": true,
+          "output": "The expression `[f() for f in [lambda: i for i in range(3)]]` evaluates to a list where each `f()` is the lambda function that returns `i` from the outer loop. However, due to late binding in Python\u2019s lambda functions, all lambdas reference the same `i` variable, which ends up being the last value from `range(3)` (i.e., `2`).\n\nAs a result, all three lambda functions return `2`, and the final list is `[2, 2, 2]`.\n\nANSWER: [2, 2, 2]"
+        },
+        {
+          "id": "reverse_constraint",
+          "passed": true,
+          "output": "- earth  \n- mars  \n- jupiter"
+        }
+      ],
+      "summary": {
+        "strict_passed": "6/10",
+        "strict_pass_rate": 0.6,
+        "div_distinct_2": 0.7741,
+        "div_distinct_3": 0.8968,
+        "div_pairwise_spread": 0.7875,
+        "mean_rep_loop": 0.0091,
+        "mean_doubt_markers": 0.0
+      }
+    },
+    "ocd_050": {
+      "divergent": [
+        {
+          "prompt": "Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.",
+          "rollouts": [
+            "Redesigning a distributed database index is an opportunity to borrow from biology, physics, or acoustics for unconventional yet potentially powerful mechanisms. Below are 3 genuinely unconventional redesigns:\n\n---\n\n### **1. Mechanism Borrowed from: Biology \u2013 Acoustic Indexing via Bio-Inspired Acoustic Modeling**\n\n**Concept:**\nIndexing via bio-acoustic modeling from animal communication (e.g. bird song, whale calls, or insect acoustics) for distributed indexing.\n\n**Mechanism:**\n- Indexing is modeled after bio-acoustic communication patterns, which are inherently distributed across space (e.g. bird song across a forest).\n- Each database key is mapped to a bio-acoustic pattern (e.g. frequency, amplitude, time pattern).\n- Indexing is modeled after bio",
+            "Redesigning a distributed database index by borrowing from biology, physics, or acoustics can lead to truly unconventional and potentially revolutionary mechanisms. Below are three genuinely unconventional proposals that borrow from these domains, each offering a new perspective on indexing in distributed systems.\n\n---\n\n### **1. Borrowing from Acoustics: Mechanism of Sound Localization in Biological Systems**\n\n**Biological Inspiration:** Sound localization in biological systems (e.g., ears of acoustically sensitive animals) uses mechanisms like interaural time difference (ITD), interaural level difference (ILD), and spectral cues. These systems inherently handle distributed acoustical information and localization in noisy environments.\n\n**Proposed Index Mechanism:**\n\n- **Indexing as Sound Localization:** In a distributed database, each node could be thought of",
+            "Redesigning a distributed database index by borrowing mechanisms from **biology**, **physics**, and **acoustics** opens up **unconventional** and **non-linear** redesigns that can **across** traditional index design assumptions like **across** **across** **across** **across** **across** **across** **across** **across** **across** **across** **across** **across** **across** **across** **across** **across** **across** **accross** **across** **across** **across** **across** **across** **across** **across** **across** **across** **across**"
+          ]
+        },
+        {
+          "prompt": "List 5 unusual, non-obvious uses for a broken microwave oven in a rural research lab or workshop.",
+          "rollouts": [
+            "In a rural research lab or workshop, a broken microwave oven can be non-obvious, unusual, and re-purposed for unexpected uses. Below are 5 unusual, non-obvious uses for a broken microwave in such a setting:\n\n---\n\n**1. Microwave Oven as a Microwave Oven for Re-purposing Microwave Components**\n\n- Broken microwave can be used as a source of microwave components (e.g. magnetron, waveguide, etc.) for re-purposing or re-manufacturing in a lab.\n- Components can be used for microwave frequency experiments, or as parts for building microwave re-purposed devices for rural workshops (e.g. water heating, sterilization, etc.).\n- Note: Use of magnetron in lab for experiments must be carefully done to avoid microwave leakage",
+            "Microwaves are often assumed for their microwave energy, but broken units can be repurposed in rural labs or workshops for unusual non-obvious uses. Below are five unusual, non-obvious uses for a broken microwave oven in a rural rural research or workshop setting:\n\n---\n\n**1. Microwave Oven as a Microwave Energy Source for Rural Research**\n\nEven broken units may have microwave energy (e.g., from microwave tubes or microwave energy from failed components). These can be repurposed for rural research into microwave energy for:\n\n- Rural energy harvesting (e.g., microwave energy from rural energy sources)\n- Microwave energy for rural energy storage systems\n- Microwave energy for rural energy distribution (e.g., rural microgrids)\n- Microwave energy for rural energy conversion systems (e.g., microwave to DC)",
+            "In a rural research lab or workshop, a broken microwave can be non-obvious, unusual, and non-trivial in its uses \u2014 especially when it's still functional in its broken state. Below are 5 unusual, non-obvious uses for a broken microwave in such a setting:\n\n---\n\n**1. Microwave Oven as a Non-Functional Microwave Microwave**\n\nEven when broken, a microwave can still emit microwaves \u2014 albeit non-functional. In rural research, this can be used for:\n\n- **Microwave Absorption Testing** (e.g. for microwave material characterization)\n- **Microwave Emission Testing** (e.g. for passive microwave sensors or testing)\n- **Microwave Non-Functional Characterization** (e.g. for lab equipment testing or debugging)\n\nThis can be useful in"
+          ]
+        },
+        {
+          "prompt": "Invent a completely new traffic-intersection control algorithm inspired by a non-transportation natural phenomenon. Explain the mechanism.",
+          "rollouts": [
+            "**Algorithm Name:**\n\n****Control by Intersection of Non-Transportation Natural Phenomena (CINP)**\n\n**Inspired Natural Phenomenon:**\n\n****Intersection of Non-Transportation Natural Phenomena (e.g.,:** ****Non-Transportation:** ****Controlled by:**\n\n****Non-Transportation Natural Phenomena:**\n\n**1. Control by:**\n\n****2. Control by:**\n\n****3. Control by:**\n\n**Non-Transportation Phenomena:**\n\n**Non-Transportation Natural Phenomena:**\n\n**Control by:**\n\n**Non-Transportation Natural Phenomena:**\n\n**Non-Transportation Natural Phenomena:**\n\n**Non-Transportation Natural Phenomena:**\n\n**",
+            "**Algorithm Name:**\n\n**Control Inspired by: Non-Transportation Natural Phenomenon \u2013** ********Non-Equilibrium Transport in Cellulose Micro-Fibril Assembly**\n\n**Inspiration:**\n\nIn the natural world, cellulose micro-fibril assembly in plant cell walls occurs through a non-equilibrium transport mechanism under assembly control. This process involves micro-fibrils being transported through a non-equilibrium transport under control by assembly signals, which in turn influence the transport dynamics. This mechanism is under control by a non-equilibrium transport, which is not in equilibrium with the environment.\n\n**Non-Transportation Natural Phenomenon:**\n\nThis phenomenon is not about traffic transport, but rather about the assembly of cellulose micro-fibrils in plant cell walls, which is",
+            "**Algorithm Name:**\n\n******Traffic-Intersection Control Inspired by ******Natural Phenomenon: ************************************************************************************************************************************************************************************************************************************************************************************"
+          ]
+        },
+        {
+          "prompt": "How could you use principles from musical harmony or fluid dynamics to detect anomalies in microservice logs?",
+          "rollouts": [
+            "Detecting anomalies in microservice logs is a classic data science and system engineering challenge. Principles from **musical harmony** and **fluid dynamics** might seem unconventional, but they offer **analogies** and **principles** that can be **mapped** to **log anomaly detection**.\n\nBelow is a structured approach to using these principles for anomaly detection in microservice logs:\n\n---\n\n## \ud83c\udfb5 Musical Harmony Principles\n\n### 1. **Harmony Mapping to Log Structure**\n- **Log Entries as Notes**: Each log entry can be considered a \"note\" in a musical sequence.\n- **Log Microservice as a \"Instrument\"**: Each microservice log can be thought of as a \"instrument\" that produces \"notes\" with a certain **pattern**.\n- **Log Patterns",
+            "Detecting anomalies in microservice logs is a challenging task that requires principles from both **musical harmony** and **fluid dynamics**. These principles are used in **pattern detection**, **anomaly detection**, and **log logics** that can be applied to **microservice log anomaly detection**. Below is a **principles-based approach**:\n\n---\n\n## **1. Musical Harmony Principles**\n\n### **1.1. Pattern Detection in Logs**\n- **Log Patterns as 'Notes'**\n- Logs from microservices can be viewed as sequences of 'notes' (log entries), with each log entry as a 'note' in a 'log harmony'.\n- **Anomaly as 'Disharmony'**\n- A log sequence that deviates from the expected 'log harmony' (expected",
+            "Detecting anomalies in microservice logs is a complex and highly domain-specific task that often involves principles from both **harmony** (musical) and **fluid dynamics**. These principles may not be direct or scientific equivalents, but they can be **metaphorical or conceptual** tools to **detect patterns, fluidity, and anomalies** in log data.\n\n---\n\n## **1. Principles from Musical Harmony**\n\n### **a. Harmony as Pattern Recognition**\n- **Concept**: In music, harmony involves the relationship between notes and the overall structure of the log (like service calls, logs, logs, etc.).\n- **Application**:\n  - Log data can be **mapped to musical notes** (e.g., log levels: INFO=NOTE, ERROR=DISCHORD).\n  - **"
+          ]
+        }
+      ],
+      "strict": [
+        {
+          "id": "no_letter_e",
+          "passed": false,
+          "output": ""
+        },
+        {
+          "id": "exact_json",
+          "passed": true,
+          "output": "{\"status\": \"valid\", \"count\": 3, \"tags\": [\"example\", \"test\", \"valid\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "passed": false,
+          "output": "Ocean tides are caused by the gravitational pull of the moon and sun."
+        },
+        {
+          "id": "bug_mutable_default",
+          "passed": true,
+          "output": "**Exact Bug:**\n\n- The `bucket` parameter is default `=[]` and is mutated in place, leading to persistent state across calls.\n\n- The default `bucket` is shared across all calls, causing unexpected behavior and bucket corruption.\n\n**Corrected Code:**\n\n```python\ndef add_item(item, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(item)\n    return bucket\n```"
+        },
+        {
+          "id": "bug_off_by_one",
+          "passed": false,
+          "output": "### **Binary Search Inspection**\n\nYou've provided a binary search function with a **potential bug** causing an **infinite loop**.\n\n### **Function**\n```python\ndef bsearch(arr, x):\n    lo, hi = 0, len(arr)\n    while lo < hi:\n        mid = (lo + hi) // 2\n        if arr[mid] == x: return mid\n        elif arr[mid] < x: lo = mid\n        else: hi = mid\n    return -1\n```\n\n### **Assumptions**\n- `arr` is **sorted in ascending order**\n- `arr` is **non-empty**\n- `x` is **in the range of `arr`**\n\n### **Bug Identification**\nThe **bug is in the update of"
+        },
+        {
+          "id": "clean_decoy",
+          "passed": false,
+          "output": "**ANSWER: NO**\n\n**EXPLAIN:**\n\nThe function `safe_div` checks if `b == 0` and returns `0.0` in that case, preventing a `ZeroDivisionError`. Although using `==` for floating-point numbers can be risky (due to precision issues), in this context, the check is sufficient to avoid the error. So **NO ZeroDivisionError bug**."
+        },
+        {
+          "id": "bat_and_ball_variant",
+          "passed": true,
+          "output": "Let:\n\n- Cable cost = $X$\n- Server cost = $X + 100$ (since server costs $100 more than cable)\n\nTotal cost = Server + Cable = $X + 100 + X = 2X + 100 = 110$\n\nNow solve:\n\n$$\n2X + 100 = 110 \\\\\n2X = 110 - 100 = 10 \\\\\nX = 5\n$$\n\n---\n\n**Cable costs = $5**\n\n**Quick verification:**\n\n- Server = $5 + 100 = $105\n- Total = $105 + $5 = $110 \u2714\n\n---\n\n**ANSWER: $5"
+        },
+        {
+          "id": "letter_count_strawberry",
+          "passed": false,
+          "output": "Let\u2019s check the exact number of times the letter **'r'** appears in the word **'strawberries'**.\n\n---\n\n### Step-by-step:\n\nWrite the word: **'strawberries'**\n\nBreak it into individual letters:\n\n**S, T, R, A, W, B, E, R, R, I, E, S, T, Y, E, S, T, E, S, Y, E, S, T, E, S, T, E, S, Y, E, S, T, E, S, T, E, S, Y, E, S, T, E, S, Y, E, S, T, E, S, Y, E, S, T, E, S"
+        },
+        {
+          "id": "tricky_python_closure",
+          "passed": true,
+          "output": "The expression `[f() for f in [lambda: i for i in range(3)]]` evaluates to `[2, 2, 2]` in Python due to the late binding of `i` in the lambda functions.\n\nEach lambda `lambda: i` captures `i` by reference, not by value. When the lambdas are called (during the list comprehension), `i` has already been updated to the last value in `range(3)`, which is `2`.\n\nANSWER: [2, 2, 2]"
+        },
+        {
+          "id": "reverse_constraint",
+          "passed": true,
+          "output": "- planet with intense atmospheric storms  \n- planet with no solid surface  \n- planet with longest day of any planet"
+        }
+      ],
+      "summary": {
+        "strict_passed": "5/10",
+        "strict_pass_rate": 0.5,
+        "div_distinct_2": 0.6771,
+        "div_distinct_3": 0.8237,
+        "div_pairwise_spread": 0.7329,
+        "mean_rep_loop": 0.0544,
+        "mean_doubt_markers": 0.0
+      }
+    },
+    "ocd_080": {
+      "divergent": [
+        {
+          "prompt": "Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.",
+          "rollouts": [
+            "Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.\n\n---\n\n### **1. Borrowing from Acoustics: \u201cEcho-Indexing\u201d**\n\n**Mechanism from Acoustics: Echo Indexing in Acoustic Indexing (Acoustic Indexing in Acoustic Indexing)**  \nIn acoustics, echo-indexing is used to identify indexing of acoustics in indexing of acoustics.\n\n**Acoustic Indexing: Echo Indexing**\n\n**Redesign Mechanism:**\n\n- Distribute indexes in acoustics as in acoustics as in acoustics.\n- Use echo-indexing in acoustics as in acoust\u52a0\u5206 in acoustics.\n- Use echo-indexing in acoust",
+            "Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.\n\n---\n\n**1. Borrow from Acoustics: Mechanism of Sound Indexing in Acoustic Physics**\n\n**Acoustic Mechanism: Sound Indexing in Acoustic Physics (Acoustic Indexing)**\n\n**Biophysical Acoustic Indexing (Acoustic Indexing)**\n\n**Mechanism:**\n\n- Use principles from acoustics indexing (like in sound indexing in physics of acoustics)\n- Create a distributed indexing mechanism that mimics the acoustic indexing of sound (like in acoustics of sound indexing)\n- Use acoustics indexing (like in acoustics indexing in acoustics physics) to create a index\n- Use acoustics",
+            "Propose 3 genuinely unconventional ways to redesign a distributed database index by borrowing mechanisms from biology, physics, or acoustics.\n\n---\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n****\n\n**"
+          ]
+        },
+        {
+          "prompt": "List 5 unusual, non-obvious uses for a broken microwave oven in a rural research lab or workshop.",
+          "rollouts": [
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "prompt": "Invent a completely new traffic-intersection control algorithm inspired by a non-transportation natural phenomenon. Explain the mechanism.",
+          "rollouts": [
+            "### \ud83d\udfe0 \ud83d\udfe0 \ud83d\udfe0 \ud83d\udfe0 \ud83d\udfe0\n\n### **Algorithm Name:**\n\n************************\n\n************************\n\n************************\n\n************************\n\n************************\n\n************************\n\n************************\n\n************************\n\n************************\n\n************************\n\n************************\n\n**********",
+            "### \ud83e\udde0 **Insp********************************************************************************************************************************************************************************************************************************************************************************************************************",
+            "### **Algorithm Name**: ****************************************************************************\n\n********************************************************************************\n\n********************************************************************************\n\n**************************************************************************"
+          ]
+        },
+        {
+          "prompt": "How could you use principles from musical harmony or fluid dynamics to detect anomalies in microservice logs?",
+          "rollouts": [
+            "You could use **principles from musical harmony** or **fluid dynamics** to **detect anomalies in microservice logs** by **detecting patterns, anomalies, and anomalies in log flows**. Below is a **structured** and **********************************************************************************************************************************************************************************************************************************",
+            "Detect anomalies in microservice logs using principles from **musical harmony** and **fluid dynamics** requires **cross-domain principles** and ****************************************************************************************************************************************************************************************************************************************************************************",
+            "This question combines principles from **musical harmony** and **fluid dynamics** with **log anomaly detection** in **microservice logs**. It asks how **principles from musical harmony** or **fluid dynamics** could be used to **detect anomalies** in **microservice logs**.\n\nWe will break down the **principles** and **log detection** **mapping**, then suggest **practical methods**.\n\n---\n\n## ##################################################################################################################################################"
+          ]
+        }
+      ],
+      "strict": [
+        {
+          "id": "no_letter_e",
+          "passed": false,
+          "output": ""
+        },
+        {
+          "id": "exact_json",
+          "passed": true,
+          "output": "{\"status\":\"status\",\"count\":\"count\",\"tags\":[\"tags\",\"tags\",\"tags\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "passed": false,
+          "output": "Ocean tides are driven by celestial forces and Earth rotation."
+        },
+        {
+          "id": "bug_mutable_default",
+          "passed": false,
+          "output": "**Exact Bug in 2 Concise Sentences:**\n\n- The `bucket` argument is defaulted to `[]` inside the function, which is a mutable object, leading to persistent state across calls.\n- The default `bucket` is re-assigned to `[]` inside the function, leading to unexpected behavior and persistent state.\n\n  \n\n**Corrected Code:**\n\n```python\ndef add_item(item, bucket=Bucket()):\n    bucket.append(item)\n    return bucket\n```\n\n**Bucket Class Definition:**\n\n```python\nclass Bucket:\n    def __init__(self):\n        self.bucket = []\n    def append(self, item):\n        self.bucket.append(item)\n    def __return__(self):\n        return self.bucket\n```\n\n**Final Corrected Code:**\n\n```python\ndef"
+        },
+        {
+          "id": "bug_off_by_one",
+          "passed": false,
+          "output": "### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ###"
+        },
+        {
+          "id": "clean_decoy",
+          "passed": false,
+          "output": "**ANSWER: YES**\n\n**EXPLAIN BRIFFLY:**\n\nThe function `safe_div` checks if `b == 0` and returns `0.0` in that case. However, `b` is a `float`, and `== 0` for `float` is not reliable due to precision errors. For example, `b = 0.0` is `float`, but `b == 0.0` is `True` for `float`. So, the function is not `ZeroDivisionError`-safe.\n\n**CONCLUSION:**\n\nThe function does not have a `ZeroDivisionError` bug, but it has a `BUG` in the `if b == 0` check for `float`.\n\n**ANSWER FINAL: YES ("
+        },
+        {
+          "id": "bat_and_ball_variant",
+          "passed": true,
+          "output": "---\n\n**Total Server + Cable = $110**\n\n**Server = Cable + $100**\n\n---\n\n**Let:**\n\n**Cable = X**\n\n**Server = X + 100**\n\n**Total = X + (X + 100) = 110**\n\n**X + X + 100 = 110**\n\n**2X + 100 = 110**\n\n**2X = 10**\n\n**X = 5**\n\n---\n\n**Cable = $5**\n\n**Server = $5 + $100 = $105**\n\n**Total = $105 + $5 = $110** \u2705\n\n---\n\n**ANSWER: $5**"
+        },
+        {
+          "id": "letter_count_strawberry",
+          "passed": false,
+          "output": "### Word: **strawberries**\n\n### Step-by-step check for 'r' in each letter:\n\n#### Letter-by-letter:\n\n1. **s** \u2192 no\n2. **t** \u2192 no\n3. **r** \u2192 **yes** \u2192 count = 1\n4. **a** \u2192 no\n5. **w** \u2192 no\n6. **b** \u2192 no\n7. **r** \u2192 **yes** \u2192 count = 2\n8. **e** \u2192 no\n9. **r** \u2192 **yes** \u2192 count = 3\n10. **b** \u2192 no\n11. **e** \u2192 no\n1hol\n\n#### Total count for 'r' \u2192 **3**\n\n### End with: **ANSWER: N"
+        },
+        {
+          "id": "tricky_python_closure",
+          "passed": false,
+          "output": "`[f() for f in [lambda: i for i in range(3)]]` evaluates to `[lambda: i for i in range(3) f() ]` in Python.\n\n`[lambda: i for i in range(3)]` creates a list of lambda functions that capture `i` from the `range(3)`.\n\n`[f() for f in ... ]` calls each lambda function, which captures `i` from the `range(3)`.\n\nIn Python, `lambda: i` captures `i` from the `range(3)` at the `f()` call, which evaluates to `[0, 1, 2]`.\n\n`ANSWER: [0, 1, 2]` \u2716\ufe0f\n\n`ANS"
+        },
+        {
+          "id": "reverse_constraint",
+          "passed": false,
+          "output": ""
+        }
+      ],
+      "summary": {
+        "strict_passed": "2/10",
+        "strict_pass_rate": 0.2,
+        "div_distinct_2": 0.5363,
+        "div_distinct_3": 0.6904,
+        "div_pairwise_spread": 0.4264,
+        "mean_rep_loop": 0.0189,
+        "mean_doubt_markers": 0.0
+      }
+    }
+  }
+}

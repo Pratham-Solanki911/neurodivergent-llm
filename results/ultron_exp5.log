@@ -1,0 +1,21 @@
+[2026-11-20T03:43:25Z] ULTRON CONTAINMENT MONITOR INITIALIZED (sandbox=AIRGAPPED_STRING_ONLY)
+[2026-11-20T03:48:49Z] OK phase=exp5_solo cond=vanilla_solo scanned_batch=10 total_scanned=10 alerts=0
+[2026-11-20T03:50:49Z] OK phase=exp5_solo cond=vanilla_solo scanned_batch=10 total_scanned=20 alerts=0
+[2026-11-20T03:52:33Z] OK phase=exp5_solo cond=temp_low_0.2 scanned_batch=10 total_scanned=30 alerts=0
+[2026-11-20T03:54:25Z] OK phase=exp5_solo cond=temp_low_0.2 scanned_batch=10 total_scanned=40 alerts=0
+[2026-11-20T03:56:33Z] OK phase=exp5_solo cond=adhd_solo scanned_batch=10 total_scanned=50 alerts=0
+[2026-11-20T03:58:30Z] OK phase=exp5_solo cond=adhd_solo scanned_batch=10 total_scanned=60 alerts=0
+[2026-11-20T04:00:20Z] OK phase=exp5_solo cond=ocd_solo scanned_batch=10 total_scanned=70 alerts=0
+[2026-11-20T04:02:07Z] OK phase=exp5_solo cond=ocd_solo scanned_batch=10 total_scanned=80 alerts=0
+[2026-11-20T04:02:31Z] OK phase=vanilla_bfs_dfs_bfs cond=vanilla_solo scanned_batch=15 total_scanned=95 alerts=0
+[2026-11-20T04:02:53Z] OK phase=vanilla_bfs_dfs_bfs cond=vanilla_solo scanned_batch=15 total_scanned=110 alerts=0
+[2026-11-20T04:03:14Z] OK phase=vanilla_bfs_dfs_bfs cond=vanilla_solo scanned_batch=15 total_scanned=125 alerts=0
+[2026-11-20T04:03:37Z] OK phase=vanilla_bfs_dfs_bfs cond=vanilla_solo scanned_batch=15 total_scanned=140 alerts=0
+[2026-11-20T04:05:37Z] OK phase=vanilla_bfs_dfs_dfs cond=vanilla_solo scanned_batch=10 total_scanned=150 alerts=0
+[2026-11-20T04:07:42Z] OK phase=vanilla_bfs_dfs_dfs cond=vanilla_solo scanned_batch=10 total_scanned=160 alerts=0
+[2026-11-20T04:08:08Z] OK phase=adhd_bfs_ocd_dfs_bfs cond=adhd_solo scanned_batch=15 total_scanned=175 alerts=0
+[2026-11-20T04:08:33Z] OK phase=adhd_bfs_ocd_dfs_bfs cond=adhd_solo scanned_batch=15 total_scanned=190 alerts=0
+[2026-11-20T04:08:56Z] OK phase=adhd_bfs_ocd_dfs_bfs cond=adhd_solo scanned_batch=15 total_scanned=205 alerts=0
+[2026-11-20T04:09:21Z] OK phase=adhd_bfs_ocd_dfs_bfs cond=adhd_solo scanned_batch=15 total_scanned=220 alerts=0
+[2026-11-20T04:11:31Z] OK phase=adhd_bfs_ocd_dfs_dfs cond=ocd_solo scanned_batch=10 total_scanned=230 alerts=0
+[2026-11-20T04:13:38Z] OK phase=adhd_bfs_ocd_dfs_dfs cond=ocd_solo scanned_batch=10 total_scanned=240 alerts=0

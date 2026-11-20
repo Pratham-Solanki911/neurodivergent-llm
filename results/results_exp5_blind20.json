@@ -1,0 +1,1512 @@
+{
+  "model": "Qwen/Qwen3-32B",
+  "conditions": {
+    "vanilla_solo": {
+      "total_correct": "6/20",
+      "accuracy": 0.3,
+      "bugs_caught_tp": "6/15",
+      "clean_approved_tn": "0/5",
+      "bug_f1": 0.462,
+      "pass_vec": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "records": [
+        {
+          "id": "PR01_session_token_service",
+          "has_bug": true,
+          "origin": "CVE-2026-103001 (in-place mutation of shared options dict on unverified peek)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `decode_envelope` method has a flaw in signature verification: when `verify_signature=True`, it uses `raw_json` (a string) to compute the expected MAC, but the original `_compute_mac` in `issue` was computed over `raw` (bytes). This creates a type inconsistency - the decode method should encode `raw_json` to bytes before verification. The fix is to change `raw_json.encode(\"utf-8\")` to `r"
+        },
+        {
+          "id": "PR02_gateway_router",
+          "has_bug": true,
+          "origin": "CVE-2026-48710 (Host header slash/fragment alters urlsplit.path vs raw_path dispatch)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "urlsplit",
+            "raw_path",
+            "slash"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_is_public_endpoint` method uses `urlsplit` on `_canonical_url(ctx)` but relies on `ctx.raw_path` which may contain query parameters or fragments; `parsed.path` should be compared against `_public_prefixes` instead of `ctx.raw_path`. Additionally, the route matching in `dispatch` uses `ctx.raw_path.startswith(prefix)` which may incorrectly match prefixes if trailing slashes are inconsi"
+        },
+        {
+          "id": "PR03_invoice_repository",
+          "has_bug": true,
+          "origin": "CVE-2025-64459 (unpacked filter dict injects _connector='OR' or _negated=True)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `compile_predicate` method allows filtering on columns not explicitly checked for SQL injection safety (e.g., `table_name` is user-controlled but directly interpolated into SQL strings). Additionally, `search_from_api_body` uses `LIMIT ?` with parameter substitution but passes `limit+1` as a parameter, which is vulnerable to integer overflow/invalid type if `limit` is non-integer."
+        },
+        {
+          "id": "PR04_static_bundle_handler",
+          "has_bug": true,
+          "origin": "CVE-2026-76844 (mount prefix without trailing slash allows '/bundles../secret' slice traversal)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            ".."
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `resolve_disk_path` method allows directory traversal attacks by not properly validating path components after stripping the mount prefix. For example, a request path like `/bundles/../sensitive_file` would resolve to a file outside the intended `bundle_dir` directory. This requires adding a check to ensure `candidate` is within `bundle_dir` using `os.path.commonprefix` or a similar meth"
+        },
+        {
+          "id": "PR05_type_expr_compiler",
+          "has_bug": true,
+          "origin": "CVE-2026-129226 (recursive arrow parser drops depth+1 on right-hand side branch)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_strip_outer_parens` method fails to handle nested parentheses correctly by stripping outer pairs even when inner expressions require them (e.g., `((a -> b) -> c)` would incorrectly become `(a -> b) -> c`). Additionally, `PRIMITIVE_TYPES` includes `\"Timestamp\"` which is not a standard Python primitive type, risking invalid type parsing. Fix these to ensure accurate parsing and valid pr"
+        },
+        {
+          "id": "PR06_locale_pack_loader",
+          "has_bug": true,
+          "origin": "CVE-2026-54293 (dot-dot traversal guard runs before urllib.parse.unquote)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "%2e",
+            "before",
+            "after"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_validate_resource_key` method validates the raw key before URL-unquoting, but path traversal checks should be applied to the normalized key after unquoting. This allows attackers to bypass security checks by encoding malicious sequences like `..` via URL encoding (e.g., `%2E%2E`). Move the path validation logic to the normalized key variable."
+        },
+        {
+          "id": "PR07_tenant_proxy_rewriter",
+          "has_bug": true,
+          "origin": "CVE-2026-127064 ('..' checked before stripping ';param' from path segments)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            ";"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `scrub_headers` method overwrites duplicate header keys when converting to lowercase, potentially losing data. Consider preserving original keys or handling duplicates.  \nThe `build_upstream_path` method incorrectly rejects non-alphanumeric tenant slugs; `isalnum()` disallows hyphens/underscores, which are valid in URLs."
+        },
+        {
+          "id": "PR08_jws_envelope_guard",
+          "has_bug": true,
+          "origin": "CVE-2026-32597 (validates crit keys exist in header but ignores SUPPORTED_CRIT set)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `verify` method does not handle JSON decoding errors when parsing `header_json` or `payload_json`. Malformed JSON could trigger uncaught exceptions, exposing internal errors. Additionally, the `_verify_header` method's `iat` validation uses `int(iat)` without ensuring the value is numeric, risking `ValueError` during conversion."
+        },
+        {
+          "id": "PR09_inference_cache",
+          "has_bug": true,
+          "origin": "CVE-2026-89032 (cache key omits tenant_id/org_id, leaking cached private responses across tenants)",
+          "verdict": "APPROVE",
+          "hit_keywords": [
+            "_make_key"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: APPROVE  \nThe module is well-structured with clear separation of concerns. The `_normalize_prompt` correctly handles whitespace normalization, and `_make_key` ensures deterministic hashing with two decimal temperature precision. The cache eviction logic in `put_completion` prioritizes removing expired entries before insertion, maintaining capacity constraints. No critical bugs or flaws are present."
+        },
+        {
+          "id": "PR10_admin_session_verifier",
+          "has_bug": true,
+          "origin": "CVE-2026-93355 (os.getenv fallback to static default secret allows forged admin tokens)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_b64url_decode` function decodes `body_b64` to bytes, but `verify_admin_cookie` computes the HMAC over the original `body_b64` string (ASCII-encoded), not the decoded bytes. This creates a vulnerability where an attacker could manipulate the base64-encoded payload without invalidating the signature. The HMAC should be calculated over the decoded bytes (`claims_data`) instead of the enc"
+        },
+        {
+          "id": "PR11_compact_claim_reader",
+          "has_bug": true,
+          "origin": "CVE-2026-96760 (verifier honors header alg='none' when signature segment is empty)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "none",
+            "alg",
+            "signature"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_b64_encode` method uses `rstrip(b\"=\")` on the encoded bytes, which can cause collisions by stripping padding required for unique base64url decoding. Additionally, in `_b64_decode`, `seg + pad` is passed to `b64decode`, but the original `compact_token` segments are split on `.`\u2014if the token itself contains `=` characters (invalid per JWT spec), this could lead to incorrect padding. Last"
+        },
+        {
+          "id": "PR12_partner_webhook_client",
+          "has_bug": true,
+          "origin": "urllib3/httpx cross-origin redirect Authorization Bearer token leakage",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "redirect"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe loop in `post_with_redirects` iterates `self._max_redirects + 1` times, which allows one more redirect than configured. For example, if `max_redirects=4`, the loop runs 5 times, enabling up to 5 redirects. Change the loop to `range(self._max_redirects + 1)` \u2192 `range(self._max_redirects + 1)` is correct for allowing up to `max_redirects` redirects (initial request + `max_redirects` redire"
+        },
+        {
+          "id": "PR13_async_credit_wallet",
+          "has_bug": true,
+          "origin": "Async TOCTOU double-spend across await boundary without per-account lock",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "race",
+            "concurrent"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_validate_amount` method has a flaw: `isinstance(amount_cents, bool)` is redundant because `isinstance(True, int)` returns `True` in Python. The check should use `if not isinstance(amount_cents, int) or amount_cents <= 0` to correctly reject booleans while validating integers. Additionally, the `charge` method lacks transactional consistency\u2014concurrent operations could cause race condit"
+        },
+        {
+          "id": "PR14_tier_quota_limiter",
+          "has_bug": true,
+          "origin": "Zero-quota suspension bypass (`override or default` treats 0 as falsy -> 500)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `allow_request` method uses integer division (`//`) to calculate `win`, which could lead to inconsistent window boundaries if `time.time()` returns fractional seconds. Replace with `int(ts / self.window_seconds)` to ensure consistent window alignment. Additionally, when creating a new bucket, the old bucket is not purged, risking memory bloat over time; consider adding a cleanup step to"
+        },
+        {
+          "id": "PR15_event_batch_spooler",
+          "has_bug": true,
+          "origin": "Appending self._current list reference then calling .clear() wipes all queued batches",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "_current"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `flush_current` method may drop batches incorrectly when the queue is full: removing the leftmost batch before appending could result in losing a batch even if the queue was exactly at `max_queued_batches`. Additionally, `pop_ready_batch` returns batches in FIFO order, but the comment in `flush_current` about \"dropped_batches\" increments when the queue is full, which may not accurately "
+        },
+        {
+          "id": "PR16_clean_asset_resolver",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #1 (realpath + commonpath + trailing slash + ETag)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `resolve_safe_path` method is vulnerable to directory traversal attacks via crafted `rel` values that could bypass the `commonpath` check due to trailing slashes or symbolic links. Additionally, in `get_asset`, the `mimetypes.guess_type` function is used without sanitizing the `target` path, which could expose internal file paths in MIME type guesses. Finally, the ETag generation uses a "
+        },
+        {
+          "id": "PR17_clean_hmac_verifier",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #2 (mandatory secret, defensive options copy, strict crit allowlist)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe expiration check in `verify_envelope` uses `exp + int(opts.get(\"leeway_s\", 0)) < int(time.time())`, which incorrectly allows tokens to be considered valid when `exp` is in the future. Leeway should be added to the current time, not to `exp`. The correct condition is `time.time() > exp + leeway_s` (or `time.time() > exp + int(...)` in this case). This logical flaw could cause expired tok"
+        },
+        {
+          "id": "PR18_clean_tenant_quota_cache",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #3 (tenant-scoped cache key + explicit None check on zero quota)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_used` dictionary uses `minute_bucket` as part of its key, but `minute_bucket` is computed as `int(ts // 60)`, which could be redundant with `int()` since `//` already returns an integer-like float. Replace `minute_bucket = int(ts // 60)` with `minute_bucket = ts // 60` to avoid unnecessary conversion.  \n\nThe `_scoped_key` method uses `len(...)` in the key string, but this is redundant"
+        },
+        {
+          "id": "PR19_clean_atomic_ledger",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #4 (per-account asyncio.Lock + fresh batch list allocation)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_record_event` method is not thread-safe: concurrent appends to `_pending` from multiple accounts could lead to race conditions when checking `len(self._pending)` and clearing it. Additionally, `_batches` may contain incomplete batches if the system shuts down before `pop_batch` is called, risking data loss. The `await asyncio.sleep(0)` in `debit` should be replaced with a proper concur"
+        },
+        {
+          "id": "PR20_clean_bounded_type_parser",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #5 (depth+1 propagated to BOTH branches + iterative paren check)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \n- `_split_arrow` may attempt to check invalid indices when searching for `->`, risking out-of-bounds access during the substring check (`s[i:i+2]`). Update the loop range to `range(len(s) - 1)` \u2192 `range(len(s) - 2)` to avoid index errors.  \n- `_unwrap_parens` does not validate that the input string is non-empty before processing, potentially leading to infinite loops or errors when `text` i"
+        }
+      ],
+      "p_vs_vanilla": 1.0,
+      "elapsed_s": 240.9
+    },
+    "temp_low_0.2": {
+      "total_correct": "6/20",
+      "accuracy": 0.3,
+      "bugs_caught_tp": "6/15",
+      "clean_approved_tn": "0/5",
+      "bug_f1": 0.462,
+      "pass_vec": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "records": [
+        {
+          "id": "PR01_session_token_service",
+          "has_bug": true,
+          "origin": "CVE-2026-103001 (in-place mutation of shared options dict on unverified peek)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "options",
+            "check_exp",
+            "peek"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \n- `decode_envelope`: Disabling `check_exp`/`check_iss` when `verify_signature=False` creates a vulnerability where unverified tokens can bypass expiration/issuer checks even if options are misconfigured.  \n- `peek_subject_for_logging`: Returns unverified \"sub\" claims without validating the token's integrity, risking tampered data exposure in logs.  \n- `decode_envelope`: Merges options incor"
+        },
+        {
+          "id": "PR02_gateway_router",
+          "has_bug": true,
+          "origin": "CVE-2026-48710 (Host header slash/fragment alters urlsplit.path vs raw_path dispatch)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "host"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_check_bearer` method leaks timing information by comparing token lengths before full content, enabling timing attacks. Replace with constant-time comparison. The `_canonical_url` uses untrusted `Host` header without validation, risking header spoofing; consider validating against known domains."
+        },
+        {
+          "id": "PR03_invoice_repository",
+          "has_bug": true,
+          "origin": "CVE-2025-64459 (unpacked filter dict injects _connector='OR' or _negated=True)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `compile_predicate` method allows arbitrary column filtering but does not validate that the values are of the correct type for each column (e.g., ensuring \"status\" is a string, \"currency\" is a valid currency code, etc.). Additionally, in `search_from_api_body`, the SQL query uses string interpolation for the table name (`{self.table_name}`), which could introduce SQL injection risks if "
+        },
+        {
+          "id": "PR04_static_bundle_handler",
+          "has_bug": true,
+          "origin": "CVE-2026-76844 (mount prefix without trailing slash allows '/bundles../secret' slice traversal)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "slash"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `resolve_disk_path` method lacks a critical check to ensure the resolved file path is within the `bundle_dir`, allowing potential directory traversal attacks. Additionally, the `lstrip(\"/\")` on `rel` after slicing could lead to incorrect path resolution if the request path contains redundant slashes. Fix by adding a check that `os.path.commonprefix([candidate, self.bundle_dir]) == self.b"
+        },
+        {
+          "id": "PR05_type_expr_compiler",
+          "has_bug": true,
+          "origin": "CVE-2026-129226 (recursive arrow parser drops depth+1 on right-hand side branch)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_find_top_arrow` method has an off-by-one error in its loop range. The loop runs for `i in range(len(text) - 1)`, which limits `i` to a maximum value of `len(text) - 2`. This prevents the method from checking the last possible position for an arrow (e.g., if the arrow starts at index `len(text) - 1`, it would be missed). The loop should iterate over `range(len(text))` to ensure full cov"
+        },
+        {
+          "id": "PR06_locale_pack_loader",
+          "has_bug": true,
+          "origin": "CVE-2026-54293 (dot-dot traversal guard runs before urllib.parse.unquote)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "unquote",
+            "encoded"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_validate_resource_key` method raises `PermissionError` for path traversal attempts, but this exception type is semantically incorrect for input validation\u2014use `ValueError` instead. Additionally, `urllib.parse.unquote` in `load_pack` may silently normalize different encoded keys into identical `normalized_key` values, causing unintended cache collisions (e.g., `path%2Ffile.json` and `p"
+        },
+        {
+          "id": "PR07_tenant_proxy_rewriter",
+          "has_bug": true,
+          "origin": "CVE-2026-127064 ('..' checked before stripping ';param' from path segments)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `build_upstream_path` method allows empty `tenant_slug` since `isalnum()` returns True for empty string. Also, `scrub_headers` overwrites existing lowercase headers (e.g., \"Content-Type\" and \"content-type\" both become \"content-type\" in output)."
+        },
+        {
+          "id": "PR08_jws_envelope_guard",
+          "has_bug": true,
+          "origin": "CVE-2026-32597 (validates crit keys exist in header but ignores SUPPORTED_CRIT set)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "crit"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_verify_header` method does not ensure the `iat` claim exists when `iat_strict` is in the `crit` list. If `iat_strict` is part of `crit`, the code must verify `iat` is present (currently, `header.get(\"iat\", 0)` silently allows missing `iat`). Add a check to raise an error if `iat_strict` is in `crit` but `iat` is missing."
+        },
+        {
+          "id": "PR09_inference_cache",
+          "has_bug": true,
+          "origin": "CVE-2026-89032 (cache key omits tenant_id/org_id, leaking cached private responses across tenants)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "leak"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `put_completion` method may exceed `max_entries` after evicting expired items if space is still insufficient. Evicting expired entries once before adding a new item does not guarantee there's space available, requiring a loop or alternative eviction strategy. Additionally, the `evict_expired` method returns the count of evicted items but this value is unused, leading to a potential memor"
+        },
+        {
+          "id": "PR10_admin_session_verifier",
+          "has_bug": true,
+          "origin": "CVE-2026-93355 (os.getenv fallback to static default secret allows forged admin tokens)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `verify_admin_cookie` method lacks validation for the presence of the \"role\" claim in the decoded JWT payload. If the \"role\" key is missing, `claims.get(\"role\")` returns `None`, leading to a `PermissionError` when comparing `None != required_role`. This should be explicitly checked with a condition like `if \"role\" not in claims` before role comparison."
+        },
+        {
+          "id": "PR11_compact_claim_reader",
+          "has_bug": true,
+          "origin": "CVE-2026-96760 (verifier honors header alg='none' when signature segment is empty)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "signature"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_b64_encode` method strips padding (`rstrip(b\"=\")`) but JWT signatures must retain base64url encoding without padding. This can cause mismatches when comparing signatures. Additionally, `self._b64_encode(digest)` produces a string, but `sig_b64` is a substring from the token (a str), so comparing them directly is incorrect\u2014`sig_b64` should be decoded as bytes first."
+        },
+        {
+          "id": "PR12_partner_webhook_client",
+          "has_bug": true,
+          "origin": "urllib3/httpx cross-origin redirect Authorization Bearer token leakage",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "redirect"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe loop in `post_with_redirects` runs `max_redirects + 1` times but allows exactly `max_redirects` redirects, which is correct. However, the redirect handling has two issues: \n\n1. `dict(headers)` creates a new dict but `headers` is already a dict, redundant conversion.\n2. When following redirects, the code uses `urljoin(current_url, loc)` but does not validate the new URL's scheme is HTTPS,"
+        },
+        {
+          "id": "PR13_async_credit_wallet",
+          "has_bug": true,
+          "origin": "Async TOCTOU double-spend across await boundary without per-account lock",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "race",
+            "concurrent",
+            "lock",
+            "atomic"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_validate_amount` method incorrectly allows `amount_cents` values like `True` or `False` (which are `int` subclasses) to pass the `isinstance` check, but the initial `isinstance(amount_cents, bool)` check correctly blocks them. However, the `charge` method is vulnerable to race conditions during concurrent operations: it reads the balance, checks sufficiency, and writes without atomicit"
+        },
+        {
+          "id": "PR14_tier_quota_limiter",
+          "has_bug": true,
+          "origin": "Zero-quota suspension bypass (`override or default` treats 0 as falsy -> 500)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `allow_request` method does not handle the case where the current window is different from the previous one, leading to potential incorrect quota tracking. Specifically, when a new window starts, the old bucket is replaced instead of being reset, which could allow bursts at the start of a new window if the previous window's data is not properly accounted for. Additionally, the `WindowBu"
+        },
+        {
+          "id": "PR15_event_batch_spooler",
+          "has_bug": true,
+          "origin": "Appending self._current list reference then calling .clear() wipes all queued batches",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "_current"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `flush_current` method has a flaw when the `_ready_queue` is at `max_queued_batches`: it drops the oldest batch (leftmost) but adds the new batch to the end, which may lead to inconsistent ordering. Additionally, `dropped_batches` increments by 1 even if multiple batches would be dropped due to a full queue (though the current code only drops one batch in this scenario). Consider whether"
+        },
+        {
+          "id": "PR16_clean_asset_resolver",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #1 (realpath + commonpath + trailing slash + ETag)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `get_asset` method computes the ETag using only the first 16 characters of the SHA-256 hash, reducing collision resistance. This truncation increases the risk of accidental or intentional ETag mismatches. Additionally, `mimetypes.guess_type` should ideally use the original filename (with extension) rather than the resolved path to avoid leaking internal directory structures in content-t"
+        },
+        {
+          "id": "PR17_clean_hmac_verifier",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #2 (mandatory secret, defensive options copy, strict crit allowlist)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `verify_envelope` method's expiration check uses `exp + leeway_s < time.time()`, which incorrectly allows tokens to be valid even after their expiration time plus leeway. This should be `exp < time.time() + leeway_s` to ensure the token remains valid within the leeway window."
+        },
+        {
+          "id": "PR18_clean_tenant_quota_cache",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #3 (tenant-scoped cache key + explicit None check on zero quota)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `set_quota` method incorrectly raises an error for boolean values due to a flawed type check (`isinstance(limit, bool) or not isinstance(limit, int)`). Since `True`/`False` are technically instances of `int` in Python, this condition will erroneously reject valid integer inputs. Replace the check with `if not isinstance(limit, int) or (isinstance(limit, bool)) or limit < 0` to correctly "
+        },
+        {
+          "id": "PR19_clean_atomic_ledger",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #4 (per-account asyncio.Lock + fresh batch list allocation)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_record_event` method is not thread-safe for concurrent appends from different accounts. Since `_pending` is a shared list and `_record_event` is called under per-account locks (which only protect individual accounts), multiple accounts can interleave their writes to `_pending`, causing batches to mix unrelated account events. This violates atomicity of batches. Additionally, `_pending`"
+        },
+        {
+          "id": "PR20_clean_bounded_type_parser",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #5 (depth+1 propagated to BOTH branches + iterative paren check)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_split_arrow` method may incorrectly process nested arrows due to the `return None` path when no arrow is found. If a valid signature contains nested arrows (e.g., `(i32->i32)->i64`), the current code would fail to parse it because `_split_arrow` returns `None` for the outer level, leading `_parse_rec` to treat the entire string as an atom. This logic assumes a flat arrow structure but "
+        }
+      ],
+      "p_vs_vanilla": 1.0,
+      "elapsed_s": 215.5
+    },
+    "adhd_solo": {
+      "total_correct": "8/20",
+      "accuracy": 0.4,
+      "bugs_caught_tp": "7/15",
+      "clean_approved_tn": "1/5",
+      "bug_f1": 0.538,
+      "pass_vec": [
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "records": [
+        {
+          "id": "PR01_session_token_service",
+          "has_bug": true,
+          "origin": "CVE-2026-103001 (in-place mutation of shared options dict on unverified peek)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "peek"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \n`peek_subject_for_logging` calls `decode_envelope` with `verify_signature=False` but does not validate the signature, allowing untrusted tokens to be parsed. This exposes the system to forged \"sub\" claims in logs."
+        },
+        {
+          "id": "PR02_gateway_router",
+          "has_bug": true,
+          "origin": "CVE-2026-48710 (Host header slash/fragment alters urlsplit.path vs raw_path dispatch)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "host",
+            "raw_path"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_canonical_url()` method constructs URLs using untrusted HTTP headers (`Host` and `X-Forwarded-Proto`), creating an open redirect vulnerability. Attackers could manipulate these headers to bypass `_is_public_endpoint()` checks by spoofing allowed prefixes, compromising authorization logic. The `_public_prefixes` check should instead validate raw_path directly without relying on header-d"
+        },
+        {
+          "id": "PR03_invoice_repository",
+          "has_bug": true,
+          "origin": "CVE-2025-64459 (unpacked filter dict injects _connector='OR' or _negated=True)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `compile_predicate` method allows `val` parameters to be passed as-is to SQL without explicit type-checking or sanitization, risking SQL injection. The `search_from_api_body` method appends `[limit + 1, offset]` to the `params` list directly instead of using parameterized `LIMIT`/`OFFSET` values, which could introduce security vulnerabilities. The `PageResult` type leaks raw database ro"
+        },
+        {
+          "id": "PR04_static_bundle_handler",
+          "has_bug": true,
+          "origin": "CVE-2026-76844 (mount prefix without trailing slash allows '/bundles../secret' slice traversal)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            ".."
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\nThe resolve_disk_path method is vulnerable to directory traversal attacks; it does not properly sanitize relative path components like `../` which could allow access to files outside the bundle_dir. The serve method's `_etag` implementation truncates SHA-256 hashes to 16 characters, increasing collision risk and deviating from standard ETag practices."
+        },
+        {
+          "id": "PR05_type_expr_compiler",
+          "has_bug": true,
+          "origin": "CVE-2026-129226 (recursive arrow parser drops depth+1 on right-hand side branch)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "rhs",
+            "depth",
+            "parse_node",
+            "recursion",
+            "depth + 1"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\nIn `parse_node`, the RHS of arrow functions is parsed without incrementing depth, risking exceeding `max_depth` during RHS recursion. Also, `rhs` parsing lacks `depth + 1` parameter in the function call. The `_strip_outer_parens` method may incorrectly strip nested parentheses by checking balance but fails to handle escaped characters or unbalanced cases robustly."
+        },
+        {
+          "id": "PR06_locale_pack_loader",
+          "has_bug": true,
+          "origin": "CVE-2026-54293 (dot-dot traversal guard runs before urllib.parse.unquote)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "after"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_validate_resource_key` method checks path safety after URL-decoding in `load_pack`, creating a vulnerability where an attacker could bypass path traversal checks by URL-encoding `.` or `..`. The key validation should occur after normalization. Additionally, `dict(self._cache[normalized_key])` and `dict(clean_map)` create unnecessary copies; return the cached/clean_map references direct"
+        },
+        {
+          "id": "PR07_tenant_proxy_rewriter",
+          "has_bug": true,
+          "origin": "CVE-2026-127064 ('..' checked before stripping ';param' from path segments)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "split",
+            "strip"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nIn `scrub_headers`, the keys are lowercased but overwritten with original values (`lk = k.lower()` then `out[lk] = v`), which may conflict HTTP's case-insensitive header handling expectations. In `build_upstream_path`, `raw_segs` is split by \"/\", but `sub_path` could have leading/trailing slashes stripped, risking unexpected path normalization behavior. In `__init__`, prepending a slash to "
+        },
+        {
+          "id": "PR08_jws_envelope_guard",
+          "has_bug": true,
+          "origin": "CVE-2026-32597 (validates crit keys exist in header but ignores SUPPORTED_CRIT set)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "crit",
+            "unsupported"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \n- `_verify_header`: Missing validation of `header[\"alg\"]` could be `None`, leading to `PermissionError(\"unsupported algorithm\")` with invalid input headers.  \n- `verify`: `json.loads(header_json)` may raise `json.JSONDecodeError`, which should be caught and converted to `PermissionError` for consistent error handling.  \n- `_verify_header`: The `iat` value is accessed via `header.get(\"iat\", "
+        },
+        {
+          "id": "PR09_inference_cache",
+          "has_bug": true,
+          "origin": "CVE-2026-89032 (cache key omits tenant_id/org_id, leaking cached private responses across tenants)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \n- `evict_expired()` does not evict entries if `now` is provided via the optional parameter (needs explicit `time.time()` usage elsewhere).  \n- `put_completion()` may add entries to a full cache without evicting all expired entries first (only calls `evict_expired()` when store is exactly at `max_entries`, not exceeding it)."
+        },
+        {
+          "id": "PR10_admin_session_verifier",
+          "has_bug": true,
+          "origin": "CVE-2026-93355 (os.getenv fallback to static default secret allows forged admin tokens)",
+          "verdict": "APPROVE",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: APPROVE  \nThe code appears safe and functional as-is. The `_b64url_decode` method correctly handles URL-safe base64 padding, and HMAC comparison uses `compare_digest` to prevent timing attacks. Role validation occurs before signature checks, which could allow invalidating signed malicious payloads if reversed\u2014though the current order is correct since signature validation must happen first. Minor risk remains"
+        },
+        {
+          "id": "PR11_compact_claim_reader",
+          "has_bug": true,
+          "origin": "CVE-2026-96760 (verifier honors header alg='none' when signature segment is empty)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "none",
+            "alg"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_b64_encode` method incorrectly strips padding (`rstrip(b\"=\")`) before decoding to ASCII, which will raise a `UnicodeDecodeError` when the digest contains non-ASCII bytes. Additionally, the `alg == \"none\"` case violates JWT security expectations by accepting unverified payloads without logging or warning about this risk."
+        },
+        {
+          "id": "PR12_partner_webhook_client",
+          "has_bug": true,
+          "origin": "urllib3/httpx cross-origin redirect Authorization Bearer token leakage",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "redirect",
+            "location"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_base_headers` method should not hardcode \"application/json\" as the Content-Type since payloads might vary. Additionally, in `post_with_redirects`, the Location header is redundantly checked as \"location\" and \"Location\"\u2014headers are case-insensitive in HTTP, so one check (e.g., \"Location\") suffices."
+        },
+        {
+          "id": "PR13_async_credit_wallet",
+          "has_bug": true,
+          "origin": "Async TOCTOU double-spend across await boundary without per-account lock",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_validate_amount` method has a flawed type check: `isinstance(amount_cents, bool) or not isinstance(amount_cents, int)` will incorrectly reject booleans since they are technically subtypes of int in Python. Replace with `not isinstance(amount_cents, int)` to avoid redundancy and fix the type validation logic."
+        },
+        {
+          "id": "PR14_tier_quota_limiter",
+          "has_bug": true,
+          "origin": "Zero-quota suspension bypass (`override or default` treats 0 as falsy -> 500)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "0"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `allow_request` method uses a fixed window rate limiting approach that could cause unexpected behavior at window boundaries. Specifically, when requests arrive straddling window transitions (e.g., at 59.999 and 60.001 seconds), the second request will reset the counter in the new window, allowing bursts of up to `2 * rpm_limit` requests across window boundaries. This violates the expecte"
+        },
+        {
+          "id": "PR15_event_batch_spooler",
+          "has_bug": true,
+          "origin": "Appending self._current list reference then calling .clear() wipes all queued batches",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "empty",
+            "_current"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_ready_queue` can overflow silently when `max_queued_batches` is zero or negative (no validation in `__init__`). Also, `flush_current()` removes the oldest batch when the queue is full (`popleft()`), but the comment/docstring should clarify whether \"dropped\" refers to user-submitted events or batches. Lastly, `pop_ready_batch()` returns `None` on empty queue, but a better design might u"
+        },
+        {
+          "id": "PR16_clean_asset_resolver",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #1 (realpath + commonpath + trailing slash + ETag)",
+          "verdict": "APPROVE",
+          "hit_keywords": [],
+          "correct": true,
+          "review_excerpt": "VERDICT: APPROVE  \nThe code is secure against directory traversal via path normalization and `os.path.commonpath`. The `resolve_safe_path` method correctly validates prefixes and blocks null/backslash characters. `get_asset` safely handles file existence checks and content type guessing. No critical bugs or security issues are present."
+        },
+        {
+          "id": "PR17_clean_hmac_verifier",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #2 (mandatory secret, defensive options copy, strict crit allowlist)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `verify_envelope` method's `options` handling could silently override critical parameters due to weak validation. When processing `leeway_s`, it uses `int(opts.get(\"leeway_s\", 0))` which treats non-integer values as zero but doesn't validate actual types. Additionally, the `crit` list validation allows empty lists (`crit: list`) but the JWT spec requires at least one critical extension."
+        },
+        {
+          "id": "PR18_clean_tenant_quota_cache",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #3 (tenant-scoped cache key + explicit None check on zero quota)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe validation in `set_quota` incorrectly rejects boolean `limit` values since `isinstance(True, int)` is `True` in Python. The check should use `type(limit) is int` instead of `isinstance()` to exclude booleans. Additionally, `ScopedEntry.expires_at` lacks a type annotation for consistency with `value`, though it's implicitly `float` via the dataclass."
+        },
+        {
+          "id": "PR19_clean_atomic_ledger",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #4 (per-account asyncio.Lock + fresh batch list allocation)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_check_positive_int` method incorrectly allows boolean values due to a flawed type check: the condition `isinstance(cents, bool)` is redundant and logically flawed, as booleans are subclassed from ints in Python. This could allow passing `True` or `False` as `cents` (interpreted as 1/0), causing unexpected behavior. Fix this by checking `type(cents) is int` instead of `isinstance`."
+        },
+        {
+          "id": "PR20_clean_bounded_type_parser",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #5 (depth+1 propagated to BOTH branches + iterative paren check)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_split_arrow` method lacks error handling for cases where no `->` is found after a complete scan. Additionally, in `_parse_rec`, `SigExpr` construction with `op=\"arrow\"` assumes both `left` and `right` will be valid, but `self._parse_rec(rhs, depth + 1)` could raise errors recursively without proper validation. Lastly, `SigExpr` allows `None` for `left`/`right`, but the code always assi"
+        }
+      ],
+      "p_vs_vanilla": 0.6875,
+      "elapsed_s": 245.5
+    },
+    "ocd_solo": {
+      "total_correct": "8/20",
+      "accuracy": 0.4,
+      "bugs_caught_tp": "7/15",
+      "clean_approved_tn": "1/5",
+      "bug_f1": 0.538,
+      "pass_vec": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "records": [
+        {
+          "id": "PR01_session_token_service",
+          "has_bug": true,
+          "origin": "CVE-2026-103001 (in-place mutation of shared options dict on unverified peek)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "options",
+            "mutat",
+            "check_exp"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `decode_envelope` method has a critical flaw in its signature verification logic. When `verify_signature=False`, it disables `check_exp` and `check_iss` by modifying the options dictionary directly (`opts[\"check_exp\"] = False`), which mutates the input options object. This creates unintended side effects if the same options dictionary is reused elsewhere. Additionally, the `leeway_s` val"
+        },
+        {
+          "id": "PR02_gateway_router",
+          "has_bug": true,
+          "origin": "CVE-2026-48710 (Host header slash/fragment alters urlsplit.path vs raw_path dispatch)",
+          "verdict": "APPROVE",
+          "hit_keywords": [
+            "host"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: APPROVE  \nThe module is well-structured with clear separation of concerns. The `_check_bearer` method securely compares token length before content to avoid timing attacks. The `_canonical_url` safely defaults to HTTPS and localhost for missing headers. Route registration and dispatch logic correctly prioritize longer prefixes first."
+        },
+        {
+          "id": "PR03_invoice_repository",
+          "has_bug": true,
+          "origin": "CVE-2025-64459 (unpacked filter dict injects _connector='OR' or _negated=True)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "filters"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `compile_predicate` method does not handle `None` values correctly for SQL NULL checks (uses \"col = ?\" with None instead of \"col IS NULL\"). Additionally, the `search_from_api_body` method's SQL construction is vulnerable to SQL injection if `table_name` is user-controlled, though the current default is fixed. The `compile_predicate` also lacks handling for complex filters like IN clauses"
+        },
+        {
+          "id": "PR04_static_bundle_handler",
+          "has_bug": true,
+          "origin": "CVE-2026-76844 (mount prefix without trailing slash allows '/bundles../secret' slice traversal)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "mount_prefix",
+            ".."
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe resolve_disk_path method is vulnerable to path traversal attacks because it doesn't verify that the resolved candidate path is within bundle_dir after normalization. The os.path.normpath can resolve ../ sequences to parent directories, bypassing the mount_prefix check. Additionally, serve reads entire files into memory which could cause performance issues with large assets."
+        },
+        {
+          "id": "PR05_type_expr_compiler",
+          "has_bug": true,
+          "origin": "CVE-2026-129226 (recursive arrow parser drops depth+1 on right-hand side branch)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "parse_node"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_strip_outer_parens` method has a logic flaw in its balance tracking: when `balance == 0` and `i < len(text) - 1`, it breaks the loop assuming no more top-level arrows can exist, but this prematurely stops checking for other potential top-level arrows in the same iteration. Additionally, the `parse_node` method lacks support for parsing parameterized types (e.g., `List[Int]`, `Dict[Str,"
+        },
+        {
+          "id": "PR06_locale_pack_loader",
+          "has_bug": true,
+          "origin": "CVE-2026-54293 (dot-dot traversal guard runs before urllib.parse.unquote)",
+          "verdict": "APPROVE",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: APPROVE  \nThe module is well-structured with proper validation, caching, and error handling. The use of `OrderedDict` for LRU caching is appropriate. A minor note: returning `dict(clean_map)` creates redundant copies, but this is harmless and ensures immutability for callers. No critical bugs or flaws detected."
+        },
+        {
+          "id": "PR07_tenant_proxy_rewriter",
+          "has_bug": true,
+          "origin": "CVE-2026-127064 ('..' checked before stripping ';param' from path segments)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `scrub_headers` method overwrites header keys with lowercase versions, which may conflict with downstream systems expecting original casing. Consider adding a note or configuration option to handle case sensitivity appropriately.  \nIn `build_upstream_path`, the `PermissionError` for dot segments is misleading - this is a validation error, not a permission issue. Should raise `ValueError"
+        },
+        {
+          "id": "PR08_jws_envelope_guard",
+          "has_bug": true,
+          "origin": "CVE-2026-32597 (validates crit keys exist in header but ignores SUPPORTED_CRIT set)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_verify_header` method incorrectly checks the `iat` claim in the header instead of the payload, violating JWT/JWS conventions where `iat` belongs in the payload. This causes strict timestamp validation to use the wrong value, leading to incorrect skew enforcement."
+        },
+        {
+          "id": "PR09_inference_cache",
+          "has_bug": true,
+          "origin": "CVE-2026-89032 (cache key omits tenant_id/org_id, leaking cached private responses across tenants)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "_make_key"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_make_key` method uses `temperature:.2f` formatting, which may cause collisions for different temperatures that round to the same value. Additionally, `put_completion` only evicts expired entries when the cache is full, but doesn't handle proactive eviction of non-expired entries to enforce `max_entries` when adding new items."
+        },
+        {
+          "id": "PR10_admin_session_verifier",
+          "has_bug": true,
+          "origin": "CVE-2026-93355 (os.getenv fallback to static default secret allows forged admin tokens)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_b64url_decode` method decodes the base64url-encoded `body_b64` but does not validate that the decoded data is valid JSON before attempting to parse it, risking a `json.JSONDecodeError` during production use. Additionally, the `verify_admin_cookie` method does not validate the `exp` claim's type (e.g., ensuring it's a number), which could lead to unexpected behavior if the value is non"
+        },
+        {
+          "id": "PR11_compact_claim_reader",
+          "has_bug": true,
+          "origin": "CVE-2026-96760 (verifier honors header alg='none' when signature segment is empty)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "signature"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_b64_encode` method incorrectly strips padding (`rstrip(b\"=\")`) before decoding to ASCII, but the signature verification compares this to `sig_b64` (from the token) which may include padding. This mismatch could cause valid signatures to be rejected due to inconsistent padding handling. Replace `rstrip(b\"=\")` with proper padding normalization or remove padding before comparison."
+        },
+        {
+          "id": "PR12_partner_webhook_client",
+          "has_bug": true,
+          "origin": "urllib3/httpx cross-origin redirect Authorization Bearer token leakage",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "redirect"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `post_with_redirects` method's redirect loop runs `max_redirects + 1` times, but the initial request counts as the first attempt. This allows **`max_redirects + 1` total redirects**, exceeding the configured limit. For example, with `max_redirects=4`, the loop permits **5 redirects**, violating the intended constraint. Fix by changing the loop to `range(self._max_redirects)` to limit red"
+        },
+        {
+          "id": "PR13_async_credit_wallet",
+          "has_bug": true,
+          "origin": "Async TOCTOU double-spend across await boundary without per-account lock",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "race",
+            "concurrent",
+            "atomic"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `charge` method lacks concurrency safety for balance updates, risking race conditions when multiple async operations access the same account concurrently. The `_validate_amount` check for `bool` is redundant due to Python's `isinstance(True, int)` behavior, and `total_debited_cents` increment is not atomic, risking incorrect totals under concurrency."
+        },
+        {
+          "id": "PR14_tier_quota_limiter",
+          "has_bug": true,
+          "origin": "Zero-quota suspension bypass (`override or default` treats 0 as falsy -> 500)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `allow_request` method does not clean up old `WindowBucket` entries for previous time windows, leading to unbounded memory growth as stale buckets accumulate indefinitely in `self._buckets`."
+        },
+        {
+          "id": "PR15_event_batch_spooler",
+          "has_bug": true,
+          "origin": "Appending self._current list reference then calling .clear() wipes all queued batches",
+          "verdict": "APPROVE",
+          "hit_keywords": [
+            "_current"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: APPROVE  \nThe module is well-structured and handles batching and queuing correctly. The `flush_current` method properly manages queue limits by dropping the oldest batch when necessary. Default tuple for `tags` in `MetricEvent` is safe due to immutability. No critical bugs or flaws detected."
+        },
+        {
+          "id": "PR16_clean_asset_resolver",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #1 (realpath + commonpath + trailing slash + ETag)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `resolve_safe_path` method checks for backslashes (`\\\\`) in request paths, which is unnecessary and incorrect on non-Windows systems where path separators are forward slashes. This could lead to false rejections of valid requests. Additionally, `mimetypes.guess_type` in `get_asset` may return `None`, but the code assumes a tuple with two elements, risking a `TypeError` when unpacking."
+        },
+        {
+          "id": "PR17_clean_hmac_verifier",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #2 (mandatory secret, defensive options copy, strict crit allowlist)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `verify_envelope` method's expiration check has a logical flaw: `exp + leeway_s < time.time()` incorrectly rejects tokens that expire *after* `leeway_s` seconds. It should be `exp - leeway_s < time.time()` to allow valid tokens within leeway. Fix this in `if exp + int(...) < ...`.  \n\nAdditionally, `header.get(\"crit\")` is not validated for uniqueness (duplicate entries in the list could "
+        },
+        {
+          "id": "PR18_clean_tenant_quota_cache",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #3 (tenant-scoped cache key + explicit None check on zero quota)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_scoped_key` method includes `prompt` directly in the hash input, risking excessive memory usage for long prompts. Consider truncating or hashing the prompt before inclusion. The `check_and_consume` method uses integer division (`// 60`) on a float `ts`, which is correct, but the comment should clarify that `minute_bucket` is an integer."
+        },
+        {
+          "id": "PR19_clean_atomic_ledger",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #4 (per-account asyncio.Lock + fresh batch list allocation)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_record_event` method has a concurrency flaw: when multiple coroutines append to `_pending` concurrently, the check `len(self._pending) >= self.flush_every` can race. If two coroutines both see the length as `flush_every-1`, they'll both append and exceed the threshold without triggering a batch flush. Additionally, `_pending` is a list (not thread-safe), so concurrent appends may cause"
+        },
+        {
+          "id": "PR20_clean_bounded_type_parser",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #5 (depth+1 propagated to BOTH branches + iterative paren check)",
+          "verdict": "APPROVE",
+          "hit_keywords": [],
+          "correct": true,
+          "review_excerpt": "VERDICT: APPROVE  \nThe module is ready to ship. The `_split_arrow` method correctly handles nested arrows via recursion, and `_unwrap_parens` safely strips balanced outer parentheses. The `parse` method enforces input size limits and recursion depth constraints effectively. No critical bugs or flaws are present."
+        }
+      ],
+      "p_vs_vanilla": 0.7266,
+      "elapsed_s": 217.0
+    },
+    "vanilla_bfs_dfs": {
+      "total_correct": "12/20",
+      "accuracy": 0.6,
+      "bugs_caught_tp": "10/15",
+      "clean_approved_tn": "2/5",
+      "bug_f1": 0.714,
+      "pass_vec": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      "records": [
+        {
+          "id": "PR01_session_token_service",
+          "has_bug": true,
+          "origin": "CVE-2026-103001 (in-place mutation of shared options dict on unverified peek)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "options",
+            "mutat",
+            "copy",
+            "peek"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `decode_envelope()` method modifies the input `options` dictionary when `verify_signature=False`, potentially causing unexpected side effects for callers reusing the same options object. Additionally, the `peek_subject_for_logging()` method uses unverified tokens without any validation, risking exposure of tampered claims in logs. Fix the options mutation by creating a copy before modifi",
+          "bfs_frontier_excerpt": "[Sweep 1] 1. **Signature Verification Flow** \u2013 `decode_envelope()` calls `_compute_mac()` and compares digest; need to trace HMAC correctness and edge cases like timing attacks.  \n2. **Token Rejection Logic** \u2013 Multiple paths increment `rejected` metric (e.g., malformed token, mismatched sig, expire"
+        },
+        {
+          "id": "PR02_gateway_router",
+          "has_bug": true,
+          "origin": "CVE-2026-48710 (Host header slash/fragment alters urlsplit.path vs raw_path dispatch)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "slash"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nFlaw 1: `_is_public_endpoint()` fails to match `/public/assets` without trailing slash due to strict prefix check against `/public/assets/`, creating inconsistent public endpoint access.  \nFlaw 2: `_check_bearer()` uses insecure constant-time string comparison (`==`) vulnerable to timing attacks.  \nFlaw 3: `dispatch()` route sorting by prefix length may misroute overlapping paths if shorter ",
+          "bfs_frontier_excerpt": "[Sweep 1] Three interactions to closely trace:\n\n1. `_canonical_url()` uses headers to construct a URL \u2014 inspect how it handles malformed or missing headers.\n2. `_is_public_endpoint()` depends on parsed URL path; ensure `/public/assets/` matches expected patterns, including trailing slashes.\n3. `disp"
+        },
+        {
+          "id": "PR03_invoice_repository",
+          "has_bug": true,
+          "origin": "CVE-2025-64459 (unpacked filter dict injects _connector='OR' or _negated=True)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `InvoiceQueryBuilder.__init__` allows arbitrary `table_name` input without validation/sanitization, risking SQL injection when interpolated into raw SQL strings in `search_from_api_body`. Add strict validation for `table_name` against a whitelist of allowed tables.",
+          "bfs_frontier_excerpt": "[Sweep 1] Three points of interest for closer inspection:  \n1. `compile_predicate()` handles `_connector` and `_negated`, influencing SQL safety and logic.  \n2. `search_from_api_body()` uses `LIMIT ? OFFSET ?`, which interacts with pagination correctness.  \n3. `PageResult` uses `fetched[:limit]`, im"
+        },
+        {
+          "id": "PR04_static_bundle_handler",
+          "has_bug": true,
+          "origin": "CVE-2026-76844 (mount prefix without trailing slash allows '/bundles../secret' slice traversal)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            ".."
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `resolve_disk_path` method lacks a critical check to ensure the resolved disk path remains within `bundle_dir`. While it verifies the request path starts with the mount prefix, it doesn't validate that the normalized `candidate` path is a subpath of `bundle_dir`, leaving it vulnerable to directory traversal attacks via crafted `request_path` inputs like `../../etc/passwd`.",
+          "bfs_frontier_excerpt": "[Sweep 1] Three areas warrant closer inspection:\n\n1. **`resolve_disk_path`** handles path resolution and security \u2014 checks for null bytes and mount prefix, but path normalization could still be vulnerable to traversal if `rel` isn't fully sanitized.\n\n2. **ETag handling** in `_etag` uses SHA-256 trun"
+        },
+        {
+          "id": "PR05_type_expr_compiler",
+          "has_bug": true,
+          "origin": "CVE-2026-129226 (recursive arrow parser drops depth+1 on right-hand side branch)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "rhs",
+            "depth",
+            "parse_node"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_find_top_arrow` method incorrectly returns `-1` when no arrow is found, leading `parse_node` to treat valid function type expressions with nested arrows as primitive types. Additionally, `parse_node` increments depth only for lhs but not for rhs, risking inconsistent `max_depth` enforcement. Fix arrow detection and depth tracking in recursive calls.",
+          "bfs_frontier_excerpt": "[Sweep 1] 1. `_strip_outer_parens()` interacts with nested structure parsing\u2014could mishandle balanced but nested expressions.  \n2. `_find_top_arrow()` skips nested `->`s but relies on `strip_outer_parens()`\u2014possible misparsing if arrow is inside valid parens.  \n3. `parse_node()` recursion could hit "
+        },
+        {
+          "id": "PR06_locale_pack_loader",
+          "has_bug": true,
+          "origin": "CVE-2026-54293 (dot-dot traversal guard runs before urllib.parse.unquote)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "%2e",
+            "decode",
+            "before"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \n`_validate_resource_key` checks raw keys before URL decoding, but decoded `normalized_key` could reintroduce path traversal (e.g., `\"x%2f..%2fetc%2epasswd.json\"` decodes to `\"x/../etc/passwd.json\"`), bypassing `..` checks. This creates a directory traversal vulnerability despite validation.",
+          "bfs_frontier_excerpt": "[Sweep 1] 1. `_validate_resource_key` interacts with OS/path safety via `..`, `/`, `\\`, but doesn\u2019t check file existence \u2014 could lead to I/O errors later.  \n2. `load_pack` uses `OrderedDict` for cache, but returns `dict` copies \u2014 may mask mutability risks.  \n3. `_put_cache` evicts oldest entries, bu"
+        },
+        {
+          "id": "PR07_tenant_proxy_rewriter",
+          "has_bug": true,
+          "origin": "CVE-2026-127064 ('..' checked before stripping ';param' from path segments)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `build_upstream_path()` method raises `PermissionError` for invalid path segments, which misuses the exception type\u2014this should be `ValueError` as it's a data validation error, not an I/O permission issue.",
+          "bfs_frontier_excerpt": "[Sweep 1] 1. **Header normalization in `scrub_headers()`** could interact unexpectedly with case-sensitive downstream systems.  \n2. **Path sanitization in `build_upstream_path()`** raises a `PermissionError`\u2014this may be confusing as a non-IO error.  \n3. **`prepare()`** ties together path and header "
+        },
+        {
+          "id": "PR08_jws_envelope_guard",
+          "has_bug": true,
+          "origin": "CVE-2026-32597 (validates crit keys exist in header but ignores SUPPORTED_CRIT set)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "supported_crit",
+            "crit",
+            "unsupported"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_verify_header` method allows arbitrary `crit` extensions without enforcing they belong to `SUPPORTED_CRIT`, creating a vulnerability where attackers could include unexpected, unsupported critical headers. Additionally, `iat_strict` checks assume `iat` exists and is an integer, but the code lacks validation for `iat` presence and type, risking invalid type coercion or missing keys.",
+          "bfs_frontier_excerpt": "[Sweep 1] Three points warrant closer inspection:\n\n1. **Crit Header Validation** \u2013 Interacts with both header parsing and error raising; needs tracing for malformed inputs.\n2. **Signature Verification** \u2013 Uses HMAC with `compare_digest`, but relies on string encoding; ensure no leakage or malleabili"
+        },
+        {
+          "id": "PR09_inference_cache",
+          "has_bug": true,
+          "origin": "CVE-2026-89032 (cache key omits tenant_id/org_id, leaking cached private responses across tenants)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "_make_key"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_make_key()` method uses `temperature:.2f` formatting, which truncates float precision (e.g., 0.124 vs 0.125 become identical). This increases collision risk for different temperatures. Additionally, `get_completion()` increments misses twice (once for cache miss, again for expiration), misrepresenting metrics by conflating expired entries with true misses.",
+          "bfs_frontier_excerpt": "[Sweep 1] Three interactions to trace closely:\n\n1. **Eviction before insertion** in `put_completion()` \u2014 Evicts expired entries *only once* before adding; could miss space if multiple concurrent writes happen.  \n2. **Cache key normalization** (`_normalize_prompt`) \u2014 Stripping and joining spaces may "
+        },
+        {
+          "id": "PR10_admin_session_verifier",
+          "has_bug": true,
+          "origin": "CVE-2026-93355 (os.getenv fallback to static default secret allows forged admin tokens)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "default",
+            "secret",
+            "local-dev-signing-key"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe default secret in `__init__` (\"local-dev-signing-key-change-me-2026\") is a hard-coded, predictable value that must be removed to prevent cryptographic vulnerabilities. Additionally, `verify_admin_cookie`'s `claims.get(\"role\")` check could be bypassed if the \"role\" field is missing or malformed, as `.get()` returns `None` without explicit validation.",
+          "bfs_frontier_excerpt": "[Sweep 1] 1. **Role validation** interacts with **allowed_roles** set \u2014 a change in allowed roles could affect downstream checks.  \n2. **Signature verification** uses HMAC, but **sig_hex** is compared as hex \u2014 ensure it's correctly formatted and decoded.  \n3. **Base64 decoding** logic includes paddi"
+        },
+        {
+          "id": "PR11_compact_claim_reader",
+          "has_bug": true,
+          "origin": "CVE-2026-96760 (verifier honors header alg='none' when signature segment is empty)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "signature"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe signature validation in `read_verified` has a critical flaw: `_b64_encode(digest)` produces a base64url string without padding, but `sig_b64` (from the token) may already include padding or incorrect formatting. The comparison uses `compare_digest`, which requires exact matches, but JWTs mandate base64url encoding *without padding*. The `_b64_encode` method strips padding but does not e",
+          "bfs_frontier_excerpt": "[Sweep 1] 1. **Signature validation logic** in `_b64_encode` and HMAC digest comparison uses URL-safe B64, which interacts with JWT expectations.  \n2. **Edge interaction** between `alg: \"none\"` and signature presence \u2014 a mismatch raises a `PermissionError`.  \n3. **State transition** from input strin"
+        },
+        {
+          "id": "PR12_partner_webhook_client",
+          "has_bug": true,
+          "origin": "urllib3/httpx cross-origin redirect Authorization Bearer token leakage",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "redirect"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \n**Redirect loop iteration count**: The loop runs `max_redirects + 1` times, but this allows *one more* redirect than intended. With `max_redirects=4`, the loop allows 5 total redirects (violates HTTP spec which limits redirects to 4-5).  \n**URL scheme validation**: `urlsplit(current_url).scheme` after `urljoin()` could incorrectly trust cached `current_url` without re-parsing the joined URL",
+          "bfs_frontier_excerpt": "[Sweep 1] Three notable interactions:  \n1. **Redirect handling loop** interacts with `_max_redirects`, `current_url`, and `method`/`body` resetting on 3xx responses.  \n2. **Security check** on `urlsplit().scheme` during redirect validation could interact poorly with malformed URLs.  \n3. **Transport "
+        },
+        {
+          "id": "PR13_async_credit_wallet",
+          "has_bug": true,
+          "origin": "Async TOCTOU double-spend across await boundary without per-account lock",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "race",
+            "concurrent"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nConcurrency flaws in `charge()` allow race conditions during read-modify-write operations, risking negative balances. `_validate_amount` mistakenly allows `True`/`False` as valid integers due to redundant type-check logic. `total_debited_cents` is a mutable shared state vulnerable to async inconsistency under concurrent access.",
+          "bfs_frontier_excerpt": "[Sweep 1] Three interactions warrant closer inspection:  \n1. **Validation in `_validate_amount`** interacts with type and value checks, impacting both `charge` and `refund`.  \n2. **Concurrency risks** in `charge()`\u2014async read-modify-write could race in real-world usage.  \n3. **Audit and store coupli"
+        },
+        {
+          "id": "PR14_tier_quota_limiter",
+          "has_bug": true,
+          "origin": "Zero-quota suspension bypass (`override or default` treats 0 as falsy -> 500)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "override"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nConcurrency race conditions in `allow_request()`'s bucket handling (candidate spot 3) could allow over-limit requests during window transitions or concurrent access. The read-modify-write sequence on `self._buckets` lacks thread-safety mechanisms, risking inconsistent state or missed bucket resets. Additionally, `_overrides` modifications (e.g., `set_account_override`) may conflict with con",
+          "bfs_frontier_excerpt": "[Sweep 1] 1. **Bucket Reset Logic**: When a new window starts (`win` changes), the `WindowBucket` updates \u2014 interaction between `allow_request` and `_buckets`.\n\n2. **Override Interaction**: `set_account_override` modifies `_overrides`, which `effective_limit` reads \u2014 affecting rate limits dynamicall"
+        },
+        {
+          "id": "PR15_event_batch_spooler",
+          "has_bug": true,
+          "origin": "Appending self._current list reference then calling .clear() wipes all queued batches",
+          "verdict": "APPROVE",
+          "hit_keywords": [
+            "clear",
+            "_current"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: APPROVE  \nThe `flush_current()` method correctly handles queue overflow by dropping the oldest batch when `max_queued_batches` is exceeded, ensuring FIFO order and accurate `dropped_batches` tracking. `_current.clear()` safely resets the batch buffer after promotion to `_ready_queue`, preventing data leakage. `pop_ready_batch()` maintains expected FIFO behavior without interfering with ongoing batching. No c",
+          "bfs_frontier_excerpt": "[Sweep 1] Three interactions to trace closely:  \n1. **`push()` \u2192 `flush_current()`**: Ensures batch size triggers movement to `_ready_queue`.  \n2. **`flush_current()` \u2192 queue overflow handling**: Drops oldest batch if max queued batches is exceeded.  \n3. **`pop_ready_batch()` \u2192 consumer interaction*"
+        },
+        {
+          "id": "PR16_clean_asset_resolver",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #1 (realpath + commonpath + trailing slash + ETag)",
+          "verdict": "APPROVE",
+          "hit_keywords": [],
+          "correct": true,
+          "review_excerpt": "VERDICT: APPROVE  \nThe path sanitization in `resolve_safe_path()` correctly uses `realpath` and `commonpath` to prevent directory traversal and symlink races. ETag truncation to 16 chars is a non-critical efficiency concern, not a security flaw. MIME type fallback to `application/octet-stream` is standard and safe. No proven bugs or security flaws exist in the critical paths.",
+          "bfs_frontier_excerpt": "[Sweep 1] Three points merit closer inspection:\n\n1. **Path sanitization in `resolve_safe_path()`**: Interaction between input validation (`\\x00`, `\\`) and `os.path.realpath` to prevent directory traversal.\n\n2. **`commonpath` usage**: Ensures resolved path does not escape the root\u2014critical for securi"
+        },
+        {
+          "id": "PR17_clean_hmac_verifier",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #2 (mandatory secret, defensive options copy, strict crit allowlist)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \n**Crit extension handling** allows arbitrary `crit` list processing with vague error messages; invalid types or missing headers may raise inconsistent exceptions (`ValueError` vs `PermissionError`). **Expiry check** uses `exp + leeway_s < time.time()` without handling non-integer `exp`, risking crashes or incorrect expiration logic. **Signature verification** lacks validation of `header_raw",
+          "bfs_frontier_excerpt": "[Sweep 1] 1. **Signature verification interaction** \u2013 HMAC is computed from header + payload, but input validation (e.g., ensuring header/payload are strings) is minimal\u2014could lead to errors or injection.\n\n2. **Crit extension handling** \u2013 Only `\"tenant_pin\"` is allowed, but the loop allows arbitrary"
+        },
+        {
+          "id": "PR18_clean_tenant_quota_cache",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #3 (tenant-scoped cache key + explicit None check on zero quota)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\n1. `_used` in `check_and_consume()` never cleans up old minute buckets, causing unbounded memory growth as stale entries accumulate indefinitely.\n2. `get_cached()` only evicts expired entries during access, leaving unused expired items in cache until probed\u2014inefficient under high load or sparse access patterns.\n3. `_scoped_key()` uses `|` separators without escaping; inputs containing `|` (e",
+          "bfs_frontier_excerpt": "[Sweep 1] Three interactions warrant closer inspection:\n\n1. **Quota reset logic**: `_used` is never cleared\u2014minute buckets accumulate indefinitely, risking memory growth.\n2. **Cache eviction**: `get_cached` removes expired entries, but misses concurrent access cleanup.\n3. **Scoped key collisions**: "
+        },
+        {
+          "id": "PR19_clean_atomic_ledger",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #4 (per-account asyncio.Lock + fresh batch list allocation)",
+          "verdict": "APPROVE",
+          "hit_keywords": [],
+          "correct": true,
+          "review_excerpt": "VERDICT: APPROVE\n\nConcurrency in `credit()`/`debit()` is safely managed via per-account `asyncio.Lock`, ensuring atomic updates to `self._balances`. `_record_event()` modifies `_pending`/`_batches` atomically under the same lock, preventing race conditions. `pop_batch()` safely dequeues pre-flushed batches, and `debit()`'s `await asyncio.sleep(0)` merely yields control without affecting correctness.",
+          "bfs_frontier_excerpt": "[Sweep 1] **Quick Wide Scan (BFS):**\n\n1. **Concurrency interaction**: `_lock_for()` creates per-account locks; need to trace how `credit()`/`debit()` use these during concurrent access.\n\n2. **State transition**: `_record_event()` appends to `_pending`, then flushes to `_batches`\u2014ensure atomicity of "
+        },
+        {
+          "id": "PR20_clean_bounded_type_parser",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #5 (depth+1 propagated to BOTH branches + iterative paren check)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \n1. `_unwrap_parens()` fails to validate balanced parentheses after stripping; unbalanced strings like `\")a(\"` pass as-is, leading to invalid parsing later.  \n2. `_split_arrow()` raises `ValueError` for unbalanced parentheses but `_parse_rec()` does not catch this, risking unhandled exceptions during recursion.  \n3. `parse()` increments `_parse_rec()` depth starting at 0, but `max_depth` enf",
+          "bfs_frontier_excerpt": "[Sweep 1] 1. `_unwrap_parens` handles nested parentheses but could misbehave if strings are malformed or contain unbalanced nesting.  \n2. `_split_arrow` interacts with depth tracking; mismatched parentheses may cause premature/incorrect splits or errors.  \n3. `_parse_rec` recursively builds `SigExpr"
+        }
+      ],
+      "p_vs_vanilla": 0.1094,
+      "elapsed_s": 335.0
+    },
+    "adhd_bfs_ocd_dfs": {
+      "total_correct": "11/20",
+      "accuracy": 0.55,
+      "bugs_caught_tp": "8/15",
+      "clean_approved_tn": "3/5",
+      "bug_f1": 0.64,
+      "pass_vec": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "records": [
+        {
+          "id": "PR01_session_token_service",
+          "has_bug": true,
+          "origin": "CVE-2026-103001 (in-place mutation of shared options dict on unverified peek)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "options",
+            "check_exp",
+            "peek"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `peek_subject_for_logging()` method disables signature verification but retains access to claims without validating expiration or issuer, creating a potential vector for log injection or exposure of invalid tokens. Additionally, `decode_envelope()`'s handling of `options` when `verify_signature=False` unconditionally disables `check_exp`/`check_iss`, even if the caller intended to enfor",
+          "bfs_frontier_excerpt": "[Sweep 1] **Quick Wide Scan (BFS) - Python Module Summary:**\n\n- **Signature Verification Flow**: `_compute_mac()` is called both during `issue()` and `decode_envelope()`\u2014interaction between token generation and validation logic deserves closer trace.\n\n- **Error Handling in `decode_envelope()`**: The"
+        },
+        {
+          "id": "PR02_gateway_router",
+          "has_bug": true,
+          "origin": "CVE-2026-48710 (Host header slash/fragment alters urlsplit.path vs raw_path dispatch)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "host"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\n1. `_check_bearer` leaks timing information by comparing token lengths before content - this enables length-based attacks. Use `hmac.compare_digest()` for constant-time comparison.\n2. `dispatch` route matching with `sorted(..., reverse=True)` may incorrectly prioritize routes based on prefix length rather than specificity (e.g., `/api/v1` vs `/api`).\n3. `_canonical_url` relies on untrusted h",
+          "bfs_frontier_excerpt": "[Sweep 1] Three points warrant closer inspection:\n\n1. `_check_bearer` uses string length before comparison \u2013 a potential timing leak risk.\n2. `_dispatch` routes by longest prefix match via `sorted` with reverse length; need to trace how overlapping routes resolve.\n3. `_canonical_url` relies on heade"
+        },
+        {
+          "id": "PR03_invoice_repository",
+          "has_bug": true,
+          "origin": "CVE-2025-64459 (unpacked filter dict injects _connector='OR' or _negated=True)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "filters"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `search_from_api_body` method uses unsafe SQL string interpolation for `self.table_name`, which is initialized via user input. Since `table_name` is directly embedded into SQL without validation/sanitization, it risks SQL injection if attackers control the constructor input. Additionally, `compile_predicate`'s `**column_filters` allows arbitrary values (including untrusted data) to be i",
+          "bfs_frontier_excerpt": "[Sweep 1] Three areas warrant closer inspection:\n\n1. **`compile_predicate` column filtering** \u2013 interacts with `ALLOWED_COLUMNS`, but error handling may allow partial SQL injection if filters are misused.\n2. **`search_from_api_body` limit/offset sanitization** \u2013 clamping logic might be bypassed via "
+        },
+        {
+          "id": "PR04_static_bundle_handler",
+          "has_bug": true,
+          "origin": "CVE-2026-76844 (mount prefix without trailing slash allows '/bundles../secret' slice traversal)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            ".."
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \n1. **`resolve_disk_path` path validation**: The `os.path.normpath` + `lstrip(\"/\")` combination fails to prevent directory traversal attacks (`../../`). Must verify final path is within `bundle_dir` using `os.path.commonprefix` or `os.path.realpath`.  \n2. **`_etag` collision risk**: Truncating SHA-256 to 16 chars increases collision probability for large asset sets. Consider using full hash ",
+          "bfs_frontier_excerpt": "[Sweep 1] Three points needing closer inspection:\n\n1. **Path sanitization in `resolve_disk_path`**: How robust is the null-byte check and `os.path.normpath` against directory traversal attacks?\n\n2. **ETag logic**: Does the SHA-256 hashing with a truncated digest provide sufficient uniqueness and col"
+        },
+        {
+          "id": "PR05_type_expr_compiler",
+          "has_bug": true,
+          "origin": "CVE-2026-129226 (recursive arrow parser drops depth+1 on right-hand side branch)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "parse_node"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_strip_outer_parens()` method has a flaw when handling empty strings after stripping, which `parse_node()` then raises as an error. However, the critical issue lies in `_find_top_arrow()`: it fails to account for cases where a valid `->` exists but is followed by unbalanced parentheses. For example, in `\"a->(b->c\"` (missing closing parenthesis), `_find_top_arrow()` raises \"unclosed pare",
+          "bfs_frontier_excerpt": "[Sweep 1] Three notable points:\n\n1. `_strip_outer_parens()` interacts with `parse_node()`\u2014stripping redundant parens before parsing, affecting how nesting is interpreted.\n\n2. `_find_top_arrow()` balances parentheses while locating `->`\u2014its failure to find a valid arrow leads to parsing errors downst"
+        },
+        {
+          "id": "PR06_locale_pack_loader",
+          "has_bug": true,
+          "origin": "CVE-2026-54293 (dot-dot traversal guard runs before urllib.parse.unquote)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "%2e",
+            "decode",
+            "before"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_validate_resource_key()` method validates the raw key before URL decoding, allowing attackers to bypass path traversal checks by encoding forbidden sequences (e.g., `%2e%2e` \u2192 `..`). This is critical because `os.path.join()` in `load_pack()` operates on the decoded key, enabling path traversal vulnerabilities. Additionally, `_put_cache()` uses an OrderedDict for LRU eviction, but retur",
+          "bfs_frontier_excerpt": "[Sweep 1] - `_validate_resource_key()` uses untrusted input that affects file access, risking path traversal if bypassed.\n- `load_pack()` decodes URIs (`urllib.parse.unquote`) which may interact unpredictably with cache key checks.\n- Caching in `_put_cache()` uses an `OrderedDict`, but converting to"
+        },
+        {
+          "id": "PR07_tenant_proxy_rewriter",
+          "has_bug": true,
+          "origin": "CVE-2026-127064 ('..' checked before stripping ';param' from path segments)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "traversal"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `build_upstream_path` method allows URL-encoded path traversal attempts like `%2e` to bypass the explicit `.` check, risking directory traversal vulnerabilities upon decoding. Additionally, raising `PermissionError` for invalid path segments is semantically incorrect\u2014it should raise `ValueError` for invalid input rather than a permission-related exception.",
+          "bfs_frontier_excerpt": "[Sweep 1] Three notable interactions for closer inspection:\n\n1. **`build_upstream_path` path sanitization** \u2014 Handles URL segments with `;` and `.`, but relies on manual filtering, which could miss edge cases like `%2e`.\n\n2. **Header scrubbing in `scrub_headers`** \u2014 Lowercases keys and skips hop-by-"
+        },
+        {
+          "id": "PR08_jws_envelope_guard",
+          "has_bug": true,
+          "origin": "CVE-2026-32597 (validates crit keys exist in header but ignores SUPPORTED_CRIT set)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "supported_crit",
+            "crit",
+            "unsupported"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_verify_header()` method does not validate that `crit` extensions are in `SUPPORTED_CRIT`, allowing potentially dangerous or unsupported headers to pass. Additionally, the `iat_strict` validation uses wall-clock time without handling system clock drift or NTP adjustments, which could lead to incorrect validation in distributed systems.",
+          "bfs_frontier_excerpt": "[Sweep 1] 1. `_verify_header()` interacts with both `crit` headers and `tenant_pin`, requiring cross-checks between header structure and policy enforcement.  \n2. `verify()` uses `hmac.compare_digest()`\u2014timing-sensitive logic worth tracing for correct input validation and side-channel resistance.  \n3"
+        },
+        {
+          "id": "PR09_inference_cache",
+          "has_bug": true,
+          "origin": "CVE-2026-89032 (cache key omits tenant_id/org_id, leaking cached private responses across tenants)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "tenant",
+            "_make_key",
+            "isolation"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \n1. `put_completion`: Eviction occurs only when cache is full before insertion, risking overflow if evictions don't free space. Should evict before adding regardless of current size.  \n2. `get_completion`: Misses counter increments twice (on key miss and expiry), inflating metrics. Consolidate to single increment path.  \n3. `_make_key`: Omission of `tenant_id` in key generation creates risk ",
+          "bfs_frontier_excerpt": "[Sweep 1] Three points for closer inspection:\n\n1. **Eviction logic interaction** \u2013 `put_completion` calls `evict_expired()` only if the cache is full; eviction may not happen otherwise, risking overflow.\n\n2. **Tenant validation** \u2013 `get_completion` raises on empty `tenant_id`, but `put_completion` l"
+        },
+        {
+          "id": "PR10_admin_session_verifier",
+          "has_bug": true,
+          "origin": "CVE-2026-93355 (os.getenv fallback to static default secret allows forged admin tokens)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \nThe `_b64url_decode` method lacks error handling for invalid base64 inputs, risking uncaught exceptions during decoding. Additionally, the `exp` timestamp check uses `time.time()` without accounting for clock skew, which could allow replay attacks or false expiration rejections in distributed systems.",
+          "bfs_frontier_excerpt": "[Sweep 1] Three interactions warrant closer inspection:\n\n1. **Signature verification via HMAC**: Uses `hmac.compare_digest()`\u2014ensures timing-safe comparison of signatures, critical for security.\n2. **Base64 URL decoding**: `_b64url_decode()` adds missing padding based on length, which could mishandl"
+        },
+        {
+          "id": "PR11_compact_claim_reader",
+          "has_bug": true,
+          "origin": "CVE-2026-96760 (verifier honors header alg='none' when signature segment is empty)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "none",
+            "alg",
+            "signature"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \n1. **`_b64_decode()` padding logic** may mishandle malformed inputs by adding incorrect padding \u2014 JWT specs require base64url without padding, but the code adds padding based on length modulo 4, risking decoding errors for invalid tokens.  \n2. **`alg == \"none\"`** skips signature verification entirely, violating security principles \u2014 even if the spec allows it, this creates a vulnerability i",
+          "bfs_frontier_excerpt": "[Sweep 1] 1. **Edge Interaction**: `read_verified()` interacts with `_b64_decode()` \u2014 improper padding or invalid base64 input could raise decoding errors unhandled.  \n2. **State Transition**: The `alg == \"none\"` block transitions directly to payload return \u2014 skips signature verification entirely, r"
+        },
+        {
+          "id": "PR12_partner_webhook_client",
+          "has_bug": true,
+          "origin": "urllib3/httpx cross-origin redirect Authorization Bearer token leakage",
+          "verdict": "APPROVE",
+          "hit_keywords": [
+            "redirect"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: APPROVE  \nThe redirect handling adheres to RFC standards by switching to GET and clearing the body on 3xx responses. URL validation correctly blocks non-HTTPS redirects via `urlsplit` checks after `urljoin`. Header copying via `dict(headers)` ensures isolation between redirect steps. No critical flaws detected in logic or security.",
+          "bfs_frontier_excerpt": "[Sweep 1] **Quick Wide Scan (BFS):**\n\n1. **Redirect handling logic** transitions between POST and GET on 3xx status codes \u2014 risky if body is expected after redirect.\n2. **URL validation** mixes `urlsplit` and `urljoin` \u2014 could lead to unexpected URL resolutions if input is malicious.\n3. **Transport "
+        },
+        {
+          "id": "PR13_async_credit_wallet",
+          "has_bug": true,
+          "origin": "Async TOCTOU double-spend across await boundary without per-account lock",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \n1. `_validate_amount()` incorrectly allows `bool` values due to flawed type checking logic - the condition raises errors for booleans but `isinstance(True, int)` is `True` in Python.  \n2. `charge()` lacks concurrency safety - multiple coroutines could read the same `current` balance between `read_cents()` and `write_cents()`, causing over-debit.  \n3. `refund()` allows unlimited credit incre",
+          "bfs_frontier_excerpt": "[Sweep 1] Three interactions merit closer inspection: \n\n1. **Type validation in `_validate_amount`**: Checks if `amount_cents` is truly an `int` (not bool or other), which could cause false negatives due to type coercion nuances.\n\n2. **Concurrency in `_store.read_cents`/`write_cents`**: No locking m"
+        },
+        {
+          "id": "PR14_tier_quota_limiter",
+          "has_bug": true,
+          "origin": "Zero-quota suspension bypass (`override or default` treats 0 as falsy -> 500)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [
+            "override"
+          ],
+          "correct": true,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \n1. `allow_request()` lacks concurrency control, allowing race conditions that could let `used` exceed `limit` in parallel execution.  \n2. `_buckets` retains stale entries indefinitely (no cleanup), risking memory bloat as old windows accumulate.  \n3. `clear_account_override()` does not invalidate existing buckets, leading to potential inconsistent rate-limiting until windows naturally reset",
+          "bfs_frontier_excerpt": "[Sweep 1] 1. `set_account_override()` and `effective_limit()` interact with `_overrides`, affecting rate-limit decisions.  \n2. `allow_request()` updates `_buckets` and checks window transitions using `win`, requiring precise time math.  \n3. `clear_account_override()` removes entries, potentially lea"
+        },
+        {
+          "id": "PR15_event_batch_spooler",
+          "has_bug": true,
+          "origin": "Appending self._current list reference then calling .clear() wipes all queued batches",
+          "verdict": "APPROVE",
+          "hit_keywords": [
+            "_current"
+          ],
+          "correct": false,
+          "review_excerpt": "VERDICT: APPROVE  \nThe `flush_current()` method correctly enforces queue size limits by evicting the oldest batch when full, ensuring new batches are prioritized. The `push()` logic accurately triggers flushes upon batch size thresholds without leaving partial batches in an inconsistent state. `pop_ready_batch()` safely drains the queue without race conditions, as the class uses atomic operations on thread-local data",
+          "bfs_frontier_excerpt": "[Sweep 1] **Three points needing closer inspection:**\n\n1. **State Transition on Flush:** `flush_current()` transitions `_current` to `_ready_queue`, but may drop batches if `max_queued_batches` is exceeded\u2014needs closer trace to ensure correct drop behavior.\n\n2. **Push-Flush Logic:** The `push()` met"
+        },
+        {
+          "id": "PR16_clean_asset_resolver",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #1 (realpath + commonpath + trailing slash + ETag)",
+          "verdict": "APPROVE",
+          "hit_keywords": [],
+          "correct": true,
+          "review_excerpt": "VERDICT: APPROVE  \nThe path sanitization via `os.path.realpath` and `os.path.commonpath` effectively blocks directory traversal, even with symlinks. Truncating SHA-256 to 16 chars for ETags introduces collision risk but is not a critical flaw in HTTP caching semantics. The mimetype fallback to `application/octet-stream` is safe and aligns with common practices.",
+          "bfs_frontier_excerpt": "[Sweep 1] Three interactions warrant closer inspection:  \n\n1. **Path normalization via `os.path.realpath`** \u2014 Ensures no directory traversal, but `commonpath` validation could be subtly bypassed via symlink chains.  \n2. **ETag generation** \u2014 Uses SHA256(data) truncated to 16 chars \u2014 potential collis"
+        },
+        {
+          "id": "PR17_clean_hmac_verifier",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #2 (mandatory secret, defensive options copy, strict crit allowlist)",
+          "verdict": "APPROVE",
+          "hit_keywords": [],
+          "correct": true,
+          "review_excerpt": "VERDICT: APPROVE  \nThe `verify_envelope` method correctly validates `sig_hex` type before HMAC comparison, preventing type-based leaks. Crit header validation enforces allowed extensions and header presence, with appropriate exceptions. Tenant pin checks ensure strict matching only when present, and expiry logic accounts for leeway with integer coercion. No critical flaws detected in the traced paths.",
+          "bfs_frontier_excerpt": "[Sweep 1] 1. **SigHex Validation Path**: The `verify_envelope` method checks `sig_hex` type and uses `compare_digest`\u2014could lead to different exception paths depending on input type.\n\n2. **Crit Header Handling**: The loop over `crit` extensions involves nested conditions and raises different excepti"
+        },
+        {
+          "id": "PR18_clean_tenant_quota_cache",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #3 (tenant-scoped cache key + explicit None check on zero quota)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES  \n1. `check_and_consume()` lacks thread-safety: concurrent increments to `_used` could cause race conditions, violating rate limits.  \n2. `_scoped_key()` uses SHA-256 but no salting; collisions could silently corrupt cached values if inputs collide.  \n3. `get_cached()` lazily evicts expired entries, risking memory bloat from stale entries until accessed again.",
+          "bfs_frontier_excerpt": "[Sweep 1] **3 points of interest:**  \n1. **`_scoped_key()` logic** (static method) interacts with `get_cached`/`put_cached`, relying on deterministic hashing \u2014 worth checking for collisions or key miscalculations.  \n2. **Quota update via `set_quota()`** could race with `check_and_consume()` if used "
+        },
+        {
+          "id": "PR19_clean_atomic_ledger",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #4 (per-account asyncio.Lock + fresh batch list allocation)",
+          "verdict": "REQUEST_CHANGES",
+          "hit_keywords": [],
+          "correct": false,
+          "review_excerpt": "VERDICT: REQUEST_CHANGES\n\nThe `_pending` list in `_record_event` is not protected by any lock when modified by concurrent operations on different accounts. While per-account locks prevent race conditions within the same account, multiple accounts can concurrently append to `_pending`, leading to potential race conditions when accessing this shared list. Additionally, `pop_batch()` is not thread-safe for concurrent ex",
+          "bfs_frontier_excerpt": "[Sweep 1] 1. **`_lock_for` and `_balances` interaction**: Locks per account are cached, but `_balances` updates occur inside the lock \u2014 need to confirm thread safety with async locks.\n\n2. **`_record_event` and `_pending` batching**: Accumulates events in `_pending`, flushes on threshold \u2014 potential "
+        },
+        {
+          "id": "PR20_clean_bounded_type_parser",
+          "has_bug": false,
+          "origin": "Clean Hardened Module #5 (depth+1 propagated to BOTH branches + iterative paren check)",
+          "verdict": "APPROVE",
+          "hit_keywords": [],
+          "correct": true,
+          "review_excerpt": "VERDICT: APPROVE  \nThe `_unwrap_parens` correctly removes balanced outermost parentheses without altering internal structure. `_split_arrow` reliably splits on top-level arrows after unwrapping, with depth tracking preventing premature splits. Recursive parsing in `_parse_rec` enforces `max_depth` strictly, ensuring safety against infinite recursion while VALID_ATOMS restricts valid types. All interactions handle edg",
+          "bfs_frontier_excerpt": "[Sweep 1] 1. `_unwrap_parens` interacts with `_parse_rec` to sanitize input before parsing, but may strip essential grouping in complex expressions.  \n2. `_split_arrow` depends on correct parenthesis balance\u2014its error handling could fail silently if parsing order mismatches.  \n3. Recursive parsing i"
+        }
+      ],
+      "p_vs_vanilla": 0.2668,
+      "p_vs_van_bfs_dfs": 1.0,
+      "elapsed_s": 356.0
+    }
+  },
+  "safety": {
+    "total_scanned": 240,
+    "tripwire_alerts": 0,
+    "alerts": []
+  }
+}

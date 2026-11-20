@@ -1,0 +1,879 @@
+{
+  "model": "Qwen/Qwen3-32B",
+  "max_new_tokens": 950,
+  "conditions": {
+    "baseline": {
+      "summary": {
+        "direct_passed": "4/10",
+        "think_passed": "2/10",
+        "mean_think_words": 506.3,
+        "mean_think_doubts": 8.2,
+        "timeouts": 5,
+        "elapsed_s": 179.8
+      },
+      "records": [
+        {
+          "id": "no_letter_e",
+          "direct_passed": false,
+          "direct_ans": "A small, soft-furred mammal with bright, curious eyes and a long, flexible tail. It moves with quiet grace and often purrs while resting in warm spots.",
+          "think_passed": false,
+          "think_words": 205,
+          "think_doubts": 5,
+          "think_ans": "A feline with silky fur and sharp claws prowls quietly, its amber gaze fixed on a darting bug. It curls into a ball, purring loudly at dawn, then stretches with a yawn."
+        },
+        {
+          "id": "exact_json",
+          "direct_passed": false,
+          "direct_ans": "```json\n{\n  \"status\": \"success\",\n  \"count\": 3,\n  \"tags\": [\"cloud\", \"code\", \"chat\"]\n}\n```",
+          "think_passed": true,
+          "think_words": 219,
+          "think_doubts": 2,
+          "think_ans": "{\"status\": \"success\", \"count\": 3, \"tags\": [\"blue\", \"green\", \"red\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "direct_passed": false,
+          "direct_ans": "Ocean tides rise and fall daily due to gravitational pulls from the moon and sun.",
+          "think_passed": false,
+          "think_words": 611,
+          "think_doubts": 7,
+          "think_ans": "Ocean tides are caused by the moon's gravitational pull"
+        },
+        {
+          "id": "bat_and_ball_trap",
+          "direct_passed": true,
+          "direct_ans": "ANSWER: $5",
+          "think_passed": true,
+          "think_words": 308,
+          "think_doubts": 3,
+          "think_ans": "ANSWER: $5"
+        },
+        {
+          "id": "letter_count_strawberries",
+          "direct_passed": false,
+          "direct_ans": "ANSWER: 7",
+          "think_passed": false,
+          "think_words": 590,
+          "think_doubts": 18,
+          "think_ans": ""
+        },
+        {
+          "id": "python_closure_trap",
+          "direct_passed": true,
+          "direct_ans": "ANSWER: [6, 6, 6, 6]",
+          "think_passed": false,
+          "think_words": 680,
+          "think_doubts": 8,
+          "think_ans": ""
+        },
+        {
+          "id": "bug_shallow_copy_grid",
+          "direct_passed": false,
+          "direct_ans": "Let's analyze the Python code step by step:\n\n```python\ngrid = [[0] * 3] * 3\ngrid[0][1] = 9\nprint(sum(row[1] for row in grid))\n```\n\n---\n\n### Step 1: `grid = [[0] * 3] * 3`\n\nThis creates a list of 3 ele",
+          "think_passed": false,
+          "think_words": 492,
+          "think_doubts": 4,
+          "think_ans": "The Python code initializes a grid using `grid = [[0] * 3] * 3`. This creates three references to the same inner list `[0, 0, 0]`. When `grid[0][1] = 9` is executed, all rows reference the modified in"
+        },
+        {
+          "id": "bug_off_by_one",
+          "direct_passed": true,
+          "direct_ans": "The given binary search function has a subtle bug that can lead to an infinite loop under certain conditions.\n\n---\n\n### \ud83d\udd0d **Bug Explanation**\n\n```python\ndef bsearch(arr, x):\n    lo, hi = 0, len(arr)\n ",
+          "think_passed": false,
+          "think_words": 688,
+          "think_doubts": 4,
+          "think_ans": ""
+        },
+        {
+          "id": "clean_decoy_float",
+          "direct_passed": true,
+          "direct_ans": "NO.",
+          "think_passed": false,
+          "think_words": 650,
+          "think_doubts": 8,
+          "think_ans": ""
+        },
+        {
+          "id": "multi_constraint_bullets",
+          "direct_passed": false,
+          "direct_ans": "- Beryllium  \n- Fluorine  \n- Manganese",
+          "think_passed": false,
+          "think_words": 620,
+          "think_doubts": 23,
+          "think_ans": ""
+        }
+      ]
+    },
+    "temp_high_1.2": {
+      "summary": {
+        "direct_passed": "4/10",
+        "think_passed": "3/10",
+        "mean_think_words": 477.9,
+        "mean_think_doubts": 9.6,
+        "timeouts": 6,
+        "elapsed_s": 178.6
+      },
+      "records": [
+        {
+          "id": "no_letter_e",
+          "direct_passed": false,
+          "direct_ans": "A tiny feline with bright eyes and soft fur often purrs loudly when pet. It climbs high, jumps far, and enjoys warm laps on sunny laps.",
+          "think_passed": false,
+          "think_words": 200,
+          "think_doubts": 5,
+          "think_ans": "Golden fur swirls atop agile paws.  \nIt coils, yawns, then darts at a ball."
+        },
+        {
+          "id": "exact_json",
+          "direct_passed": false,
+          "direct_ans": "```json\n{\"status\": \"success\", \"count\": 5, \"tags\": [\"cloud\", \"code\", \"game\"]}\n```",
+          "think_passed": true,
+          "think_words": 384,
+          "think_doubts": 12,
+          "think_ans": "{\"status\": \"true\", \"count\": 3, \"tags\": [\"snow\", \"sun\", \"hill\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "direct_passed": false,
+          "direct_ans": "Ocean tides rise and fall daily due to gravitational moon influence.",
+          "think_passed": false,
+          "think_words": 554,
+          "think_doubts": 6,
+          "think_ans": ""
+        },
+        {
+          "id": "bat_and_ball_trap",
+          "direct_passed": true,
+          "direct_ans": "ANSWER: $5",
+          "think_passed": true,
+          "think_words": 219,
+          "think_doubts": 3,
+          "think_ans": "ANSWER: $5"
+        },
+        {
+          "id": "letter_count_strawberries",
+          "direct_passed": true,
+          "direct_ans": "ANSWER: 6",
+          "think_passed": false,
+          "think_words": 529,
+          "think_doubts": 15,
+          "think_ans": ""
+        },
+        {
+          "id": "python_closure_trap",
+          "direct_passed": true,
+          "direct_ans": "ANSWER: [6, 6, 6, 6]",
+          "think_passed": false,
+          "think_words": 618,
+          "think_doubts": 7,
+          "think_ans": ""
+        },
+        {
+          "id": "bug_shallow_copy_grid",
+          "direct_passed": false,
+          "direct_ans": "The given Python code:\n\n```python\ngrid = [[0] * 3] * 3\ngrid[0][1] = 9\nprint(sum(row[1] for row in grid))\n```\n\nLet's understand what this does step by step:\n\n---\n\n### 1. Creating the grid:\n```python\ngr",
+          "think_passed": true,
+          "think_words": 496,
+          "think_doubts": 3,
+          "think_ans": "The code initializes `grid` with three references to the same inner list `[0, 0, 0]`. When `grid[0][1] = 9` modifies one row, it affects all rows since they share the same list. Summing the second ele"
+        },
+        {
+          "id": "bug_off_by_one",
+          "direct_passed": false,
+          "direct_ans": "The given `bsearch` function suffers from an infinite loop when the search space is reduced incorrectly during the binary search step. Let's analyze the issue:\n\n### Function Code\n```python\ndef bsearch",
+          "think_passed": false,
+          "think_words": 593,
+          "think_doubts": 5,
+          "think_ans": ""
+        },
+        {
+          "id": "clean_decoy_float",
+          "direct_passed": true,
+          "direct_ans": "NO.\n\nFor finite float inputs `p` such that `0.0 <= p <= 1.0`, the function `clamp_prob(p)` will always return `p`, which lies within the range `[0.0, 1.0]`. There is no condition in the function that ",
+          "think_passed": false,
+          "think_words": 640,
+          "think_doubts": 7,
+          "think_ans": ""
+        },
+        {
+          "id": "multi_constraint_bullets",
+          "direct_passed": false,
+          "direct_ans": "- Beryllium  \n- Chromium  \n- Fluorine",
+          "think_passed": false,
+          "think_words": 546,
+          "think_doubts": 33,
+          "think_ans": ""
+        }
+      ]
+    },
+    "temp_low_0.2": {
+      "summary": {
+        "direct_passed": "3/10",
+        "think_passed": "3/10",
+        "mean_think_words": 497.5,
+        "mean_think_doubts": 5.6,
+        "timeouts": 6,
+        "elapsed_s": 179.2
+      },
+      "records": [
+        {
+          "id": "no_letter_e",
+          "direct_passed": false,
+          "direct_ans": "A small, soft-furred creature with bright, curious eyes. It purrs loudly, paws at objects, and enjoys warm spots.",
+          "think_passed": false,
+          "think_words": 317,
+          "think_doubts": 6,
+          "think_ans": "A small feline with soft fur and bright gaze moves with quiet grace. It curls up in a cozy spot or jumps on toys with playful might."
+        },
+        {
+          "id": "exact_json",
+          "direct_passed": false,
+          "direct_ans": "```json\n{\n  \"status\": \"success\",\n  \"count\": 3,\n  \"tags\": [\"cloud\", \"code\", \"chat\"]\n}\n```",
+          "think_passed": true,
+          "think_words": 143,
+          "think_doubts": 2,
+          "think_ans": "{\"status\": \"success\", \"count\": 3, \"tags\": [\"cloud\", \"network\", \"security\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "direct_passed": false,
+          "direct_ans": "Ocean tides rise and fall daily due to gravitational pull from the moon and sun.",
+          "think_passed": false,
+          "think_words": 559,
+          "think_doubts": 2,
+          "think_ans": ""
+        },
+        {
+          "id": "bat_and_ball_trap",
+          "direct_passed": true,
+          "direct_ans": "ANSWER: $5",
+          "think_passed": true,
+          "think_words": 318,
+          "think_doubts": 3,
+          "think_ans": "ANSWER: $5"
+        },
+        {
+          "id": "letter_count_strawberries",
+          "direct_passed": false,
+          "direct_ans": "ANSWER: 7",
+          "think_passed": false,
+          "think_words": 585,
+          "think_doubts": 13,
+          "think_ans": ""
+        },
+        {
+          "id": "python_closure_trap",
+          "direct_passed": true,
+          "direct_ans": "ANSWER: [6, 6, 6, 6]",
+          "think_passed": false,
+          "think_words": 703,
+          "think_doubts": 9,
+          "think_ans": ""
+        },
+        {
+          "id": "bug_shallow_copy_grid",
+          "direct_passed": false,
+          "direct_ans": "The Python snippet:\n\n```python\ngrid = [[0] * 3] * 3\ngrid[0][1] = 9\nprint(sum(row[1] for row in grid))\n```\n\n### What it does:\n\n- `[[0] * 3] * 3` creates a list of three references to the **same** inner",
+          "think_passed": true,
+          "think_words": 300,
+          "think_doubts": 0,
+          "think_ans": "The code initializes `grid` as a list containing three references to the same inner list `[0, 0, 0]`. When `grid[0][1] = 9` is executed, all rows (being the same list) update their second element to `"
+        },
+        {
+          "id": "bug_off_by_one",
+          "direct_passed": false,
+          "direct_ans": "The given binary search implementation has a subtle bug that can cause an **infinite loop** when the search space reduces to two elements (`lo` and `hi` are adjacent), and the target `x` is not found.",
+          "think_passed": false,
+          "think_words": 671,
+          "think_doubts": 3,
+          "think_ans": ""
+        },
+        {
+          "id": "clean_decoy_float",
+          "direct_passed": true,
+          "direct_ans": "NO.",
+          "think_passed": false,
+          "think_words": 652,
+          "think_doubts": 8,
+          "think_ans": ""
+        },
+        {
+          "id": "multi_constraint_bullets",
+          "direct_passed": false,
+          "direct_ans": "- Beryllium  \n- Fluorine  \n- Magnesium",
+          "think_passed": false,
+          "think_words": 727,
+          "think_doubts": 10,
+          "think_ans": ""
+        }
+      ]
+    },
+    "adhd_attn_only": {
+      "summary": {
+        "direct_passed": "3/10",
+        "think_passed": "4/10",
+        "mean_think_words": 510.3,
+        "mean_think_doubts": 6.9,
+        "timeouts": 4,
+        "elapsed_s": 204.3
+      },
+      "records": [
+        {
+          "id": "no_letter_e",
+          "direct_passed": false,
+          "direct_ans": "A cat is a soft, curious critter, often found curling up in cozy corners. It walks with grace, paws silent, eyes sharp, and purrs with calm delight.",
+          "think_passed": false,
+          "think_words": 412,
+          "think_doubts": 7,
+          "think_ans": "A small feline with soft fur, a tail that sways with poise. It purrs loudly, paws at toys, and curls up in sunlight."
+        },
+        {
+          "id": "exact_json",
+          "direct_passed": false,
+          "direct_ans": "```json\n{\n  \"status\": \"success\",\n  \"count\": 5,\n  \"tags\": [\"cloud\", \"code\", \"tool\"]\n}\n```",
+          "think_passed": true,
+          "think_words": 367,
+          "think_doubts": 7,
+          "think_ans": "{\"status\": \"success\", \"count\": 3, \"tags\": [\"code\", \"tech\", \"info\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "direct_passed": false,
+          "direct_ans": "Ocean tides rise and fall daily due to gravitational pulls from the moon and sun.",
+          "think_passed": true,
+          "think_words": 417,
+          "think_doubts": 7,
+          "think_ans": "Ocean tides rise and fall daily due to the moon's gravitational pull."
+        },
+        {
+          "id": "bat_and_ball_trap",
+          "direct_passed": true,
+          "direct_ans": "ANSWER: $5",
+          "think_passed": true,
+          "think_words": 332,
+          "think_doubts": 2,
+          "think_ans": "ANSWER: $5"
+        },
+        {
+          "id": "letter_count_strawberries",
+          "direct_passed": false,
+          "direct_ans": "ANSWER: 8",
+          "think_passed": false,
+          "think_words": 580,
+          "think_doubts": 10,
+          "think_ans": ""
+        },
+        {
+          "id": "python_closure_trap",
+          "direct_passed": true,
+          "direct_ans": "ANSWER: [6, 6, 6, 6]",
+          "think_passed": false,
+          "think_words": 667,
+          "think_doubts": 7,
+          "think_ans": ""
+        },
+        {
+          "id": "bug_shallow_copy_grid",
+          "direct_passed": false,
+          "direct_ans": "The Python snippet:\n\n```python\ngrid = [[0] * 3] * 3\ngrid[0][1] = 9\nprint(sum(row[1] for row in grid))\n```\n\n### What happens?\n\n- `[[0] * 3] * 3` creates a list of **three references** to the **same lis",
+          "think_passed": false,
+          "think_words": 606,
+          "think_doubts": 4,
+          "think_ans": "The code initializes `grid` as `[[0] * 3] * 3`, which creates three references to the same inner list `[0, 0, 0]`. Modifying `grid[0][1] = 9` updates all rows because"
+        },
+        {
+          "id": "bug_off_by_one",
+          "direct_passed": false,
+          "direct_ans": "The given binary search implementation has a bug that can cause an **infinite loop** under certain conditions.\n\n---\n\n### \ud83d\udd0d Problem Analysis\n\nHere's the function again:\n\n```python\ndef bsearch(arr, x):\n",
+          "think_passed": false,
+          "think_words": 633,
+          "think_doubts": 2,
+          "think_ans": ""
+        },
+        {
+          "id": "clean_decoy_float",
+          "direct_passed": true,
+          "direct_ans": "NO.",
+          "think_passed": false,
+          "think_words": 624,
+          "think_doubts": 7,
+          "think_ans": ""
+        },
+        {
+          "id": "multi_constraint_bullets",
+          "direct_passed": false,
+          "direct_ans": "- Beryllium  \n- Fluorine  \n- Magnesium",
+          "think_passed": true,
+          "think_words": 465,
+          "think_doubts": 16,
+          "think_ans": "- Carbon  \n- Iodine  \n- Oxygen"
+        }
+      ]
+    },
+    "adhd_tuned": {
+      "summary": {
+        "direct_passed": "4/10",
+        "think_passed": "3/10",
+        "mean_think_words": 471.5,
+        "mean_think_doubts": 6.7,
+        "timeouts": 4,
+        "elapsed_s": 204.4
+      },
+      "records": [
+        {
+          "id": "no_letter_e",
+          "direct_passed": false,
+          "direct_ans": "A small, soft-furred creature with bright eyes, a long tail, and gentle purrs. It often curls up in sunny spots, paws tucked close, and watches the world with calm curiosity.",
+          "think_passed": false,
+          "think_words": 178,
+          "think_doubts": 3,
+          "think_ans": "A cat has soft fur, sharp claws, and bright eyes. It purrs loudly, jumps high, and curls into a ball."
+        },
+        {
+          "id": "exact_json",
+          "direct_passed": false,
+          "direct_ans": "```json\n{\n  \"status\": \"success\",\n  \"count\": 3,\n  \"tags\": [\"cloud\", \"code\", \"chat\"]\n}\n```",
+          "think_passed": true,
+          "think_words": 329,
+          "think_doubts": 12,
+          "think_ans": "{\"status\": \"success\", \"count\": 3, \"tags\": [\"field\", \"hill\", \"rock\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "direct_passed": true,
+          "direct_ans": "The moon's gravity pulls ocean water creating high and low tides daily.",
+          "think_passed": false,
+          "think_words": 192,
+          "think_doubts": 3,
+          "think_ans": "Ocean tides occur daily due to the moon's gravitational pull affecting water levels."
+        },
+        {
+          "id": "bat_and_ball_trap",
+          "direct_passed": false,
+          "direct_ans": "Let the cost of the cable be $ x $.  \nThen the cost of the server is $ x + 100 $.  \n\nThe total cost is given by:\n$$\nx + (x + 100) = 110\n$$\n\nSimplify:\n$$\n2x + 100 = 110\n$$\n\nSubtract 100 from both sides",
+          "think_passed": true,
+          "think_words": 351,
+          "think_doubts": 4,
+          "think_ans": "ANSWER: $5"
+        },
+        {
+          "id": "letter_count_strawberries",
+          "direct_passed": false,
+          "direct_ans": "ANSWER: 8",
+          "think_passed": false,
+          "think_words": 606,
+          "think_doubts": 10,
+          "think_ans": ""
+        },
+        {
+          "id": "python_closure_trap",
+          "direct_passed": true,
+          "direct_ans": "ANSWER: [6, 6, 6, 6]",
+          "think_passed": false,
+          "think_words": 735,
+          "think_doubts": 7,
+          "think_ans": ""
+        },
+        {
+          "id": "bug_shallow_copy_grid",
+          "direct_passed": false,
+          "direct_ans": "The Python snippet you provided creates a grid that appears 3x3, but the rows are not independent. Here's the breakdown:\n\n```python\ngrid = [[0] * 3] * 3\n```\n\nThis creates a list of 3 references to the",
+          "think_passed": false,
+          "think_words": 487,
+          "think_doubts": 2,
+          "think_ans": "The original code creates a grid where all rows reference the same inner list. Modifying one row affects all, leading to a sum of 9 * 3 = 27. The fix uses a list comprehension to create independent ro"
+        },
+        {
+          "id": "bug_off_by_one",
+          "direct_passed": true,
+          "direct_ans": "The given binary search implementation has a flaw in how it updates the `lo` or `hi` bounds after a mismatch. Specifically, it does **not** properly narrow the search space, leading to infinite loops ",
+          "think_passed": false,
+          "think_words": 653,
+          "think_doubts": 4,
+          "think_ans": ""
+        },
+        {
+          "id": "clean_decoy_float",
+          "direct_passed": true,
+          "direct_ans": "NO.",
+          "think_passed": false,
+          "think_words": 656,
+          "think_doubts": 9,
+          "think_ans": ""
+        },
+        {
+          "id": "multi_constraint_bullets",
+          "direct_passed": false,
+          "direct_ans": "- Boron  \n- Cobalt  \n- Germanium",
+          "think_passed": true,
+          "think_words": 528,
+          "think_doubts": 13,
+          "think_ans": "- Carbon  \n- Iodine  \n- Sodium"
+        }
+      ]
+    },
+    "ocd_attn_only": {
+      "summary": {
+        "direct_passed": "4/10",
+        "think_passed": "6/10",
+        "mean_think_words": 413.8,
+        "mean_think_doubts": 6.6,
+        "timeouts": 3,
+        "elapsed_s": 179.0
+      },
+      "records": [
+        {
+          "id": "no_letter_e",
+          "direct_passed": false,
+          "direct_ans": "A small, soft-furred creature, it moves with quiet grace and bright eyes. It purrs loudly, curls up in warm spots, and bats at floating bits.",
+          "think_passed": false,
+          "think_words": 300,
+          "think_doubts": 8,
+          "think_ans": "A feline with soft fur and a tail that curls, moves with silent grace and curiosity. Purring softly while basking near a warm spot, it curls up or jumps at tiny toys."
+        },
+        {
+          "id": "exact_json",
+          "direct_passed": false,
+          "direct_ans": "```json\n{\n  \"status\": \"success\",\n  \"count\": 5,\n  \"tags\": [\"cloud\", \"code\", \"chat\"]\n}\n```",
+          "think_passed": true,
+          "think_words": 375,
+          "think_doubts": 9,
+          "think_ans": "{\"status\": \"success\", \"count\": 3, \"tags\": [\"blue\", \"green\", \"red\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "direct_passed": false,
+          "direct_ans": "Ocean tides rise and fall daily due to gravitational pull from the moon and sun.",
+          "think_passed": true,
+          "think_words": 120,
+          "think_doubts": 2,
+          "think_ans": "Ocean tides rise and fall daily due to the moon's gravitational pull."
+        },
+        {
+          "id": "bat_and_ball_trap",
+          "direct_passed": true,
+          "direct_ans": "ANSWER: $5",
+          "think_passed": true,
+          "think_words": 303,
+          "think_doubts": 3,
+          "think_ans": "ANSWER: $5"
+        },
+        {
+          "id": "letter_count_strawberries",
+          "direct_passed": true,
+          "direct_ans": "ANSWER: 6",
+          "think_passed": false,
+          "think_words": 577,
+          "think_doubts": 11,
+          "think_ans": ""
+        },
+        {
+          "id": "python_closure_trap",
+          "direct_passed": true,
+          "direct_ans": "ANSWER: [6, 6, 6, 6]",
+          "think_passed": false,
+          "think_words": 683,
+          "think_doubts": 10,
+          "think_ans": ""
+        },
+        {
+          "id": "bug_shallow_copy_grid",
+          "direct_passed": false,
+          "direct_ans": "The given Python code:\n\n```python\ngrid = [[0] * 3] * 3\ngrid[0][1] = 9\nprint(sum(row[1] for row in grid))\n```\n\n### What happens:\n\n- `[[0] * 3] * 3` creates a list of **three references** to the **same ",
+          "think_passed": true,
+          "think_words": 404,
+          "think_doubts": 2,
+          "think_ans": "The original code initializes a grid with three rows, but all rows reference the same inner list. When `grid[0][1] = 9` is executed, all rows reflect this change because they are aliases of the same l"
+        },
+        {
+          "id": "bug_off_by_one",
+          "direct_passed": false,
+          "direct_ans": "The given binary search implementation has a bug that can cause an **infinite loop** when `lo` and `hi` become equal and the loop condition `lo < hi` still doesn't terminate the loop properly.\n\n---\n\n#",
+          "think_passed": false,
+          "think_words": 658,
+          "think_doubts": 4,
+          "think_ans": ""
+        },
+        {
+          "id": "clean_decoy_float",
+          "direct_passed": true,
+          "direct_ans": "NO.\n\nFor finite float inputs `p` where `0.0 <= p <= 1.0`, the function `clamp_prob(p)` will always return `p` unchanged, because none of the conditions (`p < 0.0` or `p > 1.0`) are satisfied. Therefor",
+          "think_passed": true,
+          "think_words": 393,
+          "think_doubts": 4,
+          "think_ans": "NO. The function `clamp_prob` returns the input `p` unchanged if it is within `[0.0, 1.0]`. Since the question specifies finite inputs already in this range, there are no cases where the output falls "
+        },
+        {
+          "id": "multi_constraint_bullets",
+          "direct_passed": false,
+          "direct_ans": "- Boron  \n- Cobalt  \n- Fluorine",
+          "think_passed": true,
+          "think_words": 325,
+          "think_doubts": 13,
+          "think_ans": "- Carbon  \n- Oxygen  \n- Sulfur"
+        }
+      ]
+    },
+    "ocd_steer_only": {
+      "summary": {
+        "direct_passed": "4/10",
+        "think_passed": "5/10",
+        "mean_think_words": 482.9,
+        "mean_think_doubts": 6.7,
+        "timeouts": 3,
+        "elapsed_s": 184.2
+      },
+      "records": [
+        {
+          "id": "no_letter_e",
+          "direct_passed": false,
+          "direct_ans": "A small, soft-furred creature with bright eyes and a quiet nature. It purrs, pounces, and curls up in warm spots.",
+          "think_passed": false,
+          "think_words": 475,
+          "think_doubts": 13,
+          "think_ans": "A small, furry creature with sharp claws and keen sight. Fond of climbing, purring loudly, and curling up in cozy spots."
+        },
+        {
+          "id": "exact_json",
+          "direct_passed": false,
+          "direct_ans": "```json\n{\n  \"status\": \"success\",\n  \"count\": 3,\n  \"tags\": [\"blue\", \"green\", \"cold\"]\n}\n```",
+          "think_passed": true,
+          "think_words": 303,
+          "think_doubts": 12,
+          "think_ans": "{\"status\": \"success\", \"count\": 3, \"tags\": [\"blue\", \"green\", \"sky\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "direct_passed": true,
+          "direct_ans": "The moon's gravity pulls ocean waters causing regular high and low tides.",
+          "think_passed": true,
+          "think_words": 262,
+          "think_doubts": 3,
+          "think_ans": "Ocean tides occur due to the moon's gravitational pull on Earth's waters."
+        },
+        {
+          "id": "bat_and_ball_trap",
+          "direct_passed": true,
+          "direct_ans": "ANSWER: $5",
+          "think_passed": true,
+          "think_words": 311,
+          "think_doubts": 3,
+          "think_ans": "ANSWER: $5"
+        },
+        {
+          "id": "letter_count_strawberries",
+          "direct_passed": false,
+          "direct_ans": "ANSWER: 9",
+          "think_passed": false,
+          "think_words": 634,
+          "think_doubts": 9,
+          "think_ans": ""
+        },
+        {
+          "id": "python_closure_trap",
+          "direct_passed": false,
+          "direct_ans": "ANSWER: [3, 4, 4, 4]",
+          "think_passed": false,
+          "think_words": 697,
+          "think_doubts": 7,
+          "think_ans": ""
+        },
+        {
+          "id": "bug_shallow_copy_grid",
+          "direct_passed": false,
+          "direct_ans": "Let's analyze the code step by step:\n\n### Original Code:\n```python\ngrid = [[0] * 3] * 3\ngrid[0][1] = 9\nprint(sum(row[1] for row in grid))\n```\n\n### Step-by-step Breakdown:\n\n#### 1. `[[0] * 3] * 3`:\n- `",
+          "think_passed": false,
+          "think_words": 618,
+          "think_doubts": 3,
+          "think_ans": "The original code creates a grid using `[[0] * 3] * 3`, which results in three rows that all reference the same inner list. When `grid[0][1] ="
+        },
+        {
+          "id": "bug_off_by_one",
+          "direct_passed": true,
+          "direct_ans": "The given binary search implementation has a bug that can cause an infinite loop in certain cases. Let's analyze it:\n\n### Code:\n```python\ndef bsearch(arr, x):\n    lo, hi = 0, len(arr)\n    while lo < h",
+          "think_passed": false,
+          "think_words": 648,
+          "think_doubts": 2,
+          "think_ans": ""
+        },
+        {
+          "id": "clean_decoy_float",
+          "direct_passed": true,
+          "direct_ans": "NO.\n\nFor finite float inputs `0.0 <= p <= 1.0`, the function `clamp_prob(p)` will always return a value within the interval `[0.0, 1.0]`. In this case, the value of `p` is within the valid range, so t",
+          "think_passed": true,
+          "think_words": 572,
+          "think_doubts": 7,
+          "think_ans": "NO. The function returns `p` unchanged when `0.0 <= p <= 1.0`. Since the input `p` is explicitly within this range, the output will always lie within `[0.0, 1.0]`. No floating-point precision issues c"
+        },
+        {
+          "id": "multi_constraint_bullets",
+          "direct_passed": false,
+          "direct_ans": "- Beryllium  \n- Fluorine  \n- Manganese",
+          "think_passed": true,
+          "think_words": 309,
+          "think_doubts": 8,
+          "think_ans": "- Carbon  \n- Cesium  \n- Sulfur"
+        }
+      ]
+    },
+    "ocd_tuned": {
+      "summary": {
+        "direct_passed": "3/10",
+        "think_passed": "3/10",
+        "mean_think_words": 484.6,
+        "mean_think_doubts": 7.1,
+        "timeouts": 6,
+        "elapsed_s": 185.0
+      },
+      "records": [
+        {
+          "id": "no_letter_e",
+          "direct_passed": false,
+          "direct_ans": "A small, soft-furred creature with bright, curious eyes and a tail that sways with grace. It purrs softly, paws pad lightly, and curls up in warm, quiet spots.",
+          "think_passed": false,
+          "think_words": 222,
+          "think_doubts": 3,
+          "think_ans": "A small, furry being with soft fur, a glimmering gaze, and a tail.  \nIt purrs softly, paws at objects, and curls up in cozy spots."
+        },
+        {
+          "id": "exact_json",
+          "direct_passed": false,
+          "direct_ans": "```json\n{\n  \"status\": \"success\",\n  \"count\": 3,\n  \"tags\": [\"cloud\", \"code\", \"data\"]\n}\n```",
+          "think_passed": true,
+          "think_words": 397,
+          "think_doubts": 11,
+          "think_ans": "{\"status\": \"success\", \"count\": 3, \"tags\": [\"blue\", \"green\", \"red\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "direct_passed": false,
+          "direct_ans": "Ocean tides rise and fall daily due to gravitational pull from the moon and sun.",
+          "think_passed": false,
+          "think_words": 397,
+          "think_doubts": 1,
+          "think_ans": ""
+        },
+        {
+          "id": "bat_and_ball_trap",
+          "direct_passed": true,
+          "direct_ans": "ANSWER: $5",
+          "think_passed": true,
+          "think_words": 266,
+          "think_doubts": 3,
+          "think_ans": "ANSWER: $5"
+        },
+        {
+          "id": "letter_count_strawberries",
+          "direct_passed": true,
+          "direct_ans": "ANSWER: 6",
+          "think_passed": false,
+          "think_words": 547,
+          "think_doubts": 15,
+          "think_ans": ""
+        },
+        {
+          "id": "python_closure_trap",
+          "direct_passed": false,
+          "direct_ans": "ANSWER: [3, 4, 4, 4]",
+          "think_passed": false,
+          "think_words": 667,
+          "think_doubts": 8,
+          "think_ans": ""
+        },
+        {
+          "id": "bug_shallow_copy_grid",
+          "direct_passed": false,
+          "direct_ans": "The given Python code:\n\n```python\ngrid = [[0] * 3] * 3\ngrid[0][1] = 9\nprint(sum(row[1] for row in grid))\n```\n\n### Step-by-step explanation:\n\n1. **`[0] * 3`** creates a list `[0, 0, 0]`.\n\n2. **`[[0] * ",
+          "think_passed": true,
+          "think_words": 523,
+          "think_doubts": 2,
+          "think_ans": "The code initializes a grid using `[[0] * 3] * 3`, which creates three references to the same inner list `[0, 0, 0]`. When `grid[0][1] = 9` is executed, all rows point to the modified list `[0, 9, 0]`"
+        },
+        {
+          "id": "bug_off_by_one",
+          "direct_passed": false,
+          "direct_ans": "The given binary search implementation has a subtle bug that can cause an infinite loop in certain cases.\n\n---\n\n### \ud83d\udd0d Problem Analysis:\n\n```python\ndef bsearch(arr, x):\n    lo, hi = 0, len(arr)\n    whi",
+          "think_passed": false,
+          "think_words": 595,
+          "think_doubts": 3,
+          "think_ans": ""
+        },
+        {
+          "id": "clean_decoy_float",
+          "direct_passed": true,
+          "direct_ans": "NO.\n\nFor finite float inputs where `0.0 <= p <= 1.0`, the function `clamp_prob` will return `p` unchanged, which is within the range `[0.0, 1.0]`. The function only modifies inputs that are strictly l",
+          "think_passed": false,
+          "think_words": 639,
+          "think_doubts": 5,
+          "think_ans": ""
+        },
+        {
+          "id": "multi_constraint_bullets",
+          "direct_passed": false,
+          "direct_ans": "- Beryllium  \n- Fluorine  \n- Manganese",
+          "think_passed": false,
+          "think_words": 593,
+          "think_doubts": 20,
+          "think_ans": ""
+        }
+      ]
+    },
+    "dual_adhd_ocd": {
+      "summary": {
+        "think_passed": "5/10"
+      },
+      "records": [
+        {
+          "id": "no_letter_e",
+          "passed": false,
+          "ans": ""
+        },
+        {
+          "id": "exact_json",
+          "passed": true,
+          "ans": "{\"status\": \"success\", \"count\": 3, \"tags\": [\"cloud\", \"code\", \"msg\"]}"
+        },
+        {
+          "id": "word_count_12",
+          "passed": true,
+          "ans": "The moon's gravity pulls ocean water creating high and low tides daily."
+        },
+        {
+          "id": "bat_and_ball_trap",
+          "passed": true,
+          "ans": "ANSWER: $5"
+        },
+        {
+          "id": "letter_count_strawberries",
+          "passed": false,
+          "ans": ""
+        },
+        {
+          "id": "python_closure_trap",
+          "passed": true,
+          "ans": "ANSWER: [6, 6, 6, 6]"
+        },
+        {
+          "id": "bug_shallow_copy_grid",
+          "passed": false,
+          "ans": ""
+        },
+        {
+          "id": "bug_off_by_one",
+          "passed": false,
+          "ans": ""
+        },
+        {
+          "id": "clean_decoy_float",
+          "passed": true,
+          "ans": "NO."
+        },
+        {
+          "id": "multi_constraint_bullets",
+          "passed": false,
+          "ans": ""
+        }
+      ]
+    }
+  }
+}
